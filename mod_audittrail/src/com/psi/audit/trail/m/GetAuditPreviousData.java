@@ -18,7 +18,7 @@ public class GetAuditPreviousData {
 	    	 for(DataRow row: r){
 	    		 	
 	    		 for (String key : row.keySet()) {
-	    			 m.append(key +":"+row.getString(key).toString() + "| ");
+	    			 m.append(key +":"+row.getString(key).toString() + "|");
 			 	 }
 	    	 }
 	     }
