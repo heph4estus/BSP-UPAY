@@ -25,7 +25,7 @@ public class EditManager extends Manager{
 			audit.setEntityid(accountnumber);
 			audit.setLog("Successfully update company manager user");
 			audit.setStatus("00");
-			audit.setData(this.email+"|"+this.firstname+"|"+this.lastname+"|"+this.msisdn+"|"+this.username);
+			audit.setData("EMAIL:"+this.email+"|FIRSTNAME:"+this.firstname+"|LASTNAME:"+this.lastname+"|MSISDN:"+this.msisdn+"|USERNAME:"+this.username);
 			audit.setUserid(sess.getAccount().getId());
 			audit.setUsername(sess.getAccount().getUserName());
 			audit.setSessionid(sess.getId());
@@ -34,7 +34,7 @@ public class EditManager extends Manager{
 		    audit.setPortalversion(sess.getPortalverion());
 		    audit.setOs(sess.getOs());
 		    audit.setUserslevel(sess.getAccount().getGroup().getName());
-		    audit.setOlddata(row.getString("EMAIL")+"|"+row.getString("FIRSTNAME")+"|"+row.getString("LASTNAME")+"|"+row.getString("MSISDN")+"|"+row.getString("USERNAME"));
+		    audit.setOlddata("EMAIL:"+row.getString("EMAIL")+"|FIRSTNAME:"+row.getString("FIRSTNAME")+"|LASTNAME:"+row.getString("LASTNAME")+"|MSISDN:"+row.getString("MSISDN")+"|USERNAME:"+row.getString("USERNAME"));
 	
 			audit.insert();
 			return true;

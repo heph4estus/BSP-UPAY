@@ -66,7 +66,7 @@ public class EditManagerCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
+					    audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
 			    		audit.insert();
 					}
 				}else{
@@ -86,7 +86,7 @@ public class EditManagerCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
+				    audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
 		    		audit.insert();
 				}
 				return new JsonView(reg);  
