@@ -61,7 +61,7 @@ public class NewManagerCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
+				    audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
 		    		audit.insert();
 		    		return new JsonView(reg);  
 			    }
@@ -77,7 +77,7 @@ public class NewManagerCommand extends UICommand{
 				    		audit.setStatus(reg.getState().getCode());
 				    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 				    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
-				    		audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
+				    		audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
 				    		audit.setSessionid(reg.getAuthorizedSession().getId());
 				    		audit.setBrowser(reg.getAuthorizedSession().getBrowser());
 						    audit.setBrowserversion(reg.getAuthorizedSession().getBrowserversion());
@@ -104,7 +104,7 @@ public class NewManagerCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
+						    audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
 				    		audit.insert();
 						}
 					}else{
@@ -124,7 +124,7 @@ public class NewManagerCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
+					    audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
 			    		audit.insert();
 					}
 				}else{
@@ -144,7 +144,7 @@ public class NewManagerCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData("EMAIL:"+email+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|MSISDN:"+msisdn+"|USERNAME:"+username);
+				    audit.setData(email+"|"+firstname+"|"+midname+"|"+lastname+"|"+msisdn+"|"+username);
 		    		audit.insert();
 				}				
 				return new JsonView(reg);  

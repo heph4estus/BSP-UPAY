@@ -28,7 +28,6 @@ public class ApproveUpgradeCommand extends UICommand{
 				ManageUpgrade reg = new ManageUpgrade();
 				
 				reg.setAccountnumber(accountnumber);
-				reg.getData();
 				reg.setAuthorizedSession(sess);
 						if(!reg.existupgrade()){
 							reg.setState(new ObjectState("03", "Merchant account do not exist"));
@@ -47,7 +46,7 @@ public class ApproveUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|BRANCH:"+reg.getAuditdata());
+						    audit.setData(accountnumber+"|"+reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -68,7 +67,7 @@ public class ApproveUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|BRANCH:"+reg.getAuditdata());
+						    audit.setData(accountnumber+"|"+reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -88,7 +87,7 @@ public class ApproveUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|BRANCH:"+reg.getAuditdata());
+						    audit.setData(accountnumber+"|"+reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
 						}

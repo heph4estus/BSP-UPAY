@@ -52,7 +52,7 @@ public class PreRejectBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("BRANCHNAME:"+reg.getBranchname());
+						    audit.setData(accountnumber);
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -74,7 +74,7 @@ public class PreRejectBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("BRANCHNAME:"+reg.getBranchname());
+						    audit.setData(accountnumber);
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -97,7 +97,7 @@ public class PreRejectBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("BRANCHNAME:"+reg.getBranchname());
+						    audit.setData(accountnumber);
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -118,7 +118,7 @@ public class PreRejectBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("BRANCHNAME:"+reg.getBranchname());
+						    audit.setData(accountnumber);
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);

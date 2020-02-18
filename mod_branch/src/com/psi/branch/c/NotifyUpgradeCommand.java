@@ -31,7 +31,6 @@ public class NotifyUpgradeCommand extends UICommand{
 				reg.setAccountnumber(accountnumber);
 				reg.setNotify(notify);
 				reg.setReason(reason);
-				reg.getData();
 				reg.setAuthorizedSession(sess);
 						if(!reg.existupgrade()){
 							reg.setState(new ObjectState("03", "Merchant account do not exist"));
@@ -50,7 +49,7 @@ public class NotifyUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|BRANCHNAME:"+reg.getAuditdata());
+						    audit.setData(accountnumber+"|"+reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -71,7 +70,7 @@ public class NotifyUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|BRANCHNAME:"+reg.getAuditdata());
+						    audit.setData(accountnumber+"|"+reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -91,7 +90,7 @@ public class NotifyUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|BRANCHNAME:"+reg.getAuditdata());
+						    audit.setData(accountnumber+"|"+reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
 						}

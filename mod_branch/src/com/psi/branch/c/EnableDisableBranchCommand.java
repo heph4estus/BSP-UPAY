@@ -50,7 +50,7 @@ public class EnableDisableBranchCommand extends UICommand{
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
 						    audit.setRemarks(remarks);
-						    audit.setData("STATUS:"+status+"|ACCOUNTNUMBER:"+accountnumber);
+						    audit.setData(status+"|"+accountnumber);
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -73,7 +73,7 @@ public class EnableDisableBranchCommand extends UICommand{
 							    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
 							    audit.setRemarks(remarks);
-							    audit.setData("STATUS:"+status+"|ACCOUNTNUMBER:"+accountnumber);
+							    audit.setData(status+"|"+accountnumber);
 					    		audit.insert();
 								return new JsonView(reg);
 							}
@@ -96,7 +96,7 @@ public class EnableDisableBranchCommand extends UICommand{
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
 						    audit.setRemarks(remarks);
-						    audit.setData("STATUS:"+status+"|ACCOUNTNUMBER:"+accountnumber);
+						    audit.setData(status+"|"+accountnumber);
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -117,7 +117,7 @@ public class EnableDisableBranchCommand extends UICommand{
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
 						    audit.setRemarks(remarks);
-						    audit.setData("STATUS:"+status+"|ACCOUNTNUMBER:"+accountnumber);
+						    audit.setData(status+"|"+accountnumber);
 				    		audit.insert();
 							return new JsonView(reg);
 						}

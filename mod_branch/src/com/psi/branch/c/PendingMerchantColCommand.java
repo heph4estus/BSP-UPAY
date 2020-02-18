@@ -42,7 +42,6 @@ public class PendingMerchantColCommand extends UICommand{
 				    audit.setOs(col.getAuthorizedSession().getOs());
 				    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData("Display Details");
 		    		audit.insert();
 					return new CollectionView("00",col);  
 				}else{
@@ -62,7 +61,6 @@ public class PendingMerchantColCommand extends UICommand{
 					    audit.setOs(col.getAuthorizedSession().getOs());
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData("Display Details");
 			    		audit.insert();
 						return new NoDataFoundView(state); 
 				}

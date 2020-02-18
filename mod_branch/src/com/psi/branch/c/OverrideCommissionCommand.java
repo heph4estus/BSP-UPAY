@@ -50,7 +50,7 @@ public class OverrideCommissionCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|STATUS:"+status+"|TARIFFGROUP:"+tariff);
+						    audit.setData(accountnumber+"|"+status+"|"+tariff);
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
@@ -72,7 +72,7 @@ public class OverrideCommissionCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|STATUS:"+status+"|TARIFFGROUP:"+tariff);
+						    audit.setData(accountnumber+"|"+status+"|"+tariff);
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
@@ -93,7 +93,7 @@ public class OverrideCommissionCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|STATUS:"+status+"|TARIFFGROUP:"+tariff);
+						    audit.setData(accountnumber+"|"+status+"|"+tariff);
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
