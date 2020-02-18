@@ -113,7 +113,7 @@ public class NewBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+rafilelocation+"|"+rafilename+"|"+tin+"|"+natureofbusiness+"|"+grosssales+"|"+bankbranch+"|"+paymentmode+"|"+paymentterms+"|"+maxamount);
+						    audit.setData("BRANCHNAME:"+branchname+"|ADDRESS:"+address+"|CITY:"+city+"|PROVINCE:"+province+"|COUNTRY:"+country+"|ZIPCODE:"+zipcode+"|CONTACTNUMBER:"+contactnumber+"|XCOORDINATE:"+xcoordinate+"|YCOORDINATE:"+ycoordinate+"|MONDAY:"+monday+"|TUESDAY:"+tuesday+"|WEDNESDAY:"+wednesday+"|THURSDAY:"+thursday+"|FRIDAY:"+friday+"|SATURDAY:"+saturday+"|SUNDAY:"+sunday+"|ACCOUNTNUMBER:"+accountnumber+"|TIN:"+tin+"|NATUREOFBUSINESS:"+natureofbusiness+"|ESTIMATEDGROSSSALES:"+grosssales+"|BANKBRANCH:"+bankbranch+"|PAYMENTMODE:"+paymentmode+"|PAYMENTTERM:"+paymentterms+"|CREDITLIMIT:"+maxamount);
 				    		audit.setRequest(reg.json(reg));
 						    audit.insert();
 							return new JsonView(reg);
@@ -135,7 +135,7 @@ public class NewBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+specificaddress+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+rafilelocation+"|"+rafilename+"|"+tin+"|"+natureofbusiness+"|"+grosssales+"|"+bankbranch+"|"+paymentmode+"|"+paymentterms+"|"+maxamount);
+						    audit.setData("BRANCHNAME:"+branchname+"|ADDRESS:"+address+"|CITY:"+city+"|PROVINCE:"+province+"|COUNTRY:"+country+"|ZIPCODE:"+zipcode+"|CONTACTNUMBER:"+contactnumber+"|XCOORDINATE:"+xcoordinate+"|YCOORDINATE:"+ycoordinate+"|MONDAY:"+monday+"|TUESDAY:"+tuesday+"|WEDNESDAY:"+wednesday+"|THURSDAY:"+thursday+"|FRIDAY:"+friday+"|SATURDAY:"+saturday+"|SUNDAY:"+sunday+"|ACCOUNTNUMBER:"+accountnumber+"|TIN:"+tin+"|NATUREOFBUSINESS:"+natureofbusiness+"|ESTIMATEDGROSSSALES:"+grosssales+"|BANKBRANCH:"+bankbranch+"|PAYMENTMODE:"+paymentmode+"|PAYMENTTERM:"+paymentterms+"|CREDITLIMIT:"+maxamount);
 				    		audit.setRequest(reg.json(reg));
 						    audit.insert();
 							return new JsonView(reg);
@@ -157,7 +157,7 @@ public class NewBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+specificaddress+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+rafilelocation+"|"+rafilename+"|"+tin+"|"+natureofbusiness+"|"+grosssales+"|"+bankbranch+"|"+paymentmode+"|"+paymentterms+"|"+maxamount);
+						    audit.setData("BRANCHNAME:"+branchname+"|ADDRESS:"+address+"|CITY:"+city+"|PROVINCE:"+province+"|COUNTRY:"+country+"|ZIPCODE:"+zipcode+"|CONTACTNUMBER:"+contactnumber+"|XCOORDINATE:"+xcoordinate+"|YCOORDINATE:"+ycoordinate+"|MONDAY:"+monday+"|TUESDAY:"+tuesday+"|WEDNESDAY:"+wednesday+"|THURSDAY:"+thursday+"|FRIDAY:"+friday+"|SATURDAY:"+saturday+"|SUNDAY:"+sunday+"|ACCOUNTNUMBER:"+accountnumber+"|TIN:"+tin+"|NATUREOFBUSINESS:"+natureofbusiness+"|ESTIMATEDGROSSSALES:"+grosssales+"|BANKBRANCH:"+bankbranch+"|PAYMENTMODE:"+paymentmode+"|PAYMENTTERM:"+paymentterms+"|CREDITLIMIT:"+maxamount);
 						    audit.setRequest(reg.json(reg));
 						    audit.insert();
 							return new JsonView(reg);
@@ -170,7 +170,7 @@ public class NewBranchCommand extends UICommand{
 				    		audit.setEntityid(branchname);
 				    		audit.setLog(reg.getState().getMessage());
 				    		audit.setStatus(reg.getState().getCode());
-				    		audit.setData(branchname+"|"+specificaddress+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+rafilelocation+"|"+rafilename+"|"+tin+"|"+natureofbusiness+"|"+grosssales+"|"+bankbranch+"|"+paymentmode+"|"+paymentterms+"|"+maxamount);				    		
+				    		audit.setData("BRANCHNAME:"+branchname+"|ADDRESS:"+address+"|CITY:"+city+"|PROVINCE:"+province+"|COUNTRY:"+country+"|ZIPCODE:"+zipcode+"|CONTACTNUMBER:"+contactnumber+"|XCOORDINATE:"+xcoordinate+"|YCOORDINATE:"+ycoordinate+"|MONDAY:"+monday+"|TUESDAY:"+tuesday+"|WEDNESDAY:"+wednesday+"|THURSDAY:"+thursday+"|FRIDAY:"+friday+"|SATURDAY:"+saturday+"|SUNDAY:"+sunday+"|ACCOUNTNUMBER:"+accountnumber+"|TIN:"+tin+"|NATUREOFBUSINESS:"+natureofbusiness+"|ESTIMATEDGROSSSALES:"+grosssales+"|BANKBRANCH:"+bankbranch+"|PAYMENTMODE:"+paymentmode+"|PAYMENTTERM:"+paymentterms+"|CREDITLIMIT:"+maxamount);
 				    		audit.setImage(image);
 				    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 				    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -199,7 +199,7 @@ public class NewBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+specificaddress+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+rafilelocation+"|"+rafilename+"|"+tin+"|"+natureofbusiness+"|"+grosssales+"|"+bankbranch+"|"+paymentmode+"|"+paymentterms+"|"+maxamount);				    						    		
+						    audit.setData("BRANCHNAME:"+branchname+"|ADDRESS:"+address+"|CITY:"+city+"|PROVINCE:"+province+"|COUNTRY:"+country+"|ZIPCODE:"+zipcode+"|CONTACTNUMBER:"+contactnumber+"|XCOORDINATE:"+xcoordinate+"|YCOORDINATE:"+ycoordinate+"|MONDAY:"+monday+"|TUESDAY:"+tuesday+"|WEDNESDAY:"+wednesday+"|THURSDAY:"+thursday+"|FRIDAY:"+friday+"|SATURDAY:"+saturday+"|SUNDAY:"+sunday+"|ACCOUNTNUMBER:"+accountnumber+"|TIN:"+tin+"|NATUREOFBUSINESS:"+natureofbusiness+"|ESTIMATEDGROSSSALES:"+grosssales+"|BANKBRANCH:"+bankbranch+"|PAYMENTMODE:"+paymentmode+"|PAYMENTTERM:"+paymentterms+"|CREDITLIMIT:"+maxamount);
 						    audit.setRequest(reg.json(reg));
 						    audit.insert();
 							return new JsonView(reg);

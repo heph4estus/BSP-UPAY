@@ -50,7 +50,7 @@ public class PreApproveBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getAuditdata());
+						    audit.setData("BRANCHNAME:"+reg.getBranchname());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -71,7 +71,7 @@ public class PreApproveBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getAuditdata());
+						    audit.setData("BRANCHNAME:"+reg.getBranchname());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -93,7 +93,7 @@ public class PreApproveBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getAuditdata());
+						    audit.setData("BRANCHNAME:"+reg.getBranchname());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -113,7 +113,7 @@ public class PreApproveBranchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getAuditdata());
+						    audit.setData("BRANCHNAME:"+reg.getBranchname());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
