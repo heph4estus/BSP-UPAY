@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.tlc.common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.tlc.gui.modules"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/mod_session.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/abscbn-arch.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/axis-1.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.psi.file.excel.reader.bcblack.listed"/>
+	<classpathentry kind="src" path="/com.psi.file.excel.reader.bcwhite.listed"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.psi.file.excel.reader.bspblack.listed"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mod_audittrail"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

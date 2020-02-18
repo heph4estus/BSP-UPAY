@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/httpclient-4.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/httpclient-cache-4.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/httpmime-4.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/mail.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/mail-1.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/abscbn-arch.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/bcpg-jdk15on-147.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/commons-email-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/commons-logging-1.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/javax.ws.rs.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/tlc-smtp.jar"/>
+	<classpathentry kind="lib" path="D:/ABS-CBN/libraries/com.psi.ibc.common.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.tlc.common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.tlc.gui.modules"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mod_session"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mod_audittrail"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

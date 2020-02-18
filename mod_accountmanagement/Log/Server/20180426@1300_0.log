@@ -1,0 +1,16 @@
+13:05:38.970 TBLLANGUAGE not configured!
+13:05:39.857 TBLACCOUNTTYPE not configured!
+13:05:40.308 http://accessone.ibayad.com/api/ibayad/pos/password?cashier-id=PSICASHIER&request-id=2018042613053901
+13:05:40.324 error: java.lang.IllegalArgumentException
+13:06:56.491 TBLLANGUAGE not configured!
+13:06:57.413 TBLACCOUNTTYPE not configured!
+13:06:57.864 https://accessone.ibayad.com/api/ibayad/pos/password?cashier-id=PSICASHIER&request-id=2018042613065701
+13:06:57.882 error: java.lang.IllegalArgumentException
+13:22:18.887 TBLLANGUAGE not configured!
+13:22:19.774 TBLACCOUNTTYPE not configured!
+13:22:20.224 https://accessone.ibayad.com/api/ibayad/pos/password?cashier-id=SOLBSHEPO&request-id=2018042613221901
+13:22:20.635 error: javax.net.ssl.SSLPeerUnverifiedException: peer not authenticated
+13:26:44.172 TBLLANGUAGE not configured!
+13:26:45.057 TBLACCOUNTTYPE not configured!
+13:26:45.512 http://192.168.7.11:8080/core//ibayad/pos/password?cashier-id=SOLBSHEPO&request-id=2018042613264501
+13:27:06.616 error: org.apache.http.conn.HttpHostConnectException: Connection to http://192.168.7.11:8080 refused

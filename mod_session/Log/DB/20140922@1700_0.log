@@ -1,0 +1,19 @@
+17:54:10.892 2
+17:54:10.907 java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setStringInternal(OraclePreparedStatement.java:5321)
+	at oracle.jdbc.driver.OraclePreparedStatement.setObjectCritical(OraclePreparedStatement.java:8364)
+	at oracle.jdbc.driver.OraclePreparedStatement.setObjectInternal(OraclePreparedStatement.java:8286)
+	at oracle.jdbc.driver.OraclePreparedStatement.setObjectInternal(OraclePreparedStatement.java:9060)
+	at oracle.jdbc.driver.OraclePreparedStatement.setObject(OraclePreparedStatement.java:9041)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setObject(OraclePreparedStatementWrapper.java:232)
+	at com.tlc.common.DbWrapper.SetParams(DbWrapper.java:178)
+	at com.tlc.common.DbWrapper.QueryDataRows(DbWrapper.java:326)
+	at com.tlc.common.DbWrapper.QueryDataRow(DbWrapper.java:311)
+	at com.tlc.gui.absmobile.modules.session.m.ExistingSession.exists(ExistingSession.java:43)
+	at com.tlc.absmobile.bp.session.AbstractExistingSession.<init>(AbstractExistingSession.java:14)
+	at com.tlc.gui.absmobile.modules.session.m.ExistingSession.<init>(ExistingSession.java:32)
+	at com.tlc.gui.absmobile.modules.session.m.ExistingSession.parse(ExistingSession.java:23)
+	at com.tlc.gui.absmobile.modules.session.c.MonitorCommand.execute(MonitorCommand.java:19)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.monitor(Test.java:36)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:16)
+~U0VMRUNUIFdVLlVTRVJJRCxXVS5VU0VSTkFNRSxMQVNUTkFNRSxGSVJTVE5BTUUsTEFTVExPR0lOLFUuSUQgQVMgR1JPVVBJRCxVLlVTRVJTTEVWRUwgQVMgR1JPVVBOQU1FLEFMTE9XRURJUApGUk9NIFRCTFVTRVJTIFdVIAogICAgSU5ORVIgSk9JTiBUQkxVU0VSU0xFVkVMIFUgT04gVS5VU0VSU0xFVkVMPVdVLlVTRVJTTEVWRUwKV0hFUkUgVVNFUklEPT8gQU5EIFNFU1NJT05JRD0/Owo=

@@ -1,0 +1,58 @@
+15:00:11.226 TBLLANGUAGE not configured!
+15:00:11.402 TBLACCOUNTTYPE not configured!
+15:00:38.546 TBLLANGUAGE not configured!
+15:00:38.737 TBLACCOUNTTYPE not configured!
+15:01:19.620 TBLLANGUAGE not configured!
+15:01:19.820 TBLACCOUNTTYPE not configured!
+15:01:19.909 java.lang.Exception: No column name : AMOUNT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.dashboard.m.DailySalesRemittance.hasRows(DailySalesRemittance.java:42)
+	at com.psi.dashboard.c.DailySalesRemittanceCommand.execute(DailySalesRemittanceCommand.java:17)
+	at com.psi.dashboard.test.Tester.RegisteredProduct(Tester.java:25)
+	at com.psi.dashboard.test.Tester.main(Tester.java:17)
+
+15:02:05.054 TBLLANGUAGE not configured!
+15:02:05.308 TBLACCOUNTTYPE not configured!
+15:02:05.400 java.lang.Exception: No column name : AMOUNT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.dashboard.m.DailySalesRemittance.hasRows(DailySalesRemittance.java:42)
+	at com.psi.dashboard.c.DailySalesRemittanceCommand.execute(DailySalesRemittanceCommand.java:17)
+	at com.psi.dashboard.test.Tester.RegisteredProduct(Tester.java:25)
+	at com.psi.dashboard.test.Tester.main(Tester.java:17)
+
+15:02:21.918 TBLLANGUAGE not configured!
+15:02:22.186 TBLACCOUNTTYPE not configured!
+15:02:22.309 java.lang.Exception: No column name : AMOUNT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.dashboard.m.DailySalesRemittance.hasRows(DailySalesRemittance.java:42)
+	at com.psi.dashboard.c.DailySalesRemittanceCommand.execute(DailySalesRemittanceCommand.java:17)
+	at com.psi.dashboard.test.Tester.RegisteredProduct(Tester.java:25)
+	at com.psi.dashboard.test.Tester.main(Tester.java:17)
+
+15:02:22.315 java.lang.Exception: No column name : AMOUNT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.dashboard.m.DailySalesRemittance.hasRows(DailySalesRemittance.java:42)
+	at com.psi.dashboard.c.DailySalesRemittanceCommand.execute(DailySalesRemittanceCommand.java:17)
+	at com.psi.dashboard.test.Tester.RegisteredProduct(Tester.java:25)
+	at com.psi.dashboard.test.Tester.main(Tester.java:17)
+
+15:03:47.553 TBLLANGUAGE not configured!
+15:03:47.826 TBLACCOUNTTYPE not configured!
+15:04:25.752 TBLLANGUAGE not configured!
+15:04:25.992 TBLACCOUNTTYPE not configured!
+15:05:11.200 TBLLANGUAGE not configured!
+15:05:11.408 TBLACCOUNTTYPE not configured!
+15:26:12.364 TBLLANGUAGE not configured!
+15:26:12.593 TBLACCOUNTTYPE not configured!
+15:26:51.256 TBLLANGUAGE not configured!
+15:26:51.524 TBLACCOUNTTYPE not configured!
+15:33:38.559 TBLLANGUAGE not configured!
+15:33:38.857 TBLACCOUNTTYPE not configured!
+15:34:56.588 TBLLANGUAGE not configured!
+15:34:56.789 TBLACCOUNTTYPE not configured!
+15:37:28.875 TBLLANGUAGE not configured!
+15:37:29.317 TBLACCOUNTTYPE not configured!

@@ -1,0 +1,104 @@
+22:08:14.855 DBConnection unavailable!
+22:08:14.857 java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:280)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:207)
+	at oracle.jdbc.pool.OracleConnectionPoolDataSource.getPhysicalConnection(OracleConnectionPoolDataSource.java:139)
+	at oracle.jdbc.pool.OracleConnectionPoolDataSource.getPooledConnection(OracleConnectionPoolDataSource.java:88)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.makeCacheConnection(OracleImplicitConnectionCache.java:1598)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.makeOneConnection(OracleImplicitConnectionCache.java:515)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.getCacheConnection(OracleImplicitConnectionCache.java:475)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.getConnection(OracleImplicitConnectionCache.java:357)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:395)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.tlc.common.DbWrapper.QueryUpdate(DbWrapper.java:268)
+	at com.tlc.common.SystemInfo.addAuditTrail(SystemInfo.java:150)
+	at com.tlc.common.SystemInfo.<clinit>(SystemInfo.java:86)
+	at com.tlc.gui.modules.common.Model.<init>(Model.java:29)
+	at com.psi.clearing.m.Clearing.<init>(Clearing.java:21)
+	at com.psi.clearing.c.TransactionClearingCommand.execute(TransactionClearingCommand.java:29)
+	at com.psi.clearing.test.Tester.RemitClaimsCollection(Tester.java:36)
+	at com.psi.clearing.test.Tester.main(Tester.java:19)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:363)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
+	... 29 more
+
+22:08:21.876 DBConnection unavailable!
+22:08:21.881 java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:280)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:207)
+	at oracle.jdbc.pool.OracleConnectionPoolDataSource.getPhysicalConnection(OracleConnectionPoolDataSource.java:139)
+	at oracle.jdbc.pool.OracleConnectionPoolDataSource.getPooledConnection(OracleConnectionPoolDataSource.java:88)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.makeCacheConnection(OracleImplicitConnectionCache.java:1598)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.makeOneConnection(OracleImplicitConnectionCache.java:515)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.getCacheConnection(OracleImplicitConnectionCache.java:475)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.getConnection(OracleImplicitConnectionCache.java:357)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:395)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.tlc.common.DbWrapper.QueryUpdate(DbWrapper.java:268)
+	at com.tlc.common.SystemInfo.addAuditTrail(SystemInfo.java:150)
+	at com.tlc.common.SystemInfo.<clinit>(SystemInfo.java:86)
+	at com.tlc.gui.modules.common.Model.<init>(Model.java:29)
+	at com.psi.clearing.m.Clearing.<init>(Clearing.java:21)
+	at com.psi.clearing.c.TransactionClearingCommand.execute(TransactionClearingCommand.java:29)
+	at com.psi.clearing.test.Tester.RemitClaimsCollection(Tester.java:36)
+	at com.psi.clearing.test.Tester.main(Tester.java:19)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
+	... 29 more
+
+22:09:52.101 TBLLANGUAGE not configured!
+22:09:53.119 TBLACCOUNTTYPE not configured!
+22:09:54.776 clear url:http://localhost:9992/core/181234591346/funds/clearing?request-id=90001806210000024&clearing-id=1051806080000525
+22:09:54.777 clear response:
+22:10:48.724 TBLLANGUAGE not configured!
+22:10:49.754 TBLACCOUNTTYPE not configured!
+22:10:51.400 deallocate url:http://localhost:9992/core/181234591346/funds/clearing?request-id=90001806210000025&clearing-id=1051806080000525
+22:10:51.402 deallocate response:
+22:12:23.647 TBLLANGUAGE not configured!
+22:12:24.576 TBLACCOUNTTYPE not configured!

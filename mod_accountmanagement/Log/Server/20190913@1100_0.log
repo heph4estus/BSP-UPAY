@@ -1,0 +1,163 @@
+11:43:18.576 TBLLANGUAGE not configured!
+11:43:19.168 TBLACCOUNTTYPE not configured!
+11:43:20.848 DBConnection unavailable!
+11:43:20.849 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:24.795 TBLLANGUAGE not configured!
+11:45:25.394 TBLACCOUNTTYPE not configured!
+11:45:26.656 DBConnection unavailable!
+11:45:26.657 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:31.657 DBConnection unavailable!
+11:45:31.658 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:36.659 DBConnection unavailable!
+11:45:36.660 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:41.662 DBConnection unavailable!
+11:45:41.663 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:46.664 DBConnection unavailable!
+11:45:46.665 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:51.666 DBConnection unavailable!
+11:45:51.667 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:45:56.669 DBConnection unavailable!
+11:45:56.670 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:46:01.671 DBConnection unavailable!
+11:46:01.672 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:46:06.674 DBConnection unavailable!
+11:46:06.675 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:46:11.676 DBConnection unavailable!
+11:46:11.677 java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+
+11:46:16.678 java.lang.Exception: DBConnection unavailable!
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:458)
+	at com.psi.oracle.queue.Queue.open(Queue.java:33)
+	at com.ibayad.transmitters.client.SmsMessage.send(SmsMessage.java:64)
+	at com.psi.accountmanagement.utils.OneTimePassword.send(OneTimePassword.java:79)
+	at com.psi.accountmanagement.test.Tester.main(Tester.java:88)
+Caused by: java.sql.SQLException: Connection Cache with this Cache Name already exists
+	at oracle.jdbc.pool.OracleConnectionCacheManager.createCache(OracleConnectionCacheManager.java:239)
+	at oracle.jdbc.pool.OracleDataSource.cacheInitialize(OracleDataSource.java:412)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:393)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:443)
+	... 4 more
+
+11:46:16.680 Transmitter DbConnection Not Available

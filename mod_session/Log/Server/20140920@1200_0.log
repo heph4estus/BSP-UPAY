@@ -1,0 +1,60 @@
+12:10:03.898 TBLLANGUAGE not configured!
+12:23:01.114 TBLLANGUAGE not configured!
+12:32:17.714 TBLLANGUAGE not configured!
+12:35:55.322 TBLLANGUAGE not configured!
+12:46:08.843 TBLLANGUAGE not configured!
+12:47:22.632 TBLLANGUAGE not configured!
+12:48:01.951 TBLLANGUAGE not configured!
+12:50:45.102 TBLLANGUAGE not configured!
+12:56:14.321 DBConnection unavailable!
+12:56:14.330 java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:280)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:207)
+	at oracle.jdbc.pool.OracleConnectionPoolDataSource.getPhysicalConnection(OracleConnectionPoolDataSource.java:139)
+	at oracle.jdbc.pool.OracleConnectionPoolDataSource.getPooledConnection(OracleConnectionPoolDataSource.java:88)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.makeCacheConnection(OracleImplicitConnectionCache.java:1598)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.makeOneConnection(OracleImplicitConnectionCache.java:515)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.getCacheConnection(OracleImplicitConnectionCache.java:475)
+	at oracle.jdbc.pool.OracleImplicitConnectionCache.getConnection(OracleImplicitConnectionCache.java:357)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:395)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:179)
+	at oracle.jdbc.pool.OracleDataSource.getConnection(OracleDataSource.java:157)
+	at com.tlc.common.DbWrapper.GetConnection(DbWrapper.java:357)
+	at com.tlc.common.DbWrapper.QueryUpdate(DbWrapper.java:226)
+	at com.tlc.common.SystemInfo.addAuditTrail(SystemInfo.java:150)
+	at com.tlc.common.SystemInfo.<clinit>(SystemInfo.java:86)
+	at com.tlc.gui.modules.common.Model.<init>(Model.java:27)
+	at com.tlc.gui.modules.session.UISession.<init>(UISession.java:37)
+	at com.tlc.absmobile.bp.session.AbstractNewSession.<init>(AbstractNewSession.java:9)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.<init>(NewSession.java:41)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.parse(NewSession.java:25)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:14)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
+	... 26 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
+	... 31 more
+
+12:56:24.663 TBLLANGUAGE not configured!

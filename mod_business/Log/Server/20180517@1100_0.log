@@ -1,0 +1,246 @@
+11:08:17.659 TBLLANGUAGE not configured!
+11:08:18.476 TBLACCOUNTTYPE not configured!
+11:08:21.353 java.lang.Exception: No column name : FIRSTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:44)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.354 java.lang.Exception: No column name : FIRSTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:44)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.356 java.lang.Exception: No column name : LASTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:45)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.357 java.lang.Exception: No column name : LASTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:45)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.358 java.lang.Exception: No column name : EMAIL
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:46)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.359 java.lang.Exception: No column name : EMAIL
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:46)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.360 java.lang.Exception: No column name : MSISDN
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:47)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.361 java.lang.Exception: No column name : MSISDN
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:47)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.362 java.lang.Exception: No column name : USERNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:48)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:21.363 java.lang.Exception: No column name : USERNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:48)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:22.998 java.lang.Exception: No column name : FIRSTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:44)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:22.999 java.lang.Exception: No column name : FIRSTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:44)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.000 java.lang.Exception: No column name : LASTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:45)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.001 java.lang.Exception: No column name : LASTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:45)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.002 java.lang.Exception: No column name : EMAIL
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:46)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.003 java.lang.Exception: No column name : EMAIL
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:46)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.004 java.lang.Exception: No column name : MSISDN
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:47)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.005 java.lang.Exception: No column name : MSISDN
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:47)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.006 java.lang.Exception: No column name : USERNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:48)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:23.006 java.lang.Exception: No column name : USERNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:48)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.532 java.lang.Exception: No column name : FIRSTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:44)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.533 java.lang.Exception: No column name : FIRSTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:44)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.534 java.lang.Exception: No column name : LASTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:45)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.535 java.lang.Exception: No column name : LASTNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:45)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.536 java.lang.Exception: No column name : EMAIL
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:46)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.537 java.lang.Exception: No column name : EMAIL
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:46)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.538 java.lang.Exception: No column name : MSISDN
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:47)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.539 java.lang.Exception: No column name : MSISDN
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:47)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.540 java.lang.Exception: No column name : USERNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:48)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:08:41.541 java.lang.Exception: No column name : USERNAME
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getString(DataRow.java:48)
+	at com.psi.business.m.BusinessCollection.hasRows(BusinessCollection.java:48)
+	at com.psi.business.c.BusinessCollectionCommand.execute(BusinessCollectionCommand.java:30)
+	at com.psi.business.test.Tester.RegisteredProduct(Tester.java:43)
+	at com.psi.business.test.Tester.main(Tester.java:34)
+
+11:10:10.496 TBLLANGUAGE not configured!
+11:10:11.311 TBLACCOUNTTYPE not configured!
+11:11:27.128 TBLLANGUAGE not configured!
+11:11:27.951 TBLACCOUNTTYPE not configured!

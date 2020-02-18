@@ -1,0 +1,16 @@
+14:33:25.019 TBLLANGUAGE not configured!
+14:33:25.948 TBLACCOUNTTYPE not configured!
+14:33:26.398 pasok operator1
+14:33:29.754 Message replace: Hi,
+
+The password set to your Bayad Center account is JAZK.  <br>
+ Please try to login to this URL https://www.ibayadcenter.com/operator/login <br><br>
+
+                
+                Sincerely,<br /><br />
+
+                CIS Bayad Center, Inc.<br /><br /><br />
+
+                Note: ***This is an auto-generated email, please do not reply***. 
+14:33:29.757 Request: {"to":"gelline.francia@paytyche.com","body":"Hi,\n\nThe password set to your Bayad Center account is JAZK.  <br>\n Please try to login to this URL https:\/\/www.ibayadcenter.com\/operator\/login <br><br>\n\n                \n                Sincerely,<br \/><br \/>\n\n                CIS Bayad Center, Inc.<br \/><br \/><br \/>\n\n                Note: ***This is an auto-generated email, please do not reply***. ","subject":"Forgot Password","auth":{"port":"443","username":"support@ibayad.com ","host":"192.168.3.11","password":"pa55word"}}
+14:33:50.877 error: org.apache.http.conn.HttpHostConnectException: Connection to http://192.168.7.11:8080 refused

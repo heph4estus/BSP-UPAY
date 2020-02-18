@@ -1,0 +1,9 @@
+16:13:49.844 TBLLANGUAGE not configured!
+16:13:50.654 TBLACCOUNTTYPE not configured!
+16:13:53.132 business request:{"user-id":"POLEN","request-id":"30101809240000000","valid-id-desc":"COMPANY","type":"merchant","subscriber":{"valid-id":"BAYAD8","corporate-info":{"business-address":{"region-code":"NCR CITY OF MANILA FIRST DISTRICT","city-code":"ERMITA","specific-address":"1st, Mezzanine & 2nd Floors, Filhigh Trading Bldg, 1923-25 Angel Linao St.","coordinates":",","postal-code":""},"registration-date":"2018-09-24 16:06:34.0","tin":""},"middle-name":"HOMEKING","first-name":"HOMEKING","business-name":"HOMEKING","authorized-mobile":"(02) 242 7801","last-name":"HOMEKING","account-name":"HOMEKING","password":"1234"},"auth":{"password":"1234"}}
+16:13:53.133 url:null478921234568/corporates
+16:17:24.138 TBLLANGUAGE not configured!
+16:17:24.958 TBLACCOUNTTYPE not configured!
+16:17:27.436 business request:{"user-id":"POLEN","request-id":"30101809240000001","valid-id-desc":"COMPANY","type":"merchant","subscriber":{"valid-id":"BAYAD9","corporate-info":{"business-address":{"region-code":"NCR CITY OF MANILA FIRST DISTRICT","city-code":"ERMITA","specific-address":"1st, Mezzanine & 2nd Floors, Filhigh Trading Bldg, 1923-25 Angel Linao St.","coordinates":",","postal-code":""},"registration-date":"2018-09-24 16:10:08.0","tin":""},"middle-name":"HOMEKING","first-name":"HOMEKING","business-name":"HOMEKING","authorized-mobile":"(02) 242 7801","last-name":"HOMEKING","account-name":"HOMEKING","password":"1234"},"auth":{"password":"1234"}}
+16:17:27.439 url:http://localhost:9992/core/478921234568/corporates
+16:17:28.932  response : {"account-number":"284123465458","message":"You are successfully registered to MakaRIDE. Please proceed to login to your account.","code":0}

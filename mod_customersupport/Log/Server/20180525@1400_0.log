@@ -1,0 +1,6 @@
+14:07:05.248 TBLLANGUAGE not configured!
+14:07:05.884 TBLACCOUNTTYPE not configured!
+14:07:06.226 fulfillment request:{"values":[{"response-id":"1051234567890","receipt-validation":"1234567890","trace-id":"1234567890"}],"request-id":"90001805250000003","remarks":null}
+14:10:33.707 TBLLANGUAGE not configured!
+14:10:34.359 TBLACCOUNTTYPE not configured!
+14:10:35.012 void request:{"request-id":"90001805250000004","auth":{"business":"1234"}}

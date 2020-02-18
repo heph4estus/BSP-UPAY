@@ -1,0 +1,350 @@
+08:04:01.258 TBLLANGUAGE not configured!
+08:06:01.576 TBLLANGUAGE not configured!
+08:06:02.521 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:06:02.522 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:06:02.524 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:06:02.525 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:06:02.527 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:06:02.528 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:08:30.066 TBLLANGUAGE not configured!
+08:08:36.380 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:08:36.381 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:08:36.383 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:08:36.384 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:08:36.386 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:08:36.387 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:10:46.513 TBLLANGUAGE not configured!
+08:10:48.997 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:10:48.999 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:10:49.000 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:10:49.001 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:10:49.003 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:10:49.004 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:11:56.790 TBLLANGUAGE not configured!
+08:12:01.659 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:01.660 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:01.662 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:01.663 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:01.665 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:01.666 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:26.007 TBLLANGUAGE not configured!
+08:12:35.492 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:35.493 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:35.495 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:35.496 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:35.498 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:12:35.500 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:14:26.543 TBLLANGUAGE not configured!
+08:14:27.836 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:14:27.837 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:14:27.839 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:14:27.840 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:14:27.841 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:14:27.843 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:20:03.377 TBLLANGUAGE not configured!
+08:20:04.479 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:20:04.481 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:20:04.482 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:20:04.484 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:20:04.485 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:20:04.486 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:22:29.900 TBLLANGUAGE not configured!
+08:22:31.006 java.lang.Exception: No column name : MINPASSWORD
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:227)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:22:31.008 java.lang.Exception: No column name : MAXALLOCUSER
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:228)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:22:31.009 java.lang.Exception: No column name : PASSWORDEXPIRY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:229)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:22:31.011 java.lang.Exception: No column name : PASSWORDHISTORY
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:230)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:22:31.012 java.lang.Exception: No column name : SEARCHRANGE
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:231)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:22:31.013 java.lang.Exception: No column name : SESSIONTIMEOUT
+	at com.tlc.common.DataRow.get(DataRow.java:40)
+	at com.tlc.common.DataRow.getInteger(DataRow.java:60)
+	at com.tlc.gui.absmobile.modules.session.m.NewSession.start(NewSession.java:232)
+	at com.tlc.gui.absmobile.modules.session.c.LoginCommand.execute(LoginCommand.java:15)
+	at com.tlc.gui.absmobile.modules.session.unit.Test.main(Test.java:21)
+
+08:24:23.012 TBLLANGUAGE not configured!
+08:26:56.247 TBLLANGUAGE not configured!
+08:29:35.533 TBLLANGUAGE not configured!
+08:31:41.479 TBLLANGUAGE not configured!
+08:58:57.482 TBLLANGUAGE not configured!

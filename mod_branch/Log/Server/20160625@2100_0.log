@@ -1,0 +1,10 @@
+21:22:17.379 TBLLANGUAGE not configured!
+21:22:17.568 TBLACCOUNTTYPE not configured!
+21:22:18.177 {"user-id":"POLEN","request-id":"20160625212217","valid-id-desc":"COMPANY","type":"merchant","subscriber":{"valid-id":"BAYAD13","corporate-info":{"business-address":{"region-code":"Quezon","city-code":"Lucena","specific-address":"Lucena City, Quezon","coordinates":"10000000,1111111","postal-code":"5522"},"registration-date":"20160625212217","tin":""},"middle-name":"BranchOne","first-name":"BranchOne","business-name":"BranchOne","authorized-mobile":"639302603003","last-name":"BranchOne","account-name":"BranchOne"},"auth":{"password":"PASSWORD"}}
+21:22:19.156  response : {"message":"Mobile number is already registered.","code":4}
+21:22:37.321 TBLLANGUAGE not configured!
+21:22:37.549 TBLACCOUNTTYPE not configured!
+21:22:38.234 {"user-id":"POLEN","request-id":"20160625212238","valid-id-desc":"COMPANY","type":"merchant","subscriber":{"valid-id":"BAYAD14","corporate-info":{"business-address":{"region-code":"Quezon","city-code":"Lucena","specific-address":"Lucena City, Quezon","coordinates":"10000000,1111111","postal-code":"5522"},"registration-date":"20160625212238","tin":""},"middle-name":"BranchOne","first-name":"BranchOne","business-name":"BranchOne","authorized-mobile":"639302603008","last-name":"BranchOne","account-name":"BranchOne"},"auth":{"password":"PASSWORD"}}
+21:22:38.938  response : {"account-number":"492741234580","message":"","code":0}
+21:22:55.428 TBLLANGUAGE not configured!
+21:22:55.631 TBLACCOUNTTYPE not configured!
