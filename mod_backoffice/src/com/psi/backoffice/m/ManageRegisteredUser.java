@@ -1,6 +1,7 @@
 package com.psi.backoffice.m;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import javax.xml.bind.DatatypeConverter;
@@ -24,7 +25,7 @@ public class ManageRegisteredUser extends Users{
 		  GetAuditPreviousData previous = new GetAuditPreviousData();
 		  ArrayList<Object> parameters = new ArrayList<Object>();  
 		  parameters.add(this.id);
-		  previous.setQuery("SELECT EMAIL,MSISDN,U.USERID,FIRSTNAME,MIDDLENAME,LASTNAME,USERSLEVEL,US.DEPARTMENT,EMPLOYMENTSTATUS,EMPLOYEENUMBER,IMMEDIATEHEAD FROM TBLUSERS U INNER JOIN TBLUSERSTITLE US ON U.USERNAME = US.USERID WHERE U.USERID=?");
+		  previous.setQuery("SELECT EMAIL,MSISDN,U.USERID,FIRSTNAME,MIDDLENAME,LASTNAME,USERSLEVEL,US.DEPARTMENT,EMPLOYMENTSTATUS,EMPLOYEENUMBER FROM TBLUSERS U INNER JOIN TBLUSERSTITLE US ON U.USERNAME = US.USERID WHERE U.USERID=?");
 		  previous.setParam(parameters);
 		  this.setAuditdata(previous.getData());
 		  //****END OF AUDITTRAIL PREVIOUS DATA********
@@ -148,5 +149,35 @@ public boolean exist2(){
 		UISession sess = this.getAuthorizedSession();
 		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLUSERS WHERE USERID = ? AND PASSWORD = ENCRYPT(?,?,USERNAME)", sess.getAccount().getId(),this.password,SystemInfo.getDb().getCrypt()).size()>0;
 	}
-		 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		Field[] fields = this.getClass().getSuperclass().getDeclaredFields();
+		
+		for(Field f : fields) {
+			try {
+				f.setAccessible(true);
+				if(f.get(this) != null && !f.getName().equalsIgnoreCase("AUDITDATA") && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+			
+		}
+		Field[] fieldss = this.getClass().getDeclaredFields();
+		for(Field f : fieldss) {
+			f.setAccessible(true);
+			try {
+				if(f.get(this) != null && !f.getName().equalsIgnoreCase("AUDITDATA") && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+			
+		}
+		if(sb.length() > 0)
+		sb.deleteCharAt(sb.lastIndexOf("|"));
+		return sb.toString();
+	}
 }

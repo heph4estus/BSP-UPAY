@@ -50,6 +50,7 @@ public class LockedUnlockedCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
+				    audit.setData(reg.toString());
 				    
 		    		audit.insert();
 					return new JsonView(reg);  
@@ -71,7 +72,7 @@ public class LockedUnlockedCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    
+				    audit.setData(reg.toString());
 		    		audit.insert();
 					return new JsonView(reg);  
 				}
@@ -91,9 +92,9 @@ public class LockedUnlockedCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());
+					  //  audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());
 					    audit.setRequest(this.params.toString());
-					    
+					    audit.setData(reg.toString());
 			    		audit.insert();
 						return new JsonView(reg);  
 					}else{
@@ -113,8 +114,10 @@ public class LockedUnlockedCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString()); 
-					    audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());					    
+					 //   audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());	
+					    audit.setData(reg.toString());
 			    		audit.insert();
+			    		
 						return new JsonView(reg);  
 					}
 			}else{
