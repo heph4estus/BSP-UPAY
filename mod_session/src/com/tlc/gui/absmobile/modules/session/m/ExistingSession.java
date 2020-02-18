@@ -123,7 +123,7 @@ public class ExistingSession extends AbstractExistingSession {
 			query.append("	vOS	:=?;\n");
 			query.append("	vUSERSLEVEL	:=?;\n");
 			query.append("	UPDATE TBLUSERS SET SESSIONID=NULL,LASTLOGIN=SYSDATE WHERE USERID=vUSERID;\n");
-			query.append("	INSERT INTO TBLAUDITTRAIL(USERNAME,USERID,SESSIONID,MODULE,IP,STATUS,BROWSER,BROWSERVERSION,PORTALVERSION,OS,USERSLEVEL) VALUES(vUSERNAME,vUSERID,vSESSIONID,vMODULEID,vIPADDRESS,'00',vBROWSER,vBROWSERVERSION,vPORTALVERSION,vOS,vUSERSLEVEL);\n");
+			query.append("	INSERT INTO TBLAUDITTRAIL(USERNAME,USERID,SESSIONID,MODULE,IP,STATUS,BROWSER,BROWSERVERSION,PORTALVERSION,OS,USERSLEVEL,LOG,DATA) VALUES(vUSERNAME,vUSERID,vSESSIONID,vMODULEID,vIPADDRESS,'00',vBROWSER,vBROWSERVERSION,vPORTALVERSION,vOS,vUSERSLEVEL,'Success','Logged out to the System');\n");
 			query.append(SQL_FOOTER);
 			if(this.db.QueryUpdate(query.toString(), this.getAccount().getId(),this.getAccount().getUserName(),this.id,this.token.IpAddress,this.getAccount().getBrowser(),this.getAccount().getBrowserversion(),this.getAccount().getPortalversion(),this.getAccount().getOs(),this.getAccount().getGroup().getName())>0){
 				this.setState(new ObjectState("00"));
