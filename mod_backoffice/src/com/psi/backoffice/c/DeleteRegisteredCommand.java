@@ -48,7 +48,7 @@ public class DeleteRegisteredCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    
+				    audit.setData("USERID:"+id);
 		    		audit.insert();
 					return new JsonView(reg);  
 				}
@@ -58,7 +58,7 @@ public class DeleteRegisteredCommand extends UICommand{
 		    		audit.setIp(reg.getAuthorizedSession().getIpAddress());
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(id);
-		    		audit.setLog("Account do not exist: "+id);
+		    		audit.setLog("Incorrect password");
 		    		audit.setStatus(reg.getState().getCode());
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -69,6 +69,7 @@ public class DeleteRegisteredCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
+				    audit.setData("USERID:"+id);
 				    
 		    		audit.insert();
 					return new JsonView(reg);  
@@ -89,7 +90,7 @@ public class DeleteRegisteredCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(id+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());
+					    audit.setData("USERID:"+id+"|USERNAME:"+reg.getUsername()+"|FIRSTNAME:"+reg.getFirstname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 					    audit.setRequest(this.params.toString());
 					    
 			    		audit.insert();
@@ -111,7 +112,7 @@ public class DeleteRegisteredCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString()); 
-					    audit.setData(id+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());					    
+					    audit.setData("USERID:"+id+"|USERNAME:"+reg.getUsername()+"|FIRSTNAME:"+reg.getFirstname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());					    
 			    		audit.insert();
 						return new JsonView(reg);  
 					}

@@ -1,19 +1,22 @@
 package com.psi.backoffice.m;
 
+import java.lang.reflect.Field;
+
 import com.tlc.common.DataRow;
 import com.tlc.common.DataRowCollection;
+import com.tlc.common.Logger;
 import com.tlc.common.SystemInfo;
 import com.tlc.gui.modules.common.ModelCollection;
 import com.tlc.gui.modules.common.ReportItem;
 
 public class RegisteredCollection extends ModelCollection{
 	
-	protected String id;
+	protected String accountnumber;
 	
 	@Override
 	public boolean hasRows() {
 		
-	     DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT DISTINCT U.*,UT.DEPARTMENT,UT.EMPLOYMENTSTATUS,UT.EMPLOYEENUMBER FROM TBLUSERS U LEFT JOIN TBLUSERSTITLE UT ON U.USERNAME = UT.USERID  WHERE ACCOUNTNUMBER =? AND USERSLEVEL IN ( SELECT USERSLEVEL FROM TBLUSERSLEVEL WHERE PORTAL = 'operator')", this.id);
+	     DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT DISTINCT U.*,UT.DEPARTMENT,UT.EMPLOYMENTSTATUS,UT.EMPLOYEENUMBER FROM TBLUSERS U LEFT JOIN TBLUSERSTITLE UT ON U.USERNAME = UT.USERID  WHERE ACCOUNTNUMBER =? AND USERSLEVEL IN ( SELECT USERSLEVEL FROM TBLUSERSLEVEL WHERE PORTAL = 'operator')", this.accountnumber);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -35,17 +38,46 @@ public class RegisteredCollection extends ModelCollection{
 	     }
 	     return r.size() > 0;
 	}
-
-	public String getId() {
-		return id;
+	
+	public String getAccountnumber() {
+		return accountnumber;
+	}
+	public void setAccountnumber(String accountnumber) {
+		this.accountnumber = accountnumber;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+
+
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		Field[] fields = this.getClass().getSuperclass().getDeclaredFields();
+		
+		for(Field f : fields) {
+			try {
+				f.setAccessible(true);
+				if(f.get(this) != null && !f.getName().equalsIgnoreCase("AUDITDATA") && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+			
+		}
+		Field[] fieldss = this.getClass().getDeclaredFields();
+		for(Field f : fieldss) {
+			f.setAccessible(true);
+			try {
+				if(f.get(this) != null && !f.getName().equalsIgnoreCase("AUDITDATA") && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+			
+		}
+		if(sb.length() > 0)
+		sb.deleteCharAt(sb.lastIndexOf("|"));
+		return sb.toString();
 	}
-
-	
-
-	
-
 }

@@ -58,7 +58,8 @@ public class NewRegisterCommand extends UICommand{
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(username);
 		    		audit.setLog(reg.getState().getMessage());
-		    		audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		audit.setData(reg.toString());
+		    		//audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
 		    		audit.setStatus(reg.getState().getCode());
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -80,7 +81,8 @@ public class NewRegisterCommand extends UICommand{
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(username);
 		    		audit.setLog(reg.getState().getMessage());
-		    		audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		//audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		audit.setData(reg.toString());
 		    		audit.setStatus(reg.getState().getCode());
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -102,7 +104,8 @@ public class NewRegisterCommand extends UICommand{
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(username);
 		    		audit.setLog(reg.getState().getMessage());
-		    		audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		//audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		audit.setData(reg.toString());
 		    		audit.setStatus(reg.getState().getCode());
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -124,7 +127,8 @@ public class NewRegisterCommand extends UICommand{
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(username);
 		    		audit.setLog(reg.getState().getMessage());
-		    		audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		//audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+		    		audit.setData(reg.toString());
 		    		audit.setStatus(reg.getState().getCode());
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -147,7 +151,8 @@ public class NewRegisterCommand extends UICommand{
 	    		audit.setModuleid(String.valueOf(this.getId()));
 	    		audit.setEntityid(username);
 	    		audit.setLog(reg.getState().getMessage());
-	    		audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+	    		//audit.setData(reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getMidname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn()+"|"+accountnumber+"|"+userslevel+"|"+employmentstatus+"|"+employeenumber);
+	    		audit.setData(reg.toString());
 	    		audit.setStatus(reg.getState().getCode());
 	    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 	    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());

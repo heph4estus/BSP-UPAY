@@ -61,8 +61,8 @@ public class EditRegisteredCommand extends UICommand{
 				    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData("EMAIL: "+email+"| MSISDN: "+msisdn+"| USERID: "+id+"| FIRSTNAME: "+firstname+"| LASTNAME: "+lastname+"| USERSLEVEL: "+userslevel+"| DEPARTMENT: "+department+"| EMPLOYEMENTSTATUS: "+employmentstatus+"| EMPLOYEENUMBER: "+employeenumber);
-				    audit.setRequest(this.params.toString());
+				   // audit.setData("EMAIL:"+email+"|MSISDN:"+msisdn+"|USERID:"+id+"|FIRSTNAME:"+firstname+"|LASTNAME:"+lastname+"|USERSLEVEL:"+userslevel+"|DEPARTMENT:"+department+"|EMPLOYEMENTSTATUS:"+employmentstatus+"|EMPLOYEENUMBER:"+employeenumber);
+				    audit.setData(reg.toString());				 
 				    audit.setOlddata(reg.getAuditdata());
 		    		audit.insert();
 					return new JsonView(reg);
@@ -85,8 +85,8 @@ public class EditRegisteredCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData("EMAIL: "+email+"| MSISDN: "+msisdn+"| USERID: "+id+"| FIRSTNAME: "+firstname+"| LASTNAME: "+lastname+"| USERSLEVEL: "+userslevel+"| DEPARTMENT: "+department+"| EMPLOYEMENTSTATUS: "+employmentstatus+"| EMPLOYEENUMBER: "+employeenumber);
-					    audit.setRequest(this.params.toString());
+					   // audit.setData("EMAIL:"+email+"|MSISDN:"+msisdn+"|USERID:"+id+"|FIRSTNAME:"+firstname+"|LASTNAME:"+lastname+"|USERSLEVEL:"+userslevel+"|DEPARTMENT:"+department+"|EMPLOYEMENTSTATUS:"+employmentstatus+"|EMPLOYEENUMBER:"+employeenumber);					    audit.setRequest(this.params.toString());
+					    audit.setData(reg.toString());			
 					    audit.setOlddata(reg.getAuditdata());
 			    		audit.insert();
 			    		return new JsonView(reg);
@@ -107,8 +107,8 @@ public class EditRegisteredCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData("EMAIL: "+email+"| MSISDN: "+msisdn+"| USERID: "+id+"| FIRSTNAME: "+firstname+"| LASTNAME: "+lastname+"| USERSLEVEL: "+userslevel+"| DEPARTMENT: "+department+"| EMPLOYEMENTSTATUS: "+employmentstatus+"| EMPLOYEENUMBER: "+employeenumber);
-					    audit.setOlddata(reg.getAuditdata());
+					    //audit.setData("EMAIL:"+email+"|MSISDN:"+msisdn+"|USERID:"+id+"|FIRSTNAME:"+firstname+"|LASTNAME:"+lastname+"|USERSLEVEL:"+userslevel+"|DEPARTMENT:"+department+"|EMPLOYEMENTSTATUS:"+employmentstatus+"|EMPLOYEENUMBER:"+employeenumber);					    audit.setOlddata(reg.getAuditdata());
+					    audit.setData(reg.toString());			
 					    audit.insert();
 						return new JsonView(reg);
 					}
@@ -128,8 +128,8 @@ public class EditRegisteredCommand extends UICommand{
 				    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData("EMAIL: "+email+"| MSISDN: "+msisdn+"| USERID: "+id+"| FIRSTNAME: "+firstname+"| LASTNAME: "+lastname+"| USERSLEVEL: "+userslevel+"| DEPARTMENT: "+department+"| EMPLOYEMENTSTATUS: "+employmentstatus+"| EMPLOYEENUMBER: "+employeenumber);
-				    audit.setRequest(this.params.toString());
+				    //audit.setData("EMAIL:"+email+"|MSISDN:"+msisdn+"|USERID:"+id+"|FIRSTNAME:"+firstname+"|LASTNAME:"+lastname+"|USERSLEVEL:"+userslevel+"|DEPARTMENT:"+department+"|EMPLOYEMENTSTATUS:"+employmentstatus+"|EMPLOYEENUMBER:"+employeenumber);				    audit.setRequest(this.params.toString());
+				    audit.setData(reg.toString());			
 				    audit.setOlddata(reg.getAuditdata());
 		    		audit.insert();
 					return new JsonView(reg);

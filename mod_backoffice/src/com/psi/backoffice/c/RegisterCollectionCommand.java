@@ -27,7 +27,7 @@ public class RegisterCollectionCommand extends UICommand{
 				
 				RegisteredCollection col = new RegisteredCollection();
 						
-				col.setId(accountnumber);	
+				col.setAccountnumber(accountnumber);	
 			    col.setAuthorizedSession(sess);
 				
 				if(col.hasRows()){
@@ -35,7 +35,7 @@ public class RegisterCollectionCommand extends UICommand{
 		    		audit.setIp(col.getAuthorizedSession().getIpAddress());
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(accountnumber);
-		    		audit.setLog("Successfully fetch data: "+accountnumber);
+		    		audit.setLog("Successfully fetch data");
 		    		audit.setStatus("00");
 		    		audit.setUserid(col.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(col.getAuthorizedSession().getAccount().getUserName());
@@ -45,7 +45,7 @@ public class RegisterCollectionCommand extends UICommand{
 				    audit.setPortalversion(col.getAuthorizedSession().getPortalverion());
 				    audit.setOs(col.getAuthorizedSession().getOs());
 				    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(accountnumber);
+				    audit.setData(col.toString());
 				    audit.setRequest(this.params.toString());
 		    		audit.insert();
 					return new CollectionView("00",col);  
@@ -55,7 +55,7 @@ public class RegisterCollectionCommand extends UICommand{
 			    		audit.setIp(col.getAuthorizedSession().getIpAddress());
 			    		audit.setModuleid(String.valueOf(this.getId()));
 			    		audit.setEntityid(accountnumber);
-			    		audit.setLog("No data found: "+accountnumber);
+			    		audit.setLog("No data found");
 			    		audit.setStatus("01");
 			    		audit.setUserid(col.getAuthorizedSession().getAccount().getId());
 			    		audit.setUsername(col.getAuthorizedSession().getAccount().getUserName());
@@ -67,6 +67,7 @@ public class RegisterCollectionCommand extends UICommand{
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setData(accountnumber);
 					    audit.setRequest(this.params.toString());
+					    audit.setData(col.toString());
 			    		audit.insert();
 						return new NoDataFoundView(state); 
 				}
