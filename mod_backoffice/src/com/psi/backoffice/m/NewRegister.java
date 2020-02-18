@@ -46,7 +46,7 @@ public class NewRegister extends Users{
 		for(Field f : fields) {
 			try {
 				f.setAccessible(true);
-				if(f.get(this) != null && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
+				if(f.get(this) != null && !f.getName().equalsIgnoreCase("AUDITDATA") && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
 					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
 			} catch (IllegalArgumentException | IllegalAccessException e) {
 				Logger.LogServer(this.getClass().getSimpleName(), e);
@@ -57,7 +57,7 @@ public class NewRegister extends Users{
 		for(Field f : fieldss) {
 			f.setAccessible(true);
 			try {
-				if(f.get(this) != null && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
+				if(f.get(this) != null && !f.getName().equalsIgnoreCase("AUDITDATA") && !f.getName().equalsIgnoreCase("PASSWORD") && !f.getName().equalsIgnoreCase("SERIALVERSIONUID") && !f.getName().equalsIgnoreCase("AUTHORIZEDSESSION"))
 					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
 			} catch (IllegalArgumentException | IllegalAccessException e) {
 				Logger.LogServer(this.getClass().getSimpleName(), e);

@@ -37,7 +37,7 @@ public class ResetPasswordCommand extends UICommand{
 		    		audit.setIp(reg.getAuthorizedSession().getIpAddress());
 		    		audit.setModuleid(String.valueOf(this.getId()));
 		    		audit.setEntityid(username);
-		    		audit.setLog("Account do not exist: "+username);
+		    		audit.setLog("Account do not exist");
 		    		audit.setStatus(reg.getState().getCode());
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
@@ -48,6 +48,7 @@ public class ResetPasswordCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
+				    audit.setData(reg.toString());
 				    
 		    		audit.insert();
 					return new JsonView(reg);  
@@ -69,7 +70,7 @@ public class ResetPasswordCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    
+				    audit.setData(reg.toString());
 		    		audit.insert();
 					return new JsonView(reg);  
 				}
@@ -89,9 +90,9 @@ public class ResetPasswordCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());
+					    //audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());
 					    audit.setRequest(this.params.toString());
-					    
+					    audit.setData(reg.toString());
 			    		audit.insert();
 						return new JsonView(reg);  
 					}else{
@@ -111,7 +112,8 @@ public class ResetPasswordCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString()); 
-					    audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());					    
+					   // audit.setData(username+"|"+reg.getUsername()+"|"+reg.getFirstname()+"|"+reg.getLastname()+"|"+reg.getEmail()+"|"+reg.getMsisdn());		
+					    audit.setData(reg.toString());
 			    		audit.insert();
 						return new JsonView(reg);  
 					}
