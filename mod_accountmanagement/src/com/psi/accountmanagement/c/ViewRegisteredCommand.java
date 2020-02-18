@@ -47,7 +47,7 @@ public class ViewRegisteredCommand extends UICommand{
 				    audit.setPortalversion(col.getAuthorizedSession().getPortalverion());
 				    audit.setOs(col.getAuthorizedSession().getOs());
 				    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(id+"|"+userslevel);
+				    audit.setData("USERID:"+id+"|USERSLEVEL:"+userslevel);
 				    audit.setRequest(this.params.toString());
 		    		audit.insert();
 					return new CollectionView("00",col);  
@@ -67,7 +67,7 @@ public class ViewRegisteredCommand extends UICommand{
 					    audit.setPortalversion(col.getAuthorizedSession().getPortalverion());
 					    audit.setOs(col.getAuthorizedSession().getOs());
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(id+"|"+userslevel);
+					    audit.setData("USERID:"+id+"|USERSLEVEL:"+userslevel);
 					    audit.setRequest(this.params.toString());
 			    		audit.insert();
 						return new NoDataFoundView(state); 

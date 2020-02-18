@@ -59,7 +59,7 @@ public class ForgotPasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(email+"|"+url);
+					    audit.setData("EMAIL:"+email+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -80,7 +80,7 @@ public class ForgotPasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(email+"|"+url);
+					    audit.setData("EMAIL:"+email+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -124,7 +124,7 @@ public class ForgotPasswordCommand extends UICommand {
 						    audit.setPortalversion(portalversion);
 						    audit.setOs(os);
 						    audit.setUserslevel(model.getUserslevel());
-						    audit.setData(email+"|"+url);
+						    audit.setData("EMAIL:"+email+"|URL:"+url);
 						    audit.setRequest(this.params.toString());
 				    		audit.insert();
 				    		
@@ -144,7 +144,7 @@ public class ForgotPasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(email+"|"+url);
+					    audit.setData("EMAIL:"+email+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  

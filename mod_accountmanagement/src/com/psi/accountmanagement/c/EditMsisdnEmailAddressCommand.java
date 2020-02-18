@@ -73,7 +73,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 		    		audit.setStatus("01");
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
-		    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+		    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 		    		audit.setOlddata(reg.getAuditdata());
 		    		audit.setBrowser(reg.getAuthorizedSession().getBrowser());
 		    		audit.setBrowserversion(reg.getAuthorizedSession().getBrowserversion());
@@ -95,8 +95,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 		    		audit.setStatus("02");
 		    		audit.setUserid(reg.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(reg.getAuthorizedSession().getAccount().getUserName());
-		    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
-		    		audit.setOlddata(reg.getAuditdata());
+		    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());		    		audit.setOlddata(reg.getAuditdata());
 		    		audit.setBrowser(reg.getAuthorizedSession().getBrowser());
 		    		audit.setBrowserversion(reg.getAuthorizedSession().getBrowserversion());
 		    		audit.setOs(reg.getAuthorizedSession().getOs());
@@ -133,7 +132,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -156,7 +155,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -200,7 +199,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -222,7 +221,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -266,7 +265,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -288,7 +287,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -336,7 +335,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();
@@ -358,7 +357,7 @@ public class EditMsisdnEmailAddressCommand extends UICommand{
 			    		audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
 			    		audit.setSessionid(reg.getAuthorizedSession().getId());
-			    		audit.setData("FIRSTNAME: "+reg.getFirstname()+"| MIDDLENAME: "+reg.getMidname()+"| LASTNAME: "+reg.getLastname()+"| EMAIL: "+reg.getEmail()+"| MSISDN: "+reg.getMsisdn());
+			    		audit.setData("FIRSTNAME:"+reg.getFirstname()+"|MIDDLENAME:"+reg.getMidname()+"|LASTNAME:"+reg.getLastname()+"|EMAIL:"+reg.getEmail()+"|MSISDN:"+reg.getMsisdn());
 			    		audit.setOlddata(reg.getAuditdata());
 			    		
 			    		audit.insert();

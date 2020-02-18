@@ -1,5 +1,6 @@
 package com.psi.accountmanagement.m;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
@@ -31,7 +32,7 @@ public class ManageRegisteredUser extends Users{
 		  GetAuditPreviousData previous = new GetAuditPreviousData();
 		  ArrayList<Object> parameters = new ArrayList<Object>();  
 		  parameters.add(this.userid);
-		  previous.setQuery("SELECT U.USERID,EMAIL,MSISDN,FIRSTNAME,MIDDLENAME,LASTNAME,USERSLEVEL,U.DEPARTMENT,EMPLOYMENTSTATUS,EMPLOYEENUMBER,US.IMMEDIATEHEAD FROM TBLUSERS U INNER JOIN TBLUSERSTITLE US ON U.USERNAME = US.USERID WHERE U.USERID=?");
+		  previous.setQuery("SELECT U.USERID,EMAIL,MSISDN,FIRSTNAME,MIDDLENAME,LASTNAME,USERSLEVEL,U.DEPARTMENT,EMPLOYMENTSTATUS,EMPLOYEENUMBER FROM TBLUSERS U INNER JOIN TBLUSERSTITLE US ON U.USERNAME = US.USERID WHERE U.USERID=?");
 		  previous.setParam(parameters);
 		  this.setAuditdata(previous.getData());
 		  //****END OF AUDITTRAIL PREVIOUS DATA********
@@ -41,13 +42,13 @@ public class ManageRegisteredUser extends Users{
 	     	UISession sess = this.getAuthorizedSession();
 			StringBuilder query = new StringBuilder("BEGIN\n");
 			query.append("UPDATE TBLUSERS SET FIRSTNAME=?,LASTNAME=?,MIDDLENAME=?,MSISDN=?,DATEMODIFIED=SYSDATE,EMAIL=? WHERE USERID = ?; \n");
-			query.append("UPDATE TBLUSERSTITLE SET DEPARTMENT=?,EMPLOYMENTSTATUS=?,EMPLOYEENUMBER=?,IMMEDIATEHEAD=? WHERE USERID = ?; \n");
+			query.append("UPDATE TBLUSERSTITLE SET DEPARTMENT=?,EMPLOYMENTSTATUS=?,EMPLOYEENUMBER=? WHERE USERID = ?; \n");
 			query.append("COMMIT;\nEXCEPTION WHEN OTHERS THEN\n	ROLLBACK;\n RAISE;\nEND;");
 			EmailUtils.sendUpdate(this.email, this.firstname, this.lastname,this.userid,sess.getIpAddress(),sess.getAccount().getUserName());	
 			
 			return SystemInfo.getDb().QueryUpdate(query.toString(), 
-					this.firstname,this.lastname,this.midname,this.msisdn,"~"+this.email,this.userid,
-					this.department,this.employmentstatus,this.employeenumber,this.immediatehead,SystemInfo.getDb().QueryScalar("SELECT USERNAME FROM TBLUSERS WHERE USERID =?", "", this.userid))>0;
+					this.firstname,this.lastname,this.midname,this.msisdn,this.email,this.userid,
+					this.department,this.employmentstatus,this.employeenumber,SystemInfo.getDb().QueryScalar("SELECT USERNAME FROM TBLUSERS WHERE USERID =?", "", this.userid))>0;
 
 	}
 	

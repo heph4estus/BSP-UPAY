@@ -46,7 +46,7 @@ public class BalanceCommand extends UICommand{
 						    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(id);
+						    audit.setData("USERID:"+id);
 						    audit.setRequest(this.params.toString());
 						    
 				    		audit.insert();
@@ -66,7 +66,7 @@ public class BalanceCommand extends UICommand{
 						    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(id);
+						    audit.setData("USERID:"+id);
 						    audit.setRequest(this.params.toString());
 						    
 				    		audit.insert();

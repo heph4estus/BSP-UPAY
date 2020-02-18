@@ -54,7 +54,7 @@ public class ActivateAccountCommand extends UICommand {
 		    audit.setPortalversion(mgtacct.getAuthorizedSession().getPortalverion());
 		    audit.setOs(mgtacct.getAuthorizedSession().getOs());
 		    audit.setUserslevel(mgtacct.getAuthorizedSession().getAccount().getGroup().getName());
-		    audit.setData(userid+"|"+status);
+		    audit.setData("USERID:"+userid+"|STATUS:"+status);
 		    audit.setRequest(this.params.toString());
 		    
     		audit.insert();
@@ -75,7 +75,7 @@ public class ActivateAccountCommand extends UICommand {
 		    audit.setPortalversion(mgtacct.getAuthorizedSession().getPortalverion());
 		    audit.setOs(mgtacct.getAuthorizedSession().getOs());
 		    audit.setUserslevel(mgtacct.getAuthorizedSession().getAccount().getGroup().getName());
-		    audit.setData(userid+"|"+status);
+		    audit.setData("USERID:"+userid+"|STATUS:"+status);
 		    audit.setRequest(this.params.toString());
 		    
     		audit.insert();

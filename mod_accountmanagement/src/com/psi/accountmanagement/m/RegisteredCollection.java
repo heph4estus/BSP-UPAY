@@ -1,5 +1,7 @@
 package com.psi.accountmanagement.m;
 
+import java.lang.reflect.Field;
+
 import com.tlc.common.DataRow;
 import com.tlc.common.DataRowCollection;
 import com.tlc.common.DbWrapper;
@@ -19,7 +21,7 @@ public class RegisteredCollection extends ModelCollection{
 	public boolean hasRows() {
 
 		if(this.userslevel.equals("CUSTOMER")){
-		     DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT U.*,UT.DEPARTMENT,UT.EMPLOYMENTSTATUS,UT.EMPLOYEENUMBER,UPPER(US.PORTAL) PORTAL,UT.IMMEDIATEHEAD,REPLACE(EMAIL,'~','') EMAILADDRESS,REPLACE(U.TEMPEMAIL,'~','') TEMPEMAILADDRESS FROM TBLUSERS U INNER JOIN TBLUSERSTITLE UT ON U.USERNAME = UT.USERID INNER JOIN TBLUSERSLEVEL US ON US.USERSLEVEL = U.USERSLEVEL WHERE U.USERID=? ", this.id);
+		     DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT U.*,UT.DEPARTMENT,UT.EMPLOYMENTSTATUS,UT.EMPLOYEENUMBER,UPPER(US.PORTAL) PORTAL,REPLACE(EMAIL,'~','') EMAILADDRESS,REPLACE(U.TEMPEMAIL,'~','') TEMPEMAILADDRESS FROM TBLUSERS U INNER JOIN TBLUSERSTITLE UT ON U.USERNAME = UT.USERID INNER JOIN TBLUSERSLEVEL US ON US.USERSLEVEL = U.USERSLEVEL WHERE U.USERID=? ", this.id);
 		     
 		     if (!r.isEmpty())
 		     {
@@ -40,7 +42,6 @@ public class RegisteredCollection extends ModelCollection{
 			         m.setProperty("UserName", row.getString("USERNAME") == null ? "" : row.getString("USERNAME").toString());
 			         m.setProperty("TempEmail", row.getString("TEMPEMAILADDRESS") == null ? "" : row.getString("TEMPEMAILADDRESS").toString());
 			         m.setProperty("TempMsisdn", row.getString("TEMPMSISDN") == null ? "" : row.getString("TEMPMSISDN").toString());
-			         m.setProperty("ImmediateHead", row.getString("IMMEDIATEHEAD") == null ? "" : row.getString("IMMEDIATEHEAD").toString());
 			         m.setProperty("IsOtpVerified", row.getString("ISOTPVERIFIED") == null ? "" : row.getString("ISOTPVERIFIED").toString());
 			         
 			         add(m);
@@ -48,7 +49,7 @@ public class RegisteredCollection extends ModelCollection{
 		     }
 		     return r.size() > 0;
 		}else{
-			DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT U.*,UT.DEPARTMENT,UT.EMPLOYMENTSTATUS,UT.EMPLOYEENUMBER,UPPER(US.PORTAL) PORTAL,UT.IMMEDIATEHEAD,REPLACE(EMAIL,'~','') EMAILADDRESS,REPLACE(U.TEMPEMAIL,'~','') TEMPEMAILADDRESS FROM TBLUSERS U INNER JOIN TBLUSERSTITLE UT ON U.USERNAME = UT.USERID INNER JOIN TBLUSERSLEVEL US ON US.USERSLEVEL = U.USERSLEVEL WHERE U.USERID=? ", this.id);
+			DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT U.*,UT.DEPARTMENT,UT.EMPLOYMENTSTATUS,UT.EMPLOYEENUMBER,UPPER(US.PORTAL) PORTAL,REPLACE(EMAIL,'~','') EMAILADDRESS,REPLACE(U.TEMPEMAIL,'~','') TEMPEMAILADDRESS FROM TBLUSERS U INNER JOIN TBLUSERSTITLE UT ON U.USERNAME = UT.USERID INNER JOIN TBLUSERSLEVEL US ON US.USERSLEVEL = U.USERSLEVEL WHERE U.USERID=? ", this.id);
 		     
 		     if (!r.isEmpty())
 		     {
@@ -69,7 +70,6 @@ public class RegisteredCollection extends ModelCollection{
 			         m.setProperty("UserName", row.getString("USERNAME") == null ? "" : row.getString("USERNAME").toString());
 			         m.setProperty("TempEmail", row.getString("TEMPEMAILADDRESS") == null ? "" : row.getString("TEMPEMAILADDRESS").toString());
 			         m.setProperty("TempMsisdn", row.getString("TEMPMSISDN") == null ? "" : row.getString("TEMPMSISDN").toString());
-			         m.setProperty("ImmediateHead", row.getString("IMMEDIATEHEAD") == null ? "" : row.getString("IMMEDIATEHEAD").toString());
 			         m.setProperty("IsOtpVerified", row.getString("ISOTPVERIFIED") == null ? "" : row.getString("ISOTPVERIFIED").toString());
 			         
 			         add(m);
@@ -95,6 +95,5 @@ public class RegisteredCollection extends ModelCollection{
 		this.userslevel = userslevel;
 	}
 
-	
 
 }

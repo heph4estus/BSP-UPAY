@@ -1,6 +1,7 @@
 package com.psi.accountmanagement.m;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.util.HashMap;
 
@@ -99,4 +100,5 @@ public class NewRegister extends Users{
 		
 		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLUSERS WHERE EMAIL = ?", this.email).size()>0;
 	}
+
 }

@@ -51,7 +51,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -71,7 +71,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -92,7 +92,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -113,7 +113,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -133,7 +133,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model); 
@@ -154,7 +154,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -176,7 +176,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -198,7 +198,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  
@@ -217,7 +217,7 @@ public class AuthenticatePasswordCommand extends UICommand {
 					    audit.setPortalversion(portalversion);
 					    audit.setOs(os);
 					    audit.setUserslevel(model.getUserslevel());
-					    audit.setData(userid+"|"+url);
+					    audit.setData("USERID:"+userid+"|URL:"+url);
 					    audit.setRequest(this.params.toString());
 					    audit.insert();
 						return new JsonView(model);  

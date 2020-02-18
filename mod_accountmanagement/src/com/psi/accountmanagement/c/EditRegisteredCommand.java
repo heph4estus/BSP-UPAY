@@ -33,13 +33,9 @@ public class EditRegisteredCommand extends UICommand{
 				String userid = this.params.get("UserId").toString();
 				String midname = this.params.get("MiddleName").toString();
 				String department = this.params.get("Department").toString();
-				String portal = this.params.get("Portal").toString();
 				String employmentstatus = this.params.get("EmploymentStatus").toString();
 				String employeenumber = this.params.get("EmployeeNumber").toString();
-				String immediatehead = this.params.get("ImmediateHead").toString();
-					reg.setImmediatehead(immediatehead);
 					reg.setDepartment(department);
-					reg.setPortal(portal);
 					reg.setEmploymentstatus(employmentstatus);
 					reg.setEmployeenumber(employeenumber);
 					reg.setEmail(email);
@@ -50,7 +46,7 @@ public class EditRegisteredCommand extends UICommand{
 					reg.setUserslevel(userslevel);
 					reg.setMidname(midname);
 					reg.setAuthorizedSession(sess);
-					reg.getData();
+					reg.getDataDefault();
 					if(reg.update()){						
 						reg.setState(new ObjectState("00", "Successfully updated account details"));
 						AuditTrail audit  = new AuditTrail();
@@ -59,7 +55,7 @@ public class EditRegisteredCommand extends UICommand{
 						audit.setEntityid(userid);
 						audit.setLog("Successfully updated account details");
 						audit.setStatus("00");
-						audit.setData("USERID: "+userid+" | EMAIL: "+email+" | MSISDN: "+msisdn+" | FIRSTNAME: "+firstname+" | MIDDLENAME "+midname+" |LASTNAME: "+lastname+" | USERSLEVEL: "+userslevel+" | DEPARTMENT: "+department+" | EMPLOYMENTSTATUS: "+employmentstatus+" | EMPLOYEENUMBER: "+employeenumber+" | IMMEDIATEHEAD: "+immediatehead);
+						audit.setData("USERID:"+userid+"|EMAIL:"+email+"|MSISDN:"+msisdn+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|USERSLEVEL:"+userslevel+"|DEPARTMENT:"+department+"|EMPLOYMENTSTATUS:"+employmentstatus+"|EMPLOYEENUMBER:"+employeenumber);
 						audit.setUserid(sess.getAccount().getId());
 						audit.setUsername(sess.getAccount().getUserName());
 						audit.setSessionid(sess.getId());
@@ -89,7 +85,7 @@ public class EditRegisteredCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData("USERID: "+userid+" | EMAIL: "+email+" | MSISDN: "+msisdn+" | FIRSTNAME: "+firstname+" | MIDDLENAME "+midname+" |LASTNAME: "+lastname+" | USERSLEVEL: "+userslevel+" | DEPARTMENT: "+department+" | EMPLOYMENTSTATUS: "+employmentstatus+" | EMPLOYEENUMBER: "+employeenumber+" | IMMEDIATEHEAD: "+immediatehead);
+					    audit.setData("USERID:"+userid+"|EMAIL:"+email+"|MSISDN:"+msisdn+"|FIRSTNAME:"+firstname+"|MIDDLENAME:"+midname+"|LASTNAME:"+lastname+"|USERSLEVEL:"+userslevel+"|DEPARTMENT:"+department+"|EMPLOYMENTSTATUS:"+employmentstatus+"|EMPLOYEENUMBER:"+employeenumber);
 					    audit.setOlddata(reg.getAuditdata());
 						audit.insert();
 						return new JsonView(reg);  

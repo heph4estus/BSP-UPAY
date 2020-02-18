@@ -1,5 +1,7 @@
 package com.psi.accountmanagement.m;
 
+import java.lang.reflect.Field;
+
 import com.psi.accountmanagement.utils.Users;
 import com.tlc.common.DataRow;
 import com.tlc.common.DataRowCollection;
@@ -137,6 +139,5 @@ public class ForgotPassword extends Users{
 	public boolean isTokenExpired2(){
 		return SystemInfo.getDb().QueryDataRow("SELECT TOKEN FROM TBLUSERS  WHERE EMAIL=? AND (TOKENEXPIRY > SYSDATE)",this.email).size()>0;
 	}
-// END OF RESENT REQUEST
-	
+
 }

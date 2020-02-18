@@ -45,7 +45,7 @@ public class SearchUsersCommand extends UICommand{
 				    audit.setPortalversion(useraccounts.getAuthorizedSession().getPortalverion());
 				    audit.setOs(useraccounts.getAuthorizedSession().getOs());
 				    audit.setUserslevel(useraccounts.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(username);
+				    audit.setData("USERNAME:"+username);
 				    audit.setRequest(this.params.toString());
 				    
 		    		audit.insert();
@@ -66,7 +66,7 @@ public class SearchUsersCommand extends UICommand{
 				    audit.setPortalversion(useraccounts.getAuthorizedSession().getPortalverion());
 				    audit.setOs(useraccounts.getAuthorizedSession().getOs());
 				    audit.setUserslevel(useraccounts.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(username);
+				    audit.setData("USERNAME:"+username);
 				    audit.setRequest(this.params.toString());
 				    
 		    		audit.insert();

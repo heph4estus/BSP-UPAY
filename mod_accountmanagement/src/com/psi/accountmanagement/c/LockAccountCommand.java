@@ -53,7 +53,7 @@ public class LockAccountCommand extends UICommand {
 			    audit.setPortalversion(manageacct.getAuthorizedSession().getPortalverion());
 			    audit.setOs(manageacct.getAuthorizedSession().getOs());
 			    audit.setUserslevel(manageacct.getAuthorizedSession().getAccount().getGroup().getName());
-			    audit.setData(userid+"|"+locked);
+			    audit.setData("USERID:"+userid+"|LOCKED:"+locked);
 			    audit.setRequest(this.params.toString());
 			    
 	    		audit.insert();
@@ -74,7 +74,7 @@ public class LockAccountCommand extends UICommand {
 			    audit.setPortalversion(manageacct.getAuthorizedSession().getPortalverion());
 			    audit.setOs(manageacct.getAuthorizedSession().getOs());
 			    audit.setUserslevel(manageacct.getAuthorizedSession().getAccount().getGroup().getName());
-			    audit.setData(userid+"|"+locked);
+			    audit.setData("USERID:"+userid+"|LOCKED:"+locked);
 			    audit.setRequest(this.params.toString());
 	    		audit.insert();
 				return new JsonView(manageacct);  

@@ -1,10 +1,12 @@
 package com.psi.accountmanagement.m;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import com.psi.accountmanagement.utils.Users;
 import com.psi.audit.trail.m.GetAuditPreviousData;
 import com.tlc.common.DataRow;
+import com.tlc.common.Logger;
 import com.tlc.common.SystemInfo;
 
 public class VerifyChanges extends Users{
@@ -71,5 +73,4 @@ public class VerifyChanges extends Users{
 	 public boolean isAlreadyVerifiedMobile(){
 			return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLUSERS WHERE USERID = ? AND TEMPMSISDN IS NULL", this.userid).size()>0;	
 			}	
-	
 }

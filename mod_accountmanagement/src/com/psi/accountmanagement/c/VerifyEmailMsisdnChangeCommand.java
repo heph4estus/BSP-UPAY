@@ -43,7 +43,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		
 	    		audit.insert();
@@ -66,7 +66,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		
 	    		audit.insert();
@@ -90,7 +90,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		
 	    		audit.insert();
@@ -111,7 +111,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		
 	    		audit.insert();
@@ -136,7 +136,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		
 	    		audit.insert();
@@ -160,7 +160,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		audit.insert();
 				return new JsonView(verify);  
@@ -180,7 +180,7 @@ public class VerifyEmailMsisdnChangeCommand extends UICommand{
 	    		audit.setPortalversion(portalversion);
 	    		audit.setUserslevel(verify.getUserslevel());
 	    		audit.setSessionid("");
-	    		audit.setData(verify.getMsisdn()+"|"+verify.getEmail());
+	    		audit.setData("MSISDN:"+verify.getMsisdn()+"|EMAIL:"+verify.getEmail());
 	    		audit.setOlddata(verify.getAuditdata());
 	    		
 	    		audit.insert();
