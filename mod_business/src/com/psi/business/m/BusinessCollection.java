@@ -33,4 +33,11 @@ protected String channel;
 		this.channel = channel;
 	}
 	
+	/**
+	 * MVO
+	 */
+	@Override
+	public String toString() {
+		return "CHANNEL:" + this.getChannel();
+	}
 }

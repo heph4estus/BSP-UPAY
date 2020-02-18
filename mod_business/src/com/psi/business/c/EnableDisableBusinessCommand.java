@@ -49,7 +49,8 @@ public class EnableDisableBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber);
+//						    audit.setData(status+"|"+accountnumber);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -71,7 +72,8 @@ public class EnableDisableBusinessCommand extends UICommand{
 							    audit.setOs(reg.getAuthorizedSession().getOs());
 							    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(status+"|"+accountnumber);
+//							    audit.setData(status+"|"+accountnumber);
+							    audit.setData(reg.toString());
 					    		audit.insert();
 								return new JsonView(reg);
 							}
@@ -94,7 +96,8 @@ public class EnableDisableBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber);
+//						    audit.setData(status+"|"+accountnumber);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -114,7 +117,8 @@ public class EnableDisableBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber);
+//						    audit.setData(status+"|"+accountnumber);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}

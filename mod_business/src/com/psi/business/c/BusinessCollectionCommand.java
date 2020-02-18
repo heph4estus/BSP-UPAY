@@ -43,6 +43,7 @@ public class BusinessCollectionCommand extends UICommand{
 				    audit.setOs(col.getAuthorizedSession().getOs());
 				    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
+				    audit.setData(col.toString());
 		    		audit.insert();
 					return new CollectionView("00",col);  
 				}else{
@@ -62,6 +63,7 @@ public class BusinessCollectionCommand extends UICommand{
 					    audit.setOs(col.getAuthorizedSession().getOs());
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
+					    audit.setData(col.toString());
 					    audit.insert();
 						return new NoDataFoundView(state); 
 				}

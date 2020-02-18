@@ -64,8 +64,8 @@ public class EditBusinessUserCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData(email+"|"+firstname+"|"+lastname+"|"+msisdn+"|"+username);
-
+//					    audit.setData(email+"|"+firstname+"|"+lastname+"|"+msisdn+"|"+username);
+					    audit.setData(reg.toString());
 			    		audit.insert();
 					}
 				}else{
@@ -85,8 +85,8 @@ public class EditBusinessUserCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(email+"|"+firstname+"|"+lastname+"|"+msisdn+"|"+username);
-
+//				    audit.setData(email+"|"+firstname+"|"+lastname+"|"+msisdn+"|"+username);
+				    audit.setData(reg.toString());
 		    		audit.insert();
 				}
 				return new JsonView(reg);  

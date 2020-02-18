@@ -87,8 +87,9 @@ public class NewBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+iswithholdingtax);
+//						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+iswithholdingtax);
 				    		audit.setImage(image);
+				    		audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -109,8 +110,9 @@ public class NewBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+iswithholdingtax);
+//						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+iswithholdingtax);
 				    		audit.setImage(image);
+				    		audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -132,7 +134,8 @@ public class NewBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-				    		audit.insert();
+						    audit.setData(reg.toString());
+						    audit.insert();
 							return new JsonView(reg);
 						}else{
 							AuditTrail audit  = new AuditTrail();
@@ -150,8 +153,9 @@ public class NewBusinessCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+iswithholdingtax);
+//						    audit.setData(branchname+"|"+address+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+contactnumber+"|"+xcoordinate+"|"+ycoordinate+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+accountnumber+"|"+iswithholdingtax);
 				    		audit.setImage(image);
+				    		audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}

@@ -1,6 +1,9 @@
 package com.psi.business.v2.m;
 
+import java.lang.reflect.Field;
+
 import com.psi.business.util.Business;
+import com.tlc.common.Logger;
 import com.tlc.common.SystemInfo;
 
 public class InquireData extends Business{
@@ -44,5 +47,4 @@ public class InquireData extends Business{
 	public boolean existauthusernamepndg(){
 		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLMERCHANTPNDG WHERE REQUESTS LIKE '%'||?||'%' AND STATUS = 'PNDG'", this.username.toUpperCase()).size()>0;
 	}
-
 }

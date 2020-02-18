@@ -44,7 +44,8 @@ public class ViewPndgMerchColCommand extends UICommand{
 				    audit.setOs(col.getAuthorizedSession().getOs());
 				    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-		    		audit.insert();
+				    audit.setData(col.toString());
+				    audit.insert();
 					return new CollectionView("00",col);  
 				}else{
 						ObjectState state = new ObjectState("01", "No data found");
@@ -63,6 +64,7 @@ public class ViewPndgMerchColCommand extends UICommand{
 					    audit.setOs(col.getAuthorizedSession().getOs());
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
+					    audit.setData(col.toString());
 					    audit.insert();
 						return new NoDataFoundView(state); 
 				}

@@ -53,7 +53,8 @@ public class EditRequiredDocCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(type);
+//					    audit.setData(type);
+					    audit.setData(reg.toString());
 						audit.setImage(reg.getOlddataimage());
 						audit.setOlddata(reg.getOlddata());
 						audit.insert();
@@ -74,7 +75,8 @@ public class EditRequiredDocCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(type);
+//					    audit.setData(type);
+					    audit.setData(reg.toString());
 						audit.setImage(reg.getOlddataimage());
 						audit.setOlddata(reg.getOlddata());
 						audit.insert();

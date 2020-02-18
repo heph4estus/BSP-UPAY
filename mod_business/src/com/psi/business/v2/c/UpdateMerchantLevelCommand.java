@@ -49,7 +49,8 @@ public class UpdateMerchantLevelCommand extends UICommand{
 						    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(accountnumber+"|"+merchantlevel);
+//						    audit.setData(accountnumber+"|"+merchantlevel);
+						    audit.setData(reg.toString());
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
@@ -70,7 +71,8 @@ public class UpdateMerchantLevelCommand extends UICommand{
 						    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(accountnumber+"|"+merchantlevel);
+//						    audit.setData(accountnumber+"|"+merchantlevel);
+						    audit.setData(reg.toString());
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
@@ -91,7 +93,8 @@ public class UpdateMerchantLevelCommand extends UICommand{
 						    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(accountnumber+"|"+merchantlevel);
+//						    audit.setData(accountnumber+"|"+merchantlevel);
+						    audit.setData(reg.toString());
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);
@@ -111,7 +114,8 @@ public class UpdateMerchantLevelCommand extends UICommand{
 						    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(accountnumber+"|"+merchantlevel);
+//						    audit.setData(accountnumber+"|"+merchantlevel);
+						    audit.setData(reg.toString());
 						    audit.setOlddata(reg.getAuditdata());
 				    		audit.insert();
 							return new JsonView(reg);

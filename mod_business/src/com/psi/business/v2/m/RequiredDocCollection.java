@@ -1,7 +1,10 @@
 package com.psi.business.v2.m;
 
+import java.lang.reflect.Field;
+
 import com.tlc.common.DataRow;
 import com.tlc.common.DataRowCollection;
+import com.tlc.common.Logger;
 import com.tlc.common.SystemInfo;
 import com.tlc.gui.modules.common.ModelCollection;
 import com.tlc.gui.modules.common.ReportItem;
@@ -46,5 +49,4 @@ public class RequiredDocCollection extends ModelCollection{
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
 }

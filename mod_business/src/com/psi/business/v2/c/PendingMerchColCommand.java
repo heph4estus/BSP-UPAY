@@ -62,6 +62,7 @@ public class PendingMerchColCommand extends UICommand{
 					    audit.setOs(col.getAuthorizedSession().getOs());
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
+					    audit.setData("Display Details");
 					    audit.insert();
 						return new NoDataFoundView(state); 
 				}

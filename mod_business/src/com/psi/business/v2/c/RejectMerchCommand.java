@@ -50,7 +50,8 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getBusinessname());
+//						    audit.setData(reg.getBusinessname());
+						    audit.setData(reg.toString());
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -72,8 +73,9 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getBusinessname());
+//						    audit.setData(reg.getBusinessname());
 						    audit.setRemarks(remarks);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -95,7 +97,8 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getBusinessname());
+//						    audit.setData(reg.getBusinessname());
+						    audit.setData(reg.toString());
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -116,7 +119,8 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(reg.getBusinessname());
+//						    audit.setData(reg.getBusinessname());
+						    audit.setData(reg.toString());
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
