@@ -23,6 +23,7 @@ public class AuditTrail {
 	private String request;
 	private String remarks;
 	private String olddata;
+	private String data2;
 	
 	public String getUsername() {
 		return username;
@@ -132,12 +133,18 @@ public class AuditTrail {
 	public void setOlddata(String olddata) {
 		this.olddata = olddata;
 	}
+	public String getData2() {
+		return data2;
+	}
+	public void setData2(String data2) {
+		this.data2 = data2;
+	}
 	public boolean insert(){
 		
 		try{
 		DbWrapper db = SystemInfo.getDb();
 		
-	int	res = db.QueryUpdate("INSERT INTO TBLAUDITTRAIL (USERNAME,USERID,LOG,IP,TIMESTAMP,MODULE,SESSIONID,STATUS,ENTITYID,DATA,BROWSER,BROWSERVERSION,PORTALVERSION,OS,USERSLEVEL,REMARKS,OLDDATA,IMAGE,REQUEST) VALUES(?,?,?,?,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+	int	res = db.QueryUpdate("INSERT INTO TBLAUDITTRAIL (USERNAME,USERID,LOG,IP,TIMESTAMP,MODULE,SESSIONID,STATUS,ENTITYID,DATA,BROWSER,BROWSERVERSION,PORTALVERSION,OS,USERSLEVEL,REMARKS,OLDDATA,IMAGE,REQUEST,DATA2) VALUES(?,?,?,?,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
 				
 										this.username,
 										this.userid,
@@ -156,7 +163,8 @@ public class AuditTrail {
 										this.remarks,
 										this.olddata,
 										this.image,
-										this.request);
+										this.request,
+										this.data2);
 	
 		return res>0;
 		}catch(NullPointerException e){
