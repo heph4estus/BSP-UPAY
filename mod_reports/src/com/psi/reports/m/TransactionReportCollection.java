@@ -9,7 +9,7 @@ import com.tlc.gui.modules.common.ReportItem;
 
 public class TransactionReportCollection extends ModelCollection{
 
-	protected String branch;
+	protected String accountnumber;
 	protected String datefrom;
 	protected String dateto;
 	protected String accounttype;
@@ -40,7 +40,7 @@ public class TransactionReportCollection extends ModelCollection{
 	     return r.size() > 0;
 	}
 	public boolean hasRowsAllCom() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSACTIONS WHERE (FRACCOUNT IN (SELECT ACCOUNTNUMBER FROM TBLBRANCHES WHERE KEYACCOUNT  = ?) OR TOACCOUNT IN (SELECT ACCOUNTNUMBER FROM TBLBRANCHES WHERE KEYACCOUNT  = ?)) AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ? ",this.branch,this.branch,this.datefrom,this.dateto);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSACTIONS WHERE (FRACCOUNT IN (SELECT ACCOUNTNUMBER FROM TBLBRANCHES WHERE KEYACCOUNT  = ?) OR TOACCOUNT IN (SELECT ACCOUNTNUMBER FROM TBLBRANCHES WHERE KEYACCOUNT  = ?)) AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ? ",this.accountnumber,this.accountnumber,this.datefrom,this.dateto);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -64,7 +64,7 @@ public class TransactionReportCollection extends ModelCollection{
 	     return r.size() > 0;
 	}
 	public boolean getTransCol() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSACTIONS WHERE (FRACCOUNT=? OR TOACCOUNT = ?) AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.branch,this.branch,this.datefrom,this.dateto);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSACTIONS WHERE (FRACCOUNT=? OR TOACCOUNT = ?) AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.accountnumber,this.accountnumber,this.datefrom,this.dateto);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -111,7 +111,7 @@ public class TransactionReportCollection extends ModelCollection{
 	}
 
 	public boolean hasRowsCustomer() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLCUSTOMERTRANSACTIONS WHERE (FRACCOUNT=? OR TOACCOUNT = ?) AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.branch,this.branch,this.datefrom,this.dateto);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLCUSTOMERTRANSACTIONS WHERE (FRACCOUNT=? OR TOACCOUNT = ?) AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.accountnumber,this.accountnumber,this.datefrom,this.dateto);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -133,10 +133,10 @@ public class TransactionReportCollection extends ModelCollection{
 	     return r.size() > 0;
 	}
 	public String getBranch() {
-		return branch;
+		return accountnumber;
 	}
 	public void setBranch(String branch) {
-		this.branch = branch;
+		this.accountnumber = branch;
 	}
 	public String getDatefrom() {
 		return datefrom;

@@ -13,7 +13,7 @@ import com.tlc.gui.modules.common.ReportItem;
 @SuppressWarnings("serial")
 public class BillsPaymentPerBillerCollection extends ModelCollection {
 
-	protected String billercode;
+	protected String biller;
 	protected String datefrom;
 	protected String dateto;
 	
@@ -54,7 +54,7 @@ public class BillsPaymentPerBillerCollection extends ModelCollection {
 	}
 	
 	public boolean getBillsPayCol() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSACTIONSBILLSPAYMENT WHERE BRAND=? AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.billercode,this.datefrom,this.dateto);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSACTIONSBILLSPAYMENT WHERE BRAND=? AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.biller,this.datefrom,this.dateto);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -90,7 +90,7 @@ public class BillsPaymentPerBillerCollection extends ModelCollection {
 	
 	
 	public boolean getBillsPayUMAK() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT UT.TIMESTAMP, TBP.REFERENCEID,UT.TIMESTAMP AS POSTEDDATE, SOAREFERENCE,PAIDAMOUNT AS TOTALAMOUNT, TBP.CHARGES, TOKENFEE, MISCFEE, NSTPFEE, ASSESSMENTFEE, STUDENTNUMBER, FIRSTNAME, LASTNAME, BRAND, CASHIER, IDFEE, UT.EMAIL FROM TBLTRANSACTIONSBILLSPAYMENT TBP INNER JOIN UMAK.TBLTRANSACTIONS UT ON TBP.REFERENCEID=UT.REQUESTID WHERE BRAND=? AND TO_CHAR(TBP.TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.billercode,this.datefrom,this.dateto);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT UT.TIMESTAMP, TBP.REFERENCEID,UT.TIMESTAMP AS POSTEDDATE, SOAREFERENCE,PAIDAMOUNT AS TOTALAMOUNT, TBP.CHARGES, TOKENFEE, MISCFEE, NSTPFEE, ASSESSMENTFEE, STUDENTNUMBER, FIRSTNAME, LASTNAME, BRAND, CASHIER, IDFEE, UT.EMAIL FROM TBLTRANSACTIONSBILLSPAYMENT TBP INNER JOIN UMAK.TBLTRANSACTIONS UT ON TBP.REFERENCEID=UT.REQUESTID WHERE BRAND=? AND TO_CHAR(TBP.TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.biller,this.datefrom,this.dateto);
 		
 	     if (!r.isEmpty())
 	     {
@@ -122,11 +122,11 @@ public class BillsPaymentPerBillerCollection extends ModelCollection {
 	
 
 	public String getBillercode() {
-		return billercode;
+		return biller;
 	}
 
 	public void setBillercode(String billercode) {
-		this.billercode = billercode;
+		this.biller = billercode;
 	}
 
 	public String getDatefrom() {

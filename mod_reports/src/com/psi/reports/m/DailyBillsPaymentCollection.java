@@ -11,7 +11,7 @@ import com.tlc.gui.modules.common.ReportItem;
 public class DailyBillsPaymentCollection extends ModelCollection{
 
 	protected String id;
-	protected String branch;
+	protected String accountnumber;
 	protected String datefrom;
 	protected String dateto;
 	@Override
@@ -69,10 +69,10 @@ public class DailyBillsPaymentCollection extends ModelCollection{
 		this.id = id;
 	}
 	public String getBranch() {
-		return branch;
+		return accountnumber;
 	}
 	public void setBranch(String branch) {
-		this.branch = branch;
+		this.accountnumber = branch;
 	}
 	public String getDatefrom() {
 		return datefrom;

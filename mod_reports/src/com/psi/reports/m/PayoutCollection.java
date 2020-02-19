@@ -10,7 +10,7 @@ import com.tlc.gui.modules.common.ReportItem;
 @SuppressWarnings("serial")
 public class PayoutCollection extends ModelCollection{
 
-	protected String branch;
+	protected String accountnumber;
 	protected String accounttype;
 	protected String datefrom;
 	protected String dateto;
@@ -39,7 +39,7 @@ public class PayoutCollection extends ModelCollection{
 	}
 	
 	public boolean getPrepaidCol() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSPAYOUT WHERE ACCOUNTNUMBER=? AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.branch,this.datefrom,this.dateto);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT * FROM TBLTRANSPAYOUT WHERE ACCOUNTNUMBER=? AND TO_CHAR(TIMESTAMP,'YYYY-MM-DD') BETWEEN ? AND ?",this.accountnumber,this.datefrom,this.dateto);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -62,10 +62,10 @@ public class PayoutCollection extends ModelCollection{
 
 	
 	public String getBranch() {
-		return branch;
+		return accountnumber;
 	}
 	public void setBranch(String branch) {
-		this.branch = branch;
+		this.accountnumber = branch;
 	}
 	public String getDatefrom() {
 		return datefrom;

@@ -91,12 +91,12 @@ public class AllocationColCommand extends UICommand {
 			audit.setEntityid(code);
 			audit.setUserid(model.getAuthorizedSession().getAccount().getId());
 			audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-			audit.setSessionid(sess.getAuthorizedSession().getId());
-			audit.setBrowser(sess.getAuthorizedSession().getBrowser());
-			audit.setBrowserversion(sess.getAuthorizedSession().getBrowserversion());
-			audit.setPortalversion(sess.getAuthorizedSession().getPortalverion());
-			audit.setOs(sess.getAuthorizedSession().getOs());
-			audit.setUserslevel(sess.getAuthorizedSession().getAccount().getGroup().getName());
+			audit.setSessionid(model.getAuthorizedSession().getId());
+			audit.setBrowser(model.getAuthorizedSession().getBrowser());
+			audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+			audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+			audit.setOs(model.getAuthorizedSession().getOs());
+			audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 			audit.setRequest(this.params.toString());
 			audit.setData(model.toString());
 			audit.insert();

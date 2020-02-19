@@ -10,7 +10,7 @@ import com.tlc.gui.modules.common.ReportItem;
 @SuppressWarnings("serial")
 public class EwalletPaymentsCollection extends ModelCollection{
 	protected String id;
-	protected String branch;
+	protected String accountnumber;
 	protected String datefrom;
 	protected String dateto;
 
@@ -78,11 +78,11 @@ public class EwalletPaymentsCollection extends ModelCollection{
 	}
 
 	public String getBranch() {
-		return branch;
+		return accountnumber;
 	}
 
 	public void setBranch(String branch) {
-		this.branch = branch;
+		this.accountnumber = branch;
 	}
 
 	public String getDatefrom() {
