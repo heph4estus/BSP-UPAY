@@ -51,7 +51,7 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
 //						    audit.setData(reg.getBusinessname());
-						    audit.setData(reg.toString());
+						    audit.setData2(reg.toString());
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -75,7 +75,7 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setRequest(this.params.toString());
 //						    audit.setData(reg.getBusinessname());
 						    audit.setRemarks(remarks);
-						    audit.setData(reg.toString());
+						    audit.setData2(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -98,7 +98,7 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
 //						    audit.setData(reg.getBusinessname());
-						    audit.setData(reg.toString());
+						    audit.setData2(reg.toString());
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);
@@ -120,7 +120,7 @@ public class RejectMerchCommand extends UICommand{
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
 //						    audit.setData(reg.getBusinessname());
-						    audit.setData(reg.toString());
+						    audit.setData2(reg.toString());
 						    audit.setRemarks(remarks);
 				    		audit.insert();
 							return new JsonView(reg);

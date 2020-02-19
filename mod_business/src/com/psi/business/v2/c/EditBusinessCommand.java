@@ -155,7 +155,7 @@ public class EditBusinessCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 //					    audit.setData(ownerfirstname+"|"+ownermiddlename+"|"+ownerlastname+"|"+ownerspecificaddress+"|"+ownercity+"|"+ownerprovince+"|"+ownercountry+"|"+ownerzipcode+"|"+msisdn+"|"+landline+"|"+email+"|"+secondarymsisdn+"|"+businessname+"|"+specificaddress+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+natureofbusiness+"|"+noofbranches+"|"+estimatedgrosssale+"|"+bankname+"|"+bankaccountno+"|"+bankbranch+"|"+bankaccounttype+"|"+tin+"|"+dtino+"|"+dateissueddti+"|"+businesspermitno+"|"+dateissuedbusinesspermit+"|"+authfirstname+"|"+authmiddlename+"|"+authlastname+"|"+authdesignation+"|"+authmsisdn+"|"+authemail+"|"+username+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+businesstype+"|"+category+"|"+paymentmode+"|"+paymentterms+"|"+maxamount+"|"+adminsetup+"|"+merchantlevel);
-						audit.setData(reg.toString());
+						audit.setData2(reg.toString());
 					    audit.setImage(image);
 						audit.setRequest(reg.json(reg));
 						audit.setOlddata(reg.getAuditdata());
@@ -179,7 +179,7 @@ public class EditBusinessCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 //					    audit.setData(ownerfirstname+"|"+ownermiddlename+"|"+ownerlastname+"|"+ownerspecificaddress+"|"+ownercity+"|"+ownerprovince+"|"+ownercountry+"|"+ownerzipcode+"|"+msisdn+"|"+landline+"|"+email+"|"+secondarymsisdn+"|"+businessname+"|"+specificaddress+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+natureofbusiness+"|"+noofbranches+"|"+estimatedgrosssale+"|"+bankname+"|"+bankaccountno+"|"+bankbranch+"|"+bankaccounttype+"|"+tin+"|"+dtino+"|"+dateissueddti+"|"+businesspermitno+"|"+dateissuedbusinesspermit+"|"+authfirstname+"|"+authmiddlename+"|"+authlastname+"|"+authdesignation+"|"+authmsisdn+"|"+authemail+"|"+username+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+businesstype+"|"+category+"|"+paymentmode+"|"+paymentterms+"|"+maxamount+"|"+adminsetup+"|"+merchantlevel);
-					    audit.setData(reg.toString());
+					    audit.setData2(reg.toString());
 					    audit.setImage(image);
 						audit.setRequest(reg.json(reg));
 						audit.setOlddata(reg.getAuditdata());
@@ -203,7 +203,7 @@ public class EditBusinessCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 //					    audit.setData(ownerfirstname+"|"+ownermiddlename+"|"+ownerlastname+"|"+ownerspecificaddress+"|"+ownercity+"|"+ownerprovince+"|"+ownercountry+"|"+ownerzipcode+"|"+msisdn+"|"+landline+"|"+email+"|"+secondarymsisdn+"|"+businessname+"|"+specificaddress+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+natureofbusiness+"|"+noofbranches+"|"+estimatedgrosssale+"|"+bankname+"|"+bankaccountno+"|"+bankbranch+"|"+bankaccounttype+"|"+tin+"|"+dtino+"|"+dateissueddti+"|"+businesspermitno+"|"+dateissuedbusinesspermit+"|"+authfirstname+"|"+authmiddlename+"|"+authlastname+"|"+authdesignation+"|"+authmsisdn+"|"+authemail+"|"+username+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+businesstype+"|"+category+"|"+paymentmode+"|"+paymentterms+"|"+maxamount+"|"+adminsetup+"|"+merchantlevel);
-					    audit.setData(reg.toString());
+					    audit.setData2(reg.toString());
 					    audit.setImage(image);
 						audit.setRequest(reg.json(reg));
 						audit.setOlddata(reg.getAuditdata());
@@ -251,7 +251,7 @@ public class EditBusinessCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 //					    audit.setData(ownerfirstname+"|"+ownermiddlename+"|"+ownerlastname+"|"+ownerspecificaddress+"|"+ownercity+"|"+ownerprovince+"|"+ownercountry+"|"+ownerzipcode+"|"+msisdn+"|"+landline+"|"+email+"|"+secondarymsisdn+"|"+businessname+"|"+specificaddress+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+natureofbusiness+"|"+noofbranches+"|"+estimatedgrosssale+"|"+bankname+"|"+bankaccountno+"|"+bankbranch+"|"+bankaccounttype+"|"+tin+"|"+dtino+"|"+dateissueddti+"|"+businesspermitno+"|"+dateissuedbusinesspermit+"|"+authfirstname+"|"+authmiddlename+"|"+authlastname+"|"+authdesignation+"|"+authmsisdn+"|"+authemail+"|"+username+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+businesstype+"|"+category+"|"+paymentmode+"|"+paymentterms+"|"+maxamount+"|"+adminsetup+"|"+merchantlevel);
-					    audit.setData(reg.toString());
+					    audit.setData2(reg.toString());
 					    audit.setImage(image);
 						audit.setRequest(reg.json(reg));
 						audit.setOlddata(reg.getAuditdata());
@@ -274,7 +274,7 @@ public class EditBusinessCommand extends UICommand{
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 //					    audit.setData(ownerfirstname+"|"+ownermiddlename+"|"+ownerlastname+"|"+ownerspecificaddress+"|"+ownercity+"|"+ownerprovince+"|"+ownercountry+"|"+ownerzipcode+"|"+msisdn+"|"+landline+"|"+email+"|"+secondarymsisdn+"|"+businessname+"|"+specificaddress+"|"+city+"|"+province+"|"+country+"|"+zipcode+"|"+natureofbusiness+"|"+noofbranches+"|"+estimatedgrosssale+"|"+bankname+"|"+bankaccountno+"|"+bankbranch+"|"+bankaccounttype+"|"+tin+"|"+dtino+"|"+dateissueddti+"|"+businesspermitno+"|"+dateissuedbusinesspermit+"|"+authfirstname+"|"+authmiddlename+"|"+authlastname+"|"+authdesignation+"|"+authmsisdn+"|"+authemail+"|"+username+"|"+monday+"|"+tuesday+"|"+wednesday+"|"+thursday+"|"+friday+"|"+saturday+"|"+sunday+"|"+businesstype+"|"+category+"|"+paymentmode+"|"+paymentterms+"|"+maxamount+"|"+adminsetup+"|"+merchantlevel);
-					    audit.setData(reg.toString());
+					    audit.setData2(reg.toString());
 					    audit.setImage(image);
 						audit.setRequest(reg.json(reg));
 						audit.setOlddata(reg.getAuditdata());

@@ -277,7 +277,7 @@ public class ApproveMerchCommand extends UICommand{
 	    audit.setOs(reg.getAuthorizedSession().getOs());
 	    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 	    audit.setRequest(this.params.toString());
-	    audit.setData(reg.toString());
+	    audit.setData2(reg.toString());
 		return audit;
 	}
 }
