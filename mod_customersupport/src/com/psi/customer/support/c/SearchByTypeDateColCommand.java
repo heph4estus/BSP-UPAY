@@ -54,7 +54,8 @@ public class SearchByTypeDateColCommand extends UICommand{
 					    audit.setOs(model.getAuthorizedSession().getOs());
 					    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData(type+"|"+account+"|"+datefrom+"|"+dateto+"|"+username);
+					   // audit.setData(type+"|"+account+"|"+datefrom+"|"+dateto+"|"+username);
+					    audit.setData(model.toString());
 			    		audit.insert();
 						return new CollectionView("00",model);  
 					}else{
@@ -74,7 +75,8 @@ public class SearchByTypeDateColCommand extends UICommand{
 						    audit.setOs(model.getAuthorizedSession().getOs());
 						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(type+"|"+account+"|"+datefrom+"|"+dateto+"|"+username);
+						 // audit.setData(type+"|"+account+"|"+datefrom+"|"+dateto+"|"+username);
+						    audit.setData(model.toString());
 				    		audit.insert();
 							return new NoDataFoundView(state); 
 					}

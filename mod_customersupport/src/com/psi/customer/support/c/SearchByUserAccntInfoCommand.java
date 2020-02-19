@@ -44,7 +44,8 @@ public class SearchByUserAccntInfoCommand extends UICommand{
 				    audit.setOs(model.getAuthorizedSession().getOs());
 				    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(username);
+				   // audit.setData(username);
+				    audit.setData(model.toString());
 		    		audit.insert();
 					return new CollectionView("00",model);  
 				}else{
@@ -64,7 +65,8 @@ public class SearchByUserAccntInfoCommand extends UICommand{
 				    audit.setOs(model.getAuthorizedSession().getOs());
 				    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(username);
+				 // audit.setData(username);
+				    audit.setData(model.toString());
 		    		audit.insert();
 					return new NoDataFoundView(state); 
 				}

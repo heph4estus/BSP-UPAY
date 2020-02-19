@@ -48,7 +48,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -70,7 +71,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						  //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -90,7 +92,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						  //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -112,7 +115,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						  //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -132,7 +136,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						  //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -154,7 +159,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						  //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -174,7 +180,8 @@ public class ActivateDeactivateAcctCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						  //audit.setData(status+"|"+accountnumber+"|"+accounttype);
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}

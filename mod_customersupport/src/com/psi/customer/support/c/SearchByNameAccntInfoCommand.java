@@ -49,7 +49,8 @@ public class SearchByNameAccntInfoCommand extends UICommand{
 				    audit.setOs(model.getAuthorizedSession().getOs());
 				    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(msisdn+"|"+firstname+"|"+lastname);
+				    //audit.setData(msisdn+"|"+firstname+"|"+lastname);
+				    audit.setData(model.toString());
 		    		audit.insert();
 					return new CollectionView("00",model);  
 				}else{
@@ -69,7 +70,8 @@ public class SearchByNameAccntInfoCommand extends UICommand{
 				    audit.setOs(model.getAuthorizedSession().getOs());
 				    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(msisdn+"|"+firstname+"|"+lastname);
+				  //audit.setData(msisdn+"|"+firstname+"|"+lastname);
+				    audit.setData(model.toString());
 		    		audit.insert();
 					return new NoDataFoundView(state); 
 				}

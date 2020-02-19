@@ -53,7 +53,8 @@ public class EditCustomerCommand extends UICommand{
 					    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 					    audit.setOs(reg.getAuthorizedSession().getOs());
 					    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData("NEW DETAILS: "+firstname+"|"+middlename+"|"+lastname+"|"+username);
+					   // audit.setData("NEW DETAILS: "+firstname+"|"+middlename+"|"+lastname+"|"+username);
+					    audit.setData(reg.toString());
 					    audit.setRequest(this.params.toString());
 						audit.insert();
 						return new JsonView(reg);  

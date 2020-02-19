@@ -54,7 +54,8 @@ public class FulfillFailedTransCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(referenceid+"|"+traceid+"|"+receiptvalidation+"|"+accountnumber);
+							    //audit.setData(referenceid+"|"+traceid+"|"+receiptvalidation+"|"+accountnumber);
+							    audit.setData(create.toString());
 					    		audit.insert();
 								return new JsonView(create); 
 
@@ -75,7 +76,8 @@ public class FulfillFailedTransCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(referenceid+"|"+traceid+"|"+receiptvalidation+"|"+accountnumber);
+							    //audit.setData(referenceid+"|"+traceid+"|"+receiptvalidation+"|"+accountnumber);
+							    audit.setData(create.toString());
 					    		audit.insert();
 								return new JsonView(create); 
 							}
