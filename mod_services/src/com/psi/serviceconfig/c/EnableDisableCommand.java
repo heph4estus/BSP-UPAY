@@ -79,7 +79,7 @@ public class EnableDisableCommand extends UICommand{
 				    audit.setOs(changestat.getAuthorizedSession().getOs());
 				    audit.setUserslevel(changestat.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(accountnumber+"|"+category+"|"+this.params.get("MODULE"));
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|CATEGORY:"+category+"|SERVICES:"+this.params.get("MODULE"));
 		    		audit.insert();
 					JsonView view = new JsonView(changestat);
 					return view;
@@ -102,7 +102,7 @@ public class EnableDisableCommand extends UICommand{
 				    audit.setOs(changestat.getAuthorizedSession().getOs());
 				    audit.setUserslevel(changestat.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(accountnumber+"|"+category+"|"+this.params.get("MODULE"));
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|CATEGORY:"+category+"|SERVICES:"+this.params.get("MODULE"));
 		    		audit.insert();
 					JsonView view = new JsonView(changestat);
 					return view;
