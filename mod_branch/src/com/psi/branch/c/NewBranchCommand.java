@@ -168,7 +168,7 @@ public class NewBranchCommand extends UICommand{
 				    		audit.setIp(reg.getAuthorizedSession().getIpAddress());
 				    		audit.setModuleid(String.valueOf(this.getId()));
 				    		audit.setEntityid(branchname);
-				    		audit.setLog(reg.getState().getMessage());
+				    		audit.setLog("Branch Account Successfully Requested. Please wait for the KYC Department Approval.");
 				    		audit.setStatus(reg.getState().getCode());
 				    		audit.setData("BRANCHNAME:"+branchname+"|ADDRESS:"+address+"|CITY:"+city+"|PROVINCE:"+province+"|COUNTRY:"+country+"|ZIPCODE:"+zipcode+"|CONTACTNUMBER:"+contactnumber+"|XCOORDINATE:"+xcoordinate+"|YCOORDINATE:"+ycoordinate+"|MONDAY:"+monday+"|TUESDAY:"+tuesday+"|WEDNESDAY:"+wednesday+"|THURSDAY:"+thursday+"|FRIDAY:"+friday+"|SATURDAY:"+saturday+"|SUNDAY:"+sunday+"|ACCOUNTNUMBER:"+accountnumber+"|TIN:"+tin+"|NATUREOFBUSINESS:"+natureofbusiness+"|ESTIMATEDGROSSSALES:"+grosssales+"|BANKBRANCH:"+bankbranch+"|PAYMENTMODE:"+paymentmode+"|PAYMENTTERM:"+paymentterms+"|CREDITLIMIT:"+maxamount);
 				    		audit.setImage(image);

@@ -21,11 +21,11 @@ public class EditManager extends Manager{
 		if(res>0){
 			AuditTrail audit  = new AuditTrail();
 			audit.setIp(sess.getIpAddress());
-			audit.setModuleid(String.valueOf("1202"));
+			audit.setModuleid(String.valueOf("1205"));
 			audit.setEntityid(accountnumber);
-			audit.setLog("Successfully update company manager user");
+			audit.setLog("Successfully update branch manager user");
 			audit.setStatus("00");
-			audit.setData("EMAIL:"+this.email+"|FIRSTNAME:"+this.firstname+"|LASTNAME:"+this.lastname+"|MSISDN:"+this.msisdn+"|USERNAME:"+this.username);
+			audit.setData("EMAIL:"+this.email+"|FIRSTNAME:"+this.firstname+"|LASTNAME:"+"|MIDDLENAME:"+this.midname+this.lastname+"|MSISDN:"+this.msisdn+"|USERNAME:"+this.username);
 			audit.setUserid(sess.getAccount().getId());
 			audit.setUsername(sess.getAccount().getUserName());
 			audit.setSessionid(sess.getId());
@@ -34,11 +34,29 @@ public class EditManager extends Manager{
 		    audit.setPortalversion(sess.getPortalverion());
 		    audit.setOs(sess.getOs());
 		    audit.setUserslevel(sess.getAccount().getGroup().getName());
-		    audit.setOlddata("EMAIL:"+row.getString("EMAIL")+"|FIRSTNAME:"+row.getString("FIRSTNAME")+"|LASTNAME:"+row.getString("LASTNAME")+"|MSISDN:"+row.getString("MSISDN")+"|USERNAME:"+row.getString("USERNAME"));
+		    audit.setOlddata("EMAIL:"+row.getString("EMAIL")+"|FIRSTNAME:"+row.getString("FIRSTNAME")+"|MIDDLENAME:"+row.getString("MIDDLENAME")+"|LASTNAME:"+row.getString("LASTNAME")+"|MSISDN:"+row.getString("MSISDN")+"|USERNAME:"+row.getString("USERNAME"));
 	
 			audit.insert();
 			return true;
 		}else{
+			AuditTrail audit  = new AuditTrail();
+			audit.setIp(sess.getIpAddress());
+			audit.setModuleid(String.valueOf("1205"));
+			audit.setEntityid(accountnumber);
+			audit.setLog("Unable to update branch manager user");
+			audit.setStatus("99");
+			audit.setData("EMAIL:"+this.email+"|FIRSTNAME:"+this.firstname+"|LASTNAME:"+"|MIDDLENAME:"+this.midname+this.lastname+"|MSISDN:"+this.msisdn+"|USERNAME:"+this.username);
+			audit.setUserid(sess.getAccount().getId());
+			audit.setUsername(sess.getAccount().getUserName());
+			audit.setSessionid(sess.getId());
+    		audit.setBrowser(sess.getBrowser());
+		    audit.setBrowserversion(sess.getBrowserversion());
+		    audit.setPortalversion(sess.getPortalverion());
+		    audit.setOs(sess.getOs());
+		    audit.setUserslevel(sess.getAccount().getGroup().getName());
+		    audit.setOlddata("EMAIL:"+row.getString("EMAIL")+"|FIRSTNAME:"+row.getString("FIRSTNAME")+"|MIDDLENAME:"+row.getString("MIDDLENAME")+"|LASTNAME:"+row.getString("LASTNAME")+"|MSISDN:"+row.getString("MSISDN")+"|USERNAME:"+row.getString("USERNAME"));
+	
+			audit.insert();
 			return false;
 		}
 	}
