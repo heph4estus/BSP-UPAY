@@ -13,213 +13,114 @@ import com.tlc.gui.modules.common.UICommand;
 import com.tlc.gui.modules.session.SessionNotFoundException;
 import com.tlc.gui.modules.session.UISession;
 
-public class PrepaidColCommand extends UICommand{
+/**
+ * 19/02/2020
+ * Remodel audit trail - MVO
+ *
+ */
+public class PrepaidColCommand extends UICommand {
 
 	@Override
 	public IView execute() {
 		ExistingSession sess = null;
-				SessionView v = null;
-				
-				try {
-					sess = ExistingSession.parse(this.reqHeaders);		
-					if(sess.exists()) {
-				
-				
-				String code = this.params.get("BranchCode").toString();
+		IView v = null;
+		PrepaidCollection model = new PrepaidCollection();
+		AuditTrail audit = new AuditTrail();
+		String code = "";
+		try {
+			sess = ExistingSession.parse(this.reqHeaders);
+			if (sess.exists()) {
+
+				code = this.params.get("BranchCode").toString();
 				String datefrom = this.params.get("DateFrom").toString();
 				String dateto = this.params.get("DateTo").toString();
 				String accounttype = this.params.get("AccountType").toString();
-				
-				PrepaidCollection model = new PrepaidCollection();
-								model.setAccounttype(accounttype);
-								model.setBranch(code);
-								model.setDatefrom(datefrom);
-								model.setDateto(dateto);
-								model.setAuthorizedSession(sess);
-				if(accounttype.equals("MERCHANT")){
-					if(code.equals("ALL")){
-						if(model.hasRowsAllBranch()){
-							AuditTrail audit  = new AuditTrail();
-				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-				    		audit.setModuleid(String.valueOf(this.getId()));
-				    		audit.setEntityid(code);
-				    		audit.setLog("Successfully fetched data");
-				    		audit.setStatus("00");
-				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-				    		audit.setSessionid(model.getAuthorizedSession().getId());
-				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-						    audit.setOs(model.getAuthorizedSession().getOs());
-						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setRequest(this.params.toString());
-						    audit.setData(code+"|"+datefrom+"|"+dateto);
-				    		audit.insert();
-							return new CollectionView("00",model);  
-						}else{
-								ObjectState state = new ObjectState("01", "No data found");
-								AuditTrail audit  = new AuditTrail();
-					    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-					    		audit.setModuleid(String.valueOf(this.getId()));
-					    		audit.setEntityid(code);
-					    		audit.setLog("No data found");
-					    		audit.setStatus("01");
-					    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-					    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-					    		audit.setSessionid(model.getAuthorizedSession().getId());
-					    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-							    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-							    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-							    audit.setOs(model.getAuthorizedSession().getOs());
-							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setRequest(this.params.toString());
-							    audit.setData(code+"|"+datefrom+"|"+dateto);
-					    		audit.insert();
-								return new NoDataFoundView(state); 
+
+				model.setAccounttype(accounttype);
+				model.setBranch(code);
+				model.setDatefrom(datefrom);
+				model.setDateto(dateto);
+				model.setAuthorizedSession(sess);
+				if (accounttype.equals("MERCHANT")) {
+					if (code.equals("ALL")) {
+						if (model.hasRowsAllBranch()) {
+							audit.setLog("Successfully fetched data");
+							audit.setStatus("00");
+							v = new CollectionView("00", model);
+						} else {
+							ObjectState state = new ObjectState("01", "No data found");
+							audit.setLog("No data found");
+							audit.setStatus("01");
+							v = new NoDataFoundView(state);
 						}
-					}else{
-						if(model.getPrepaidCol()){
-							AuditTrail audit  = new AuditTrail();
-				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-				    		audit.setModuleid(String.valueOf(this.getId()));
-				    		audit.setEntityid(code);
-				    		audit.setLog("Successfully fetched data");
-				    		audit.setStatus("00");
-				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-				    		audit.setSessionid(model.getAuthorizedSession().getId());
-				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-						    audit.setOs(model.getAuthorizedSession().getOs());
-						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setRequest(this.params.toString());
-						    audit.setData(code+"|"+datefrom+"|"+dateto);
-				    		audit.insert();
-							return new CollectionView("00",model);  
-						}else{
-								ObjectState state = new ObjectState("01", "No data found");
-								AuditTrail audit  = new AuditTrail();
-					    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-					    		audit.setModuleid(String.valueOf(this.getId()));
-					    		audit.setEntityid(code);
-					    		audit.setLog("No data found");
-					    		audit.setStatus("01");
-					    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-					    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-					    		audit.setSessionid(model.getAuthorizedSession().getId());
-					    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-							    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-							    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-							    audit.setOs(model.getAuthorizedSession().getOs());
-							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setRequest(this.params.toString());
-							    audit.setData(code+"|"+datefrom+"|"+dateto);
-					    		audit.insert();
-								return new NoDataFoundView(state); 
+					} else {
+						if (model.getPrepaidCol()) {
+							audit.setLog("Successfully fetched data");
+							audit.setStatus("00");
+							v = new CollectionView("00", model);
+						} else {
+							ObjectState state = new ObjectState("01", "No data found");
+							audit.setLog("No data found");
+							audit.setStatus("01");
+							v = new NoDataFoundView(state);
 						}
 					}
-				}else if(accounttype.equals("CUSTOMER")){
-					if(model.hasRowsAllCustomer()){
-						AuditTrail audit  = new AuditTrail();
-			    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-			    		audit.setModuleid(String.valueOf(this.getId()));
-			    		audit.setEntityid(code);
-			    		audit.setLog("Successfully fetched data");
-			    		audit.setStatus("00");
-			    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-			    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-			    		audit.setSessionid(model.getAuthorizedSession().getId());
-			    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-					    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-					    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-					    audit.setOs(model.getAuthorizedSession().getOs());
-					    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setRequest(this.params.toString());
-					    audit.setData(code+"|"+datefrom+"|"+dateto);
-			    		audit.insert();
-						return new CollectionView("00",model);  
-					}else{
-							ObjectState state = new ObjectState("01", "No data found");
-							AuditTrail audit  = new AuditTrail();
-				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-				    		audit.setModuleid(String.valueOf(this.getId()));
-				    		audit.setEntityid(code);
-				    		audit.setLog("No data found");
-				    		audit.setStatus("01");
-				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-				    		audit.setSessionid(model.getAuthorizedSession().getId());
-				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-						    audit.setOs(model.getAuthorizedSession().getOs());
-						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setRequest(this.params.toString());
-						    audit.setData(code+"|"+datefrom+"|"+dateto);
-				    		audit.insert();
-							return new NoDataFoundView(state); 
+				} else if (accounttype.equals("CUSTOMER")) {
+					if (model.hasRowsAllCustomer()) {
+						audit.setLog("Successfully fetched data");
+						audit.setStatus("00");
+						v = new CollectionView("00", model);
+					} else {
+						ObjectState state = new ObjectState("01", "No data found");
+						audit.setLog("No data found");
+						audit.setStatus("01");
+						v = new NoDataFoundView(state);
 					}
-				}else{
-					if(model.hasRows()){
-						AuditTrail audit  = new AuditTrail();
-			    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-			    		audit.setModuleid(String.valueOf(this.getId()));
-			    		audit.setEntityid(code);
-			    		audit.setLog("Successfully fetched data");
-			    		audit.setStatus("00");
-			    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-			    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-			    		audit.setSessionid(model.getAuthorizedSession().getId());
-			    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-					    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-					    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-					    audit.setOs(model.getAuthorizedSession().getOs());
-					    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setRequest(this.params.toString());
-					    audit.setData(code+"|"+datefrom+"|"+dateto);
-			    		audit.insert();
-						return new CollectionView("00",model);  
-					}else{
-							ObjectState state = new ObjectState("01", "No data found");
-							AuditTrail audit  = new AuditTrail();
-				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
-				    		audit.setModuleid(String.valueOf(this.getId()));
-				    		audit.setEntityid(code);
-				    		audit.setLog("No data found");
-				    		audit.setStatus("01");
-				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
-				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-				    		audit.setSessionid(model.getAuthorizedSession().getId());
-				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
-						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
-						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
-						    audit.setOs(model.getAuthorizedSession().getOs());
-						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setRequest(this.params.toString());
-						    audit.setData(code+"|"+datefrom+"|"+dateto);
-				    		audit.insert();
-							return new NoDataFoundView(state); 
+				} else {
+					if (model.hasRows()) {
+						audit.setLog("Successfully fetched data");
+						audit.setStatus("00");
+						v = new CollectionView("00", model);
+					} else {
+						ObjectState state = new ObjectState("01", "No data found");
+						audit.setLog("No data found");
+						audit.setStatus("01");
+						v = new NoDataFoundView(state);
 					}
 				}
-						
-					}else{		
-						UISession u = new UISession(null);
-					    u.setState(new ObjectState("TLC-3902-01"));
-					    v = new SessionView(u);
-					}
-				}catch (SessionNotFoundException e) {
-					UISession u = new UISession(null);
-				    u.setState(new ObjectState("TLC-3902-01"));
-				    v = new SessionView(u);
-					Logger.LogServer(e);
-			} catch (Exception e) {
+
+			} else {
 				UISession u = new UISession(null);
-			    u.setState(new ObjectState("TLC-3902-01"));
-			    v = new SessionView(u);
-				Logger.LogServer(e);
-			}return v;
+				u.setState(new ObjectState("TLC-3902-01"));
+				v = new SessionView(u);
+			}
+		} catch (SessionNotFoundException e) {
+			UISession u = new UISession(null);
+			u.setState(new ObjectState("TLC-3902-01"));
+			v = new SessionView(u);
+			Logger.LogServer(e);
+		} catch (Exception e) {
+			UISession u = new UISession(null);
+			u.setState(new ObjectState("TLC-3902-01"));
+			v = new SessionView(u);
+			Logger.LogServer(e);
+		} finally {
+			audit.setIp(model.getAuthorizedSession().getIpAddress());
+			audit.setModuleid(String.valueOf(this.getId()));
+			audit.setEntityid(code);
+			audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+			audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+			audit.setSessionid(model.getAuthorizedSession().getId());
+			audit.setBrowser(model.getAuthorizedSession().getBrowser());
+			audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+			audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+			audit.setOs(model.getAuthorizedSession().getOs());
+			audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+			audit.setRequest(this.params.toString());
+			audit.setData(model.toString());
+			audit.insert();
+		}
+		return v;
 	}
 
 	@Override
@@ -231,5 +132,224 @@ public class PrepaidColCommand extends UICommand{
 	public int getId() {
 		return 1503;
 	}
-
 }
+//public class PrepaidColCommand extends UICommand{
+//
+//	@Override
+//	public IView execute() {
+//		ExistingSession sess = null;
+//				SessionView v = null;
+//				
+//				try {
+//					sess = ExistingSession.parse(this.reqHeaders);		
+//					if(sess.exists()) {
+//				
+//				
+//				String code = this.params.get("BranchCode").toString();
+//				String datefrom = this.params.get("DateFrom").toString();
+//				String dateto = this.params.get("DateTo").toString();
+//				String accounttype = this.params.get("AccountType").toString();
+//				
+//				PrepaidCollection model = new PrepaidCollection();
+//								model.setAccounttype(accounttype);
+//								model.setBranch(code);
+//								model.setDatefrom(datefrom);
+//								model.setDateto(dateto);
+//								model.setAuthorizedSession(sess);
+//				if(accounttype.equals("MERCHANT")){
+//					if(code.equals("ALL")){
+//						if(model.hasRowsAllBranch()){
+//							AuditTrail audit  = new AuditTrail();
+//				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//				    		audit.setModuleid(String.valueOf(this.getId()));
+//				    		audit.setEntityid(code);
+//				    		audit.setLog("Successfully fetched data");
+//				    		audit.setStatus("00");
+//				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//				    		audit.setSessionid(model.getAuthorizedSession().getId());
+//				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//						    audit.setOs(model.getAuthorizedSession().getOs());
+//						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//						    audit.setRequest(this.params.toString());
+//						    audit.setData(code+"|"+datefrom+"|"+dateto);
+//				    		audit.insert();
+//							return new CollectionView("00",model);  
+//						}else{
+//								ObjectState state = new ObjectState("01", "No data found");
+//								AuditTrail audit  = new AuditTrail();
+//					    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//					    		audit.setModuleid(String.valueOf(this.getId()));
+//					    		audit.setEntityid(code);
+//					    		audit.setLog("No data found");
+//					    		audit.setStatus("01");
+//					    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//					    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//					    		audit.setSessionid(model.getAuthorizedSession().getId());
+//					    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//							    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//							    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//							    audit.setOs(model.getAuthorizedSession().getOs());
+//							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//							    audit.setRequest(this.params.toString());
+//							    audit.setData(code+"|"+datefrom+"|"+dateto);
+//					    		audit.insert();
+//								return new NoDataFoundView(state); 
+//						}
+//					}else{
+//						if(model.getPrepaidCol()){
+//							AuditTrail audit  = new AuditTrail();
+//				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//				    		audit.setModuleid(String.valueOf(this.getId()));
+//				    		audit.setEntityid(code);
+//				    		audit.setLog("Successfully fetched data");
+//				    		audit.setStatus("00");
+//				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//				    		audit.setSessionid(model.getAuthorizedSession().getId());
+//				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//						    audit.setOs(model.getAuthorizedSession().getOs());
+//						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//						    audit.setRequest(this.params.toString());
+//						    audit.setData(code+"|"+datefrom+"|"+dateto);
+//				    		audit.insert();
+//							return new CollectionView("00",model);  
+//						}else{
+//								ObjectState state = new ObjectState("01", "No data found");
+//								AuditTrail audit  = new AuditTrail();
+//					    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//					    		audit.setModuleid(String.valueOf(this.getId()));
+//					    		audit.setEntityid(code);
+//					    		audit.setLog("No data found");
+//					    		audit.setStatus("01");
+//					    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//					    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//					    		audit.setSessionid(model.getAuthorizedSession().getId());
+//					    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//							    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//							    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//							    audit.setOs(model.getAuthorizedSession().getOs());
+//							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//							    audit.setRequest(this.params.toString());
+//							    audit.setData(code+"|"+datefrom+"|"+dateto);
+//					    		audit.insert();
+//								return new NoDataFoundView(state); 
+//						}
+//					}
+//				}else if(accounttype.equals("CUSTOMER")){
+//					if(model.hasRowsAllCustomer()){
+//						AuditTrail audit  = new AuditTrail();
+//			    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//			    		audit.setModuleid(String.valueOf(this.getId()));
+//			    		audit.setEntityid(code);
+//			    		audit.setLog("Successfully fetched data");
+//			    		audit.setStatus("00");
+//			    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//			    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//			    		audit.setSessionid(model.getAuthorizedSession().getId());
+//			    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//					    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//					    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//					    audit.setOs(model.getAuthorizedSession().getOs());
+//					    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//					    audit.setRequest(this.params.toString());
+//					    audit.setData(code+"|"+datefrom+"|"+dateto);
+//			    		audit.insert();
+//						return new CollectionView("00",model);  
+//					}else{
+//							ObjectState state = new ObjectState("01", "No data found");
+//							AuditTrail audit  = new AuditTrail();
+//				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//				    		audit.setModuleid(String.valueOf(this.getId()));
+//				    		audit.setEntityid(code);
+//				    		audit.setLog("No data found");
+//				    		audit.setStatus("01");
+//				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//				    		audit.setSessionid(model.getAuthorizedSession().getId());
+//				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//						    audit.setOs(model.getAuthorizedSession().getOs());
+//						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//						    audit.setRequest(this.params.toString());
+//						    audit.setData(code+"|"+datefrom+"|"+dateto);
+//				    		audit.insert();
+//							return new NoDataFoundView(state); 
+//					}
+//				}else{
+//					if(model.hasRows()){
+//						AuditTrail audit  = new AuditTrail();
+//			    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//			    		audit.setModuleid(String.valueOf(this.getId()));
+//			    		audit.setEntityid(code);
+//			    		audit.setLog("Successfully fetched data");
+//			    		audit.setStatus("00");
+//			    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//			    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//			    		audit.setSessionid(model.getAuthorizedSession().getId());
+//			    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//					    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//					    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//					    audit.setOs(model.getAuthorizedSession().getOs());
+//					    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//					    audit.setRequest(this.params.toString());
+//					    audit.setData(code+"|"+datefrom+"|"+dateto);
+//			    		audit.insert();
+//						return new CollectionView("00",model);  
+//					}else{
+//							ObjectState state = new ObjectState("01", "No data found");
+//							AuditTrail audit  = new AuditTrail();
+//				    		audit.setIp(model.getAuthorizedSession().getIpAddress());
+//				    		audit.setModuleid(String.valueOf(this.getId()));
+//				    		audit.setEntityid(code);
+//				    		audit.setLog("No data found");
+//				    		audit.setStatus("01");
+//				    		audit.setUserid(model.getAuthorizedSession().getAccount().getId());
+//				    		audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
+//				    		audit.setSessionid(model.getAuthorizedSession().getId());
+//				    		audit.setBrowser(model.getAuthorizedSession().getBrowser());
+//						    audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
+//						    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
+//						    audit.setOs(model.getAuthorizedSession().getOs());
+//						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
+//						    audit.setRequest(this.params.toString());
+//						    audit.setData(code+"|"+datefrom+"|"+dateto);
+//				    		audit.insert();
+//							return new NoDataFoundView(state); 
+//					}
+//				}
+//						
+//					}else{		
+//						UISession u = new UISession(null);
+//					    u.setState(new ObjectState("TLC-3902-01"));
+//					    v = new SessionView(u);
+//					}
+//				}catch (SessionNotFoundException e) {
+//					UISession u = new UISession(null);
+//				    u.setState(new ObjectState("TLC-3902-01"));
+//				    v = new SessionView(u);
+//					Logger.LogServer(e);
+//			} catch (Exception e) {
+//				UISession u = new UISession(null);
+//			    u.setState(new ObjectState("TLC-3902-01"));
+//			    v = new SessionView(u);
+//				Logger.LogServer(e);
+//			}return v;
+//	}
+//
+//	@Override
+//	public String getKey() {
+//		return "PREPAIDLOADTRANS";
+//	}
+//
+//	@Override
+//	public int getId() {
+//		return 1503;
+//	}
+//
+//}
