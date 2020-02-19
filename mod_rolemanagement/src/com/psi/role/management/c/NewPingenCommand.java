@@ -59,7 +59,7 @@ public class NewPingenCommand extends UICommand{
 			    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 			    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 			    audit.setRequest(this.params.toString());
-			    audit.setData(name+"|"+homepage+"|"+minPassword);
+			    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword);
 	    		audit.insert();
 				JsonView view = new JsonView(pingenGroup);
 				return view;
@@ -95,7 +95,7 @@ public class NewPingenCommand extends UICommand{
 						    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 						    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(name+"|"+homepage+"|"+minPassword+"|"+portal);
+						    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword);
 				    		audit.insert();
 							JsonView view = new JsonView(pingenGroup);
 							return view;
@@ -118,7 +118,7 @@ public class NewPingenCommand extends UICommand{
 						    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 						    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(name+"|"+homepage+"|"+minPassword+"|"+portal);
+						    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword);
 				    		audit.insert();
 							JsonView view = new JsonView(pingenGroup);
 							return view;
@@ -141,7 +141,7 @@ public class NewPingenCommand extends UICommand{
 					    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 					    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData(name+"|"+homepage+"|"+minPassword+"|"+portal);
+					    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword);
 			    		audit.insert();
 						JsonView view = new JsonView(pingenGroup);
 						return view;

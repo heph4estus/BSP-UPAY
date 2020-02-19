@@ -1,6 +1,8 @@
 package com.psi.role.management.m;
 
 
+import java.lang.reflect.Field;
+
 import org.json.simple.JSONArray;
 
 import com.psi.audit.trail.m.AuditTrail;
@@ -150,15 +152,32 @@ public class RegisteredPingenGroup extends AbstractRegisteredPingenGroup {
 		    audit.setPortalversion(sess.getPortalverion());
 		    audit.setOs(sess.getOs());
 		    audit.setUserslevel(sess.getAccount().getGroup().getName());
-		    audit.setData(name+"|"+homepage+"|"+minPassword+"|"+this.accountStatus+"|"+this.getModaudit());
-		    audit.setOlddata(row.getString("USERSLEVEL")+"|"+row.getString("HOMEPAGE")+"|"+row.getString("MINPASSWORD")+"|"+row.getString("ACCOUNTSTATUS")+"|"+SystemInfo.getDb().QueryScalar("SELECT LISTAGG(MODULEID,',') WITHIN GROUP (ORDER BY MODULEID) MODULEID FROM TBLGROUPMODULES WHERE GROUPID=?","",this.id));
+		    audit.setData("USERSLEVEL:"+this.name+"|HOMEPAGE:"+this.homepage+"|MINPASSWORD:"+this.minPassword+"|STATUS:"+this.accountStatus+"|MODULES:"+this.getModaudit());
+		    audit.setOlddata("USERSLEVEL:"+row.getString("USERSLEVEL")+"|HOMEPAGE:"+row.getString("HOMEPAGE")+"|MINPASSWORD:"+row.getString("MINPASSWORD")+"|STATUS:"+row.getString("ACCOUNTSTATUS")+"|"+SystemInfo.getDb().QueryScalar("SELECT LISTAGG(MODULEID,',') WITHIN GROUP (ORDER BY MODULEID) MODULEID FROM TBLGROUPMODULES WHERE GROUPID=?","",this.id));
 		
 		    audit.insert();
 			return true;
 		}
 		else{
-//			this.db.QueryUpdate("INSERT INTO TBLAUDITTRAIL(USERNAME,USERID,LOG,IP,MODULE,SESSIONID,STATUS,ENTITYID) VALUES(?,?,?,?,?,?,?,?)",
-//					sess.getToken().Username,sess.getToken().UserId,"UserLevel Update Failed",sess.getToken().IpAddress,"3040",sess.getId(),"TLC-3040-01",this.id);
+			DataRow row =  this.db.QueryDataRow("SELECT * FROM TBLUSERSLEVEL WHERE UPPER(USERSLEVEL) = UPPER(?)", name);
+			AuditTrail audit  = new AuditTrail();
+    		audit.setIp(sess.getIpAddress());
+    		audit.setModuleid(String.valueOf(this.getId()));
+    		audit.setEntityid(name);
+    		audit.setLog("Unable to Updated Role");
+    		audit.setStatus("99");
+    		audit.setUserid(sess.getAccount().getId());
+    		audit.setUsername(sess.getAccount().getUserName());
+    		audit.setSessionid(sess.getId());
+    		audit.setBrowser(sess.getBrowser());
+		    audit.setBrowserversion(sess.getBrowserversion());
+		    audit.setPortalversion(sess.getPortalverion());
+		    audit.setOs(sess.getOs());
+		    audit.setUserslevel(sess.getAccount().getGroup().getName());
+		    audit.setData("USERSLEVEL:"+this.name+"|HOMEPAGE:"+this.homepage+"|MINPASSWORD:"+this.minPassword+"|STATUS:"+this.accountStatus+"|MODULES:"+this.getModaudit());
+		    audit.setOlddata("USERSLEVEL:"+row.getString("USERSLEVEL")+"|HOMEPAGE:"+row.getString("HOMEPAGE")+"|MINPASSWORD:"+row.getString("MINPASSWORD")+"|STATUS:"+row.getString("ACCOUNTSTATUS")+"|"+SystemInfo.getDb().QueryScalar("SELECT LISTAGG(MODULEID,',') WITHIN GROUP (ORDER BY MODULEID) MODULEID FROM TBLGROUPMODULES WHERE GROUPID=?","",this.id));
+		
+		    audit.insert();
 			return false;
 		}
 	}
@@ -178,5 +197,4 @@ public class RegisteredPingenGroup extends AbstractRegisteredPingenGroup {
 		this.portal = portal;
 	}
 
-	
 }

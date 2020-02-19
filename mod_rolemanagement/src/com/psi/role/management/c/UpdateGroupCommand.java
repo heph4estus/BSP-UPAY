@@ -113,7 +113,7 @@ public class UpdateGroupCommand extends UICommand{
 				    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 				    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(name+"|"+homepage+"|"+minPassword+"|"+status+"|"+this.params.get("MODULE"));
+				    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword+"|STATUS:"+status+"|MODULES:"+this.params.get("MODULE"));
 		    		audit.insert();
 					JsonView view = new JsonView(pingenGroup);
 					return view;
@@ -143,7 +143,7 @@ public class UpdateGroupCommand extends UICommand{
 				    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 				    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(name+"|"+homepage+"|"+minPassword+"|"+status+"|"+this.params.get("MODULE"));
+				    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword+"|STATUS:"+status+"|MODULES:"+this.params.get("MODULE"));
 				    
 		    		audit.insert();
 					JsonView view = new JsonView(pingenGroup);
@@ -168,7 +168,7 @@ public class UpdateGroupCommand extends UICommand{
 		    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 		    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 		    audit.setRequest(this.params.toString());
-		    audit.setData("NEW DETAILS: "+name+"|"+homepage+"|"+minPassword+"|"+status+"|"+this.params.get("MODULE"));
+		    audit.setData("USERSLEVEL:"+name+"|HOMEPAGE:"+homepage+"|MINPASSWORD:"+minPassword+"|STATUS:"+status+"|MODULES:"+this.params.get("MODULE"));
 		    
     		audit.insert();
 			JsonView view = new JsonView(pingenGroup);
