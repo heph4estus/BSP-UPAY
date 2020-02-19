@@ -83,7 +83,7 @@ public class ReversalColCommand extends UICommand {
 			audit.setEntityid(code);
 			audit.setUserid(model.getAuthorizedSession().getAccount().getId());
 			audit.setUsername(model.getAuthorizedSession().getAccount().getUserName());
-			audit.setSessionid(sess.getAuthorizedSession().getId());
+			audit.setSessionid(model.getAuthorizedSession().getId());
 			audit.setSessionid(model.getAuthorizedSession().getId());
 			audit.setBrowser(model.getAuthorizedSession().getBrowser());
 			audit.setBrowserversion(model.getAuthorizedSession().getBrowserversion());
