@@ -2,7 +2,6 @@ package com.psi.reports.c;
 
 import com.psi.audit.trail.m.AuditTrail;
 import com.psi.reports.m.MotherWalletCollection;
-import com.psi.reports.m.VoidedTransCollection;
 import com.psi.reports.v.CollectionView;
 import com.psi.reports.v.NoDataFoundView;
 import com.tlc.common.Logger;
@@ -49,7 +48,7 @@ public class MotherWalletColCommand extends UICommand{
 					    audit.setOs(model.getAuthorizedSession().getOs());
 					    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
-					    audit.setData(datefrom+"|"+dateto);
+					    audit.setData(model.toString());
 			    		audit.insert();
 						return new CollectionView("00",model);  
 					}else{
@@ -69,7 +68,7 @@ public class MotherWalletColCommand extends UICommand{
 						    audit.setOs(model.getAuthorizedSession().getOs());
 						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(datefrom+"|"+dateto);
+						    audit.setData(model.toString());
 				    		audit.insert();
 							return new NoDataFoundView(state); 
 					}
