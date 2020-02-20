@@ -1,14 +1,17 @@
 package com.psi.tariff.group.m;
 
+import java.lang.reflect.Field;
+
 import com.psi.audit.trail.m.AuditTrail;
 import com.tlc.common.DataRow;
+import com.tlc.common.Logger;
 import com.tlc.common.SystemInfo;
 import com.tlc.gui.modules.common.Model;
 import com.tlc.gui.modules.session.UISession;
 
 public class ManageTariffGroup extends Model{
 	
-	protected String groupname;
+	protected String tariffGroup;
 	protected String description;
 	protected String password;
 	protected String id;
@@ -16,12 +19,12 @@ public class ManageTariffGroup extends Model{
 	public boolean update(){
 		UISession sess = this.getAuthorizedSession();
 		DataRow row = SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE ID = ?", this.id);
-		int res =  SystemInfo.getDb().QueryUpdate("UPDATE TBLTARIFFGROUP  SET GROUPNAME=?, DESCRIPTION = ?,DATEMODIFIED=SYSDATE WHERE ID = ?", this.groupname, this.description,this.id);
+		int res =  SystemInfo.getDb().QueryUpdate("UPDATE TBLTARIFFGROUP  SET GROUPNAME=?, DESCRIPTION = ?,DATEMODIFIED=SYSDATE WHERE ID = ?", this.tariffGroup, this.description,this.id);
 		if(res > 0){
 			AuditTrail audit  = new AuditTrail();
     		audit.setIp(sess.getIpAddress());
     		audit.setModuleid(String.valueOf(this.getId()));
-    		audit.setEntityid(groupname);
+    		audit.setEntityid(tariffGroup);
     		audit.setLog("Successfully updated Tariff Group");
     		audit.setStatus("00");
     		audit.setUserid(sess.getAccount().getId());
@@ -32,8 +35,8 @@ public class ManageTariffGroup extends Model{
 		    audit.setPortalversion(sess.getPortalverion());
 		    audit.setOs(sess.getOs());
 		    audit.setUserslevel(sess.getAccount().getGroup().getName());
-		    audit.setData("NEW DETAILS: "+this.groupname+"|"+description
-		    		+"OLD DETAILS: "+row.getString("GROUPNAME")+"|"+row.getString("DESCRIPTION"));
+		    audit.setData("TARIFFGROUP:"+this.tariffGroup+"|DESCRIPTION:"+description);
+		    audit.setOlddata("TARIFFGROUP:"+row.getString("GROUPNAME")+"|DESCRIPTION:"+row.getString("DESCRIPTION"));
 		    
     		audit.insert();
     		return true;
@@ -49,11 +52,11 @@ public class ManageTariffGroup extends Model{
 		str.append("DELETE FROM TBLTARIFFCONFIG WHERE TARIFFGROUP = ?;\n");
 		str.append("DELETE FROM TBLCOMPANYTARIFF WHERE TARIFFGROUP = ?;\n");
 		str.append("END;\n");
-		return SystemInfo.getDb().QueryUpdate(str.toString(), this.groupname,this.groupname,SystemInfo.getDb().QueryScalar("SELECT ID FROM TBLTARIFFGROUP WHERE GROUPNAME = ?", "", this.groupname))>0;
+		return SystemInfo.getDb().QueryUpdate(str.toString(), this.tariffGroup,this.tariffGroup,SystemInfo.getDb().QueryScalar("SELECT ID FROM TBLTARIFFGROUP WHERE GROUPNAME = ?", "", this.tariffGroup))>0;
 	}
 	
 	public boolean exist(){
-		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE GROUPNAME = ?", this.groupname).size()>0;
+		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE GROUPNAME = ?", this.tariffGroup).size()>0;
 	}
 	
 	public boolean existid(){
@@ -72,15 +75,15 @@ public class ManageTariffGroup extends Model{
 	
 	public boolean authorizebygrouname(){
 		UISession sess = this.getAuthorizedSession();
-		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE GROUPNAME = ? AND UPPER(CREATEDBY) = ? ",this.groupname,sess.getAccount().getUserName().toUpperCase()).size()>0;
+		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE GROUPNAME = ? AND UPPER(CREATEDBY) = ? ",this.tariffGroup,sess.getAccount().getUserName().toUpperCase()).size()>0;
 	}
 
 	public String getGroupname() {
-		return groupname;
+		return tariffGroup;
 	}
 
 	public void setGroupname(String groupname) {
-		this.groupname = groupname;
+		this.tariffGroup = groupname;
 	}
 
 	public String getDescription() {
@@ -107,6 +110,46 @@ public class ManageTariffGroup extends Model{
 		this.id = id;
 	}
 	
-	
+	/**
+	 * MVO 18-02-2020
+	 */
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+		Field[] superFields = this.getClass().getSuperclass().getDeclaredFields();
+
+		/*
+		 * Super Class fields
+		 */
+		for (Field f : superFields) {
+			try {
+				f.setAccessible(true);
+				if (f.get(this) != null && !f.getName().equalsIgnoreCase("auditdata") && !f.getName().equalsIgnoreCase("password") && !f.getName().equalsIgnoreCase("authorizedSession") && !f.getName().equalsIgnoreCase("serialVersionUID"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+
+		}
+		/*
+		 * Class fields
+		 */
+		Field[] classFields = this.getClass().getDeclaredFields();
+		for (Field f : classFields) {
+			f.setAccessible(true);
+			try {
+
+				if (f.get(this) != null && !f.getName().equalsIgnoreCase("auditdata") && !f.getName().equalsIgnoreCase("password") && !f.getName().equalsIgnoreCase("authorizedSession") && !f.getName().equalsIgnoreCase("serialVersionUID"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+
+		}
+		if (sb.length() > 0)
+			sb.deleteCharAt(sb.lastIndexOf("|"));
+		return sb.toString();
+	}
 	
 }

@@ -53,7 +53,8 @@ public class EditLoyaltyCommand extends UICommand{
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("NEW DETAILS: "+type+"|"+earn+"|"+forevery);
+//						    audit.setData("NEW DETAILS: "+type+"|"+earn+"|"+forevery);
+						    audit.setData("ID: "+id+"|TYPE:"+type+"|EARN:"+earn+"|FOREVERY:"+ LongUtil.toString(forevery));
 				    		audit.insert();
 							return new JsonView(create); 
 
@@ -75,7 +76,8 @@ public class EditLoyaltyCommand extends UICommand{
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData("NEW DETAILS: "+id+"|"+type+"|"+earn+"|"+forevery);
+//						    audit.setData("NEW DETAILS: "+id+"|"+type+"|"+earn+"|"+forevery);
+						    audit.setData("ID: "+id+"|TYPE:"+type+"|EARN:"+earn+"|FOREVERY:"+ LongUtil.toString(forevery));
 				    		audit.insert();
 							return new JsonView(create); 
 
@@ -102,7 +104,8 @@ public class EditLoyaltyCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData("NEW DETAILS: "+id+"|"+type+"|"+earn+"|"+forevery);
+//							    audit.setData("NEW DETAILS: "+id+"|"+type+"|"+earn+"|"+forevery);
+							    audit.setData("ID: "+id+"|TYPE:"+type+"|EARN:"+earn+"|FOREVERY:"+ LongUtil.toString(forevery));
 					    		audit.insert();
 								return new JsonView(create); 
 							}

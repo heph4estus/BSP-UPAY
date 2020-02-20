@@ -44,7 +44,7 @@ public class LoyaltyCollectionCommand extends UICommand{
 						    audit.setOs(model.getAuthorizedSession().getOs());
 						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(type);
+						    audit.setData("TYPE" + type);
 				    		audit.insert();
 							return new CollectionView("00",model);  
 						}else{
@@ -64,8 +64,9 @@ public class LoyaltyCollectionCommand extends UICommand{
 							    audit.setOs(model.getAuthorizedSession().getOs());
 							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(type);
-					    		audit.insert();
+//							    audit.setData(type);
+							    audit.setData("TYPE" + type);
+							    audit.insert();
 								return new NoDataFoundView(state); 
 						}
 					

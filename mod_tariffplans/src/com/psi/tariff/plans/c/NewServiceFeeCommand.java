@@ -56,8 +56,8 @@ public class NewServiceFeeCommand extends UICommand{
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(type+"|"+minamount+"|"+maxamount+"|"+fixed+"|"+percentage);
-				    		
+//						    audit.setData(type+"|"+minamount+"|"+maxamount+"|"+fixed+"|"+percentage);
+				    		audit.setData(create.toString());
 				    		audit.insert();
 							return new JsonView(create); 
 
@@ -79,8 +79,9 @@ public class NewServiceFeeCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(type+"|"+minamount+"|"+maxamount+"|"+fixed+"|"+percentage);
-					    		audit.insert();
+//							    audit.setData(type+"|"+minamount+"|"+maxamount+"|"+fixed+"|"+percentage);
+							    audit.setData(create.toString());
+							    audit.insert();
 								return new JsonView(create); 
 
 							}else{
@@ -100,8 +101,9 @@ public class NewServiceFeeCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(type+"|"+minamount+"|"+maxamount+"|"+fixed+"|"+percentage);
-					    		audit.insert();
+//							    audit.setData(type+"|"+minamount+"|"+maxamount+"|"+fixed+"|"+percentage);
+							    audit.setData(create.toString());
+							    audit.insert();
 								return new JsonView(create); 
 							}
 						} catch (Exception e) {

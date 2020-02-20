@@ -12,109 +12,77 @@ import com.tlc.gui.modules.common.UICommand;
 import com.tlc.gui.modules.session.SessionNotFoundException;
 import com.tlc.gui.modules.session.UISession;
 
-public class NewTariffGroupCommand extends UICommand{
+public class NewTariffGroupCommand extends UICommand {
 	@Override
 	public IView execute() {
 		ExistingSession sess = null;
-		SessionView v = null;
-		
+		IView v = null;
+		String groupname = "";
+		String description = "";
+		AuditTrail audit = new AuditTrail();
+		NewTariffGroup create = new NewTariffGroup();
 		try {
-			sess = ExistingSession.parse(this.reqHeaders);		
-			if(sess.exists()) {
-		
-				String groupname = this.params.get("GroupName");
-				String description = this.params.get("Description");
-				
-				NewTariffGroup create = new NewTariffGroup();
+			sess = ExistingSession.parse(this.reqHeaders);
+			if (sess.exists()) {
+
+				groupname = this.params.get("GroupName");
+				description = this.params.get("Description");
 				create.setGroupname(groupname);
-				create.setDescription(description);				
+				create.setDescription(description);
 				create.setAuthorizedSession(sess);
-					
-					try {
-						if(create.exist()){
-							create.setState(new ObjectState("01", "Group Name Already Exist"));
-							AuditTrail audit  = new AuditTrail();
-				    		audit.setIp(create.getAuthorizedSession().getIpAddress());
-				    		audit.setModuleid(String.valueOf(this.getId()));
-				    		audit.setEntityid(groupname);
-				    		audit.setLog(create.getState().getMessage());
-				    		audit.setStatus(create.getState().getCode());
-				    		audit.setUserid(create.getAuthorizedSession().getAccount().getId());
-				    		audit.setUsername(create.getAuthorizedSession().getAccount().getUserName());
-				    		audit.setSessionid(create.getAuthorizedSession().getId());
-				    		audit.setBrowser(create.getAuthorizedSession().getBrowser());
-						    audit.setBrowserversion(create.getAuthorizedSession().getBrowserversion());
-						    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
-						    audit.setOs(create.getAuthorizedSession().getOs());
-						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setRequest(this.params.toString());
-						    audit.setData(groupname+"|"+description);
-				    		audit.insert();
-							return new JsonView(create); 
 
-						}
-						if(create.create()){
-								create.setState(new ObjectState("00", "Successfully added new Tariff Group"));
-								AuditTrail audit  = new AuditTrail();
-					    		audit.setIp(create.getAuthorizedSession().getIpAddress());
-					    		audit.setModuleid(String.valueOf(this.getId()));
-					    		audit.setEntityid(groupname);
-					    		audit.setLog(create.getState().getMessage());
-					    		audit.setStatus(create.getState().getCode());
-					    		audit.setUserid(create.getAuthorizedSession().getAccount().getId());
-					    		audit.setUsername(create.getAuthorizedSession().getAccount().getUserName());
-					    		audit.setSessionid(create.getAuthorizedSession().getId());
-					    		audit.setBrowser(create.getAuthorizedSession().getBrowser());
-							    audit.setBrowserversion(create.getAuthorizedSession().getBrowserversion());
-							    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
-							    audit.setOs(create.getAuthorizedSession().getOs());
-							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setRequest(this.params.toString());
-							    audit.setData(groupname+"|"+description);
-					    		audit.insert();
-								return new JsonView(create); 
+				try {
+					if (create.exist()) {
+						create.setState(new ObjectState("01", "Group Name Already Exist"));
+						v = new JsonView(create);
 
-							}else{
-								create.setState(new ObjectState("99", "System busy"));
-								AuditTrail audit  = new AuditTrail();
-					    		audit.setIp(create.getAuthorizedSession().getIpAddress());
-					    		audit.setModuleid(String.valueOf(this.getId()));
-					    		audit.setEntityid(groupname);
-					    		audit.setLog(create.getState().getMessage());
-					    		audit.setStatus(create.getState().getCode());
-					    		audit.setUserid(create.getAuthorizedSession().getAccount().getId());
-					    		audit.setUsername(create.getAuthorizedSession().getAccount().getUserName());
-					    		audit.setSessionid(create.getAuthorizedSession().getId());
-					    		audit.setBrowser(create.getAuthorizedSession().getBrowser());
-							    audit.setBrowserversion(create.getAuthorizedSession().getBrowserversion());
-							    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
-							    audit.setOs(create.getAuthorizedSession().getOs());
-							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setRequest(this.params.toString());
-							    audit.setData(groupname+"|"+description);
-					    		audit.insert();
-								return new JsonView(create); 
-							}
-						} catch (Exception e) {
-							create.setState(new ObjectState("99", "System busy"));
-							return new JsonView(create); 
-						}
-			}else{	
+					}
+					if (create.create()) {
+						create.setState(new ObjectState("00", "Successfully added new Tariff Group"));
+						v = new JsonView(create);
+
+					} else {
+						create.setState(new ObjectState("99", "System busy"));
+						return new JsonView(create);
+					}
+				} catch (Exception e) {
+					create.setState(new ObjectState("99", "System busy"));
+					return new JsonView(create);
+				}
+			} else {
 				UISession u = new UISession(null);
-			    u.setState(new ObjectState("TLC-3902-01"));
-			    v = new SessionView(u);
-			}				 
-		}catch (SessionNotFoundException e) {
+				u.setState(new ObjectState("TLC-3902-01"));
+				v = new SessionView(u);
+			}
+		} catch (SessionNotFoundException e) {
 			UISession u = new UISession(null);
-		    u.setState(new ObjectState("TLC-3902-01"));
-		    v = new SessionView(u);
+			u.setState(new ObjectState("TLC-3902-01"));
+			v = new SessionView(u);
 			Logger.LogServer(e);
-	} catch (Exception e) {
-		UISession u = new UISession(null);
-	    u.setState(new ObjectState("TLC-3902-01"));
-	    v = new SessionView(u);
-		Logger.LogServer(e);
-	}return v;
+		} catch (Exception e) {
+			UISession u = new UISession(null);
+			u.setState(new ObjectState("TLC-3902-01"));
+			v = new SessionView(u);
+			Logger.LogServer(e);
+		} finally {
+			audit.setIp(create.getAuthorizedSession().getIpAddress());
+			audit.setModuleid(String.valueOf(this.getId()));
+			audit.setEntityid(groupname);
+			audit.setLog(create.getState().getMessage());
+			audit.setStatus(create.getState().getCode());
+			audit.setUserid(create.getAuthorizedSession().getAccount().getId());
+			audit.setUsername(create.getAuthorizedSession().getAccount().getUserName());
+			audit.setSessionid(create.getAuthorizedSession().getId());
+			audit.setBrowser(create.getAuthorizedSession().getBrowser());
+			audit.setBrowserversion(create.getAuthorizedSession().getBrowserversion());
+			audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
+			audit.setOs(create.getAuthorizedSession().getOs());
+			audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
+			audit.setRequest(this.params.toString());
+			audit.setData("TARIFFGROUP:" + groupname + "|DESCRIPTION:" + description);
+			audit.insert();
+		}
+		return v;
 	}
 
 	@Override
