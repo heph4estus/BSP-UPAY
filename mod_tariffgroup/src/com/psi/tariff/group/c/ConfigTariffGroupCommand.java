@@ -99,8 +99,8 @@ public class ConfigTariffGroupCommand extends UICommand{
 						    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 						    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(company+"|"+branch+"|"+this.params.get("TariffGroup")+"|"+this.params.get("Branches"));
-				    		
+//						    audit.setData(company+"|"+branch+"|"+this.params.get("TariffGroup")+"|"+this.params.get("Branches"));
+				    		audit.setData(pingenGroup.toString());
 				    		audit.insert();
 							JsonView view = new JsonView(pingenGroup);
 							return view;
@@ -124,8 +124,9 @@ public class ConfigTariffGroupCommand extends UICommand{
 				    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 				    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(company+"|"+branch+"|"+this.params.get("TariffGroup")+"|"+this.params.get("Branches"));
-		    		audit.insert();
+//				    audit.setData(company+"|"+branch+"|"+this.params.get("TariffGroup")+"|"+this.params.get("Branches"));
+				    audit.setData(pingenGroup.toString());
+				    audit.insert();
 					JsonView view = new JsonView(pingenGroup);
 					return view;
 					

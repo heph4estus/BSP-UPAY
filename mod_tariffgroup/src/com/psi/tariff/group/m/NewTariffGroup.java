@@ -7,24 +7,24 @@ import com.tlc.gui.modules.session.UISession;
 
 public class NewTariffGroup extends Model{
 	
-	protected String groupname;
+	protected String tariffGroup;
 	protected String description;
 	
 	public boolean create(){
 		UISession sess = this.getAuthorizedSession();
-		return SystemInfo.getDb().QueryUpdate("INSERT INTO TBLTARIFFGROUP (GROUPNAME,DESCRIPTION,TIMESTAMP,CREATEDBY) VALUES(?,?,SYSDATE,?) ", this.groupname,this.description,sess.getAccount().getUserName().toUpperCase())>0;
+		return SystemInfo.getDb().QueryUpdate("INSERT INTO TBLTARIFFGROUP (GROUPNAME,DESCRIPTION,TIMESTAMP,CREATEDBY) VALUES(?,?,SYSDATE,?) ", this.tariffGroup,this.description,sess.getAccount().getUserName().toUpperCase())>0;
 	}
 
 	public boolean exist(){
-		Logger.LogServer(this.groupname);
-		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE GROUPNAME = ?", this.groupname).size()>0;
+		Logger.LogServer(this.tariffGroup);
+		return SystemInfo.getDb().QueryDataRow("SELECT * FROM TBLTARIFFGROUP WHERE GROUPNAME = ?", this.tariffGroup).size()>0;
 	}
 	
 	public String getGroupname() {
-		return groupname;
+		return tariffGroup;
 	}
 	public void setGroupname(String groupname) {
-		this.groupname = groupname;
+		this.tariffGroup = groupname;
 	}
 	public String getDescription() {
 		return description;

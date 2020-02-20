@@ -44,7 +44,7 @@ public class AvailableGroupCollectionCommand extends UICommand{
 						    audit.setOs(model.getAuthorizedSession().getOs());
 						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber);
+						    audit.setData("ACCOUNTNUMBER:"+ accountnumber);
 				    		audit.insert();
 							return new CollectionView("00",model);  
 						}else{
@@ -64,7 +64,7 @@ public class AvailableGroupCollectionCommand extends UICommand{
 							    audit.setOs(model.getAuthorizedSession().getOs());
 							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(accountnumber);
+							    audit.setData("ACCOUNTNUMBER:"+ accountnumber);
 					    		audit.insert();
 								return new NoDataFoundView(state); 
 						}
