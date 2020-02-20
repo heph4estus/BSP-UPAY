@@ -50,6 +50,7 @@ public class ClearedCollectionCommand extends UICommand{
 					    audit.setOs(clrd.getAuthorizedSession().getOs());
 					    audit.setUserslevel(clrd.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
+					    audit.setData(clrd.toString());
 			    		audit.insert();
 				      return new CollectionView("00", clrd);
 				    }else{
@@ -69,6 +70,7 @@ public class ClearedCollectionCommand extends UICommand{
 					    audit.setOs(clrd.getAuthorizedSession().getOs());
 					    audit.setUserslevel(clrd.getAuthorizedSession().getAccount().getGroup().getName());
 					    audit.setRequest(this.params.toString());
+					    audit.setData(clrd.toString());
 			    		audit.insert();
 				      return new NoDataFoundView(state);
 				    }
@@ -90,6 +92,7 @@ public class ClearedCollectionCommand extends UICommand{
 				    audit.setOs(clrd.getAuthorizedSession().getOs());
 				    audit.setUserslevel(clrd.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
+				    audit.setData(clrd.toString());
 		    		audit.insert();
 			      return new CollectionView("00", clrd);
 			    }else{
@@ -109,6 +112,7 @@ public class ClearedCollectionCommand extends UICommand{
 				    audit.setOs(clrd.getAuthorizedSession().getOs());
 				    audit.setUserslevel(clrd.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
+				    audit.setData(clrd.toString());
 		    		audit.insert();
 			      return new NoDataFoundView(state);
 			    }

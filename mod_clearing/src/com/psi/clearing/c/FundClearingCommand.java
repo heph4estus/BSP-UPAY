@@ -50,7 +50,7 @@ public class FundClearingCommand extends UICommand{
 			    audit.setOs(clearing.getAuthorizedSession().getOs());
 			    audit.setUserslevel(clearing.getAuthorizedSession().getAccount().getGroup().getName());
 			    audit.setRequest(this.params.toString());
-			    audit.setData(accountnumber+"|"+amount);
+			    audit.setData("ACCOUNTNUMBER:" + accountnumber+"|AMOUNT:"+amount);
 	    		audit.insert();
 				return new JsonView(clearing); 
 			}
@@ -73,7 +73,7 @@ public class FundClearingCommand extends UICommand{
 				    audit.setOs(clearing.getAuthorizedSession().getOs());
 				    audit.setUserslevel(clearing.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(accountnumber+"|"+amount);
+				    audit.setData("ACCOUNTNUMBER:" + accountnumber+"|AMOUNT:"+amount);
 		            audit.insert();
 		            return new JsonView(clearing);	          
 	          }else{
@@ -94,7 +94,7 @@ public class FundClearingCommand extends UICommand{
 				    audit.setOs(clearing.getAuthorizedSession().getOs());
 				    audit.setUserslevel(clearing.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(accountnumber+"|"+amount);
+				    audit.setData("ACCOUNTNUMBER:" + accountnumber+"|AMOUNT:"+amount);
 		            audit.insert();
 		          return new JsonView(clearing);
 	          }

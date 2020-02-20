@@ -46,7 +46,7 @@ public class TransactionCollectionCommand extends UICommand {
 				    audit.setOs(claimcol.getAuthorizedSession().getOs());
 				    audit.setUserslevel(claimcol.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(outletaccntno);
+				    audit.setData("ACCOUNTNUMBER:" + outletaccntno);
 		    		audit.insert();
 			      return new CollectionView("00", claimcol);
 			    }else{
@@ -66,7 +66,7 @@ public class TransactionCollectionCommand extends UICommand {
 				    audit.setOs(claimcol.getAuthorizedSession().getOs());
 				    audit.setUserslevel(claimcol.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(outletaccntno);
+				    audit.setData("ACCOUNTNUMBER:" + outletaccntno);
 		    		audit.insert();
 			      return new NoDataFoundView(state);
 			    }

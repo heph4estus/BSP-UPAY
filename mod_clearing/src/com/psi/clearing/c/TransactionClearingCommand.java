@@ -82,7 +82,7 @@ public class TransactionClearingCommand extends UICommand{
 		    		audit.setStatus(clearing.getState().getCode());
 		    		audit.setUserid(clearing.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(clearing.getAuthorizedSession().getAccount().getUserName());
-		    		audit.setData(ref+"|"+id+"|"+outletaccntno+"|"+clearingtype+"|"+companyaccntno);
+		    		audit.setData("REFERENCE:" + ref+"|ID:"+id+"|OUTLETACCOUNTNUMBER:"+outletaccntno+"|CLEARINGTYPE:"+clearingtype+"|COMPANYACCOUNTNUMBER:"+companyaccntno);
 		    		audit.setSessionid(clearing.getAuthorizedSession().getId());
 		    		audit.setBrowser(clearing.getAuthorizedSession().getBrowser());
 				    audit.setBrowserversion(clearing.getAuthorizedSession().getBrowserversion());
@@ -106,7 +106,7 @@ public class TransactionClearingCommand extends UICommand{
 		            audit.setStatus(clearing.getState().getCode());
 		            audit.setUserid(Integer.valueOf(clearing.getAuthorizedSession().getAccount().getId()));
 		            audit.setUsername(clearing.getAuthorizedSession().getAccount().getUserName());
-		            audit.setData(ref+"|"+id+"|"+outletaccntno+"|"+clearingtype+"|"+companyaccntno);
+		            audit.setData("REFERENCE:" + ref+"|ID:"+id+"|OUTLETACCOUNTNUMBER:"+outletaccntno+"|CLEARINGTYPE:"+clearingtype+"|COMPANYACCOUNTNUMBER:"+companyaccntno);
 		            audit.setSessionid(clearing.getAuthorizedSession().getId());
 		    		audit.setBrowser(clearing.getAuthorizedSession().getBrowser());
 				    audit.setBrowserversion(clearing.getAuthorizedSession().getBrowserversion());
@@ -129,7 +129,7 @@ public class TransactionClearingCommand extends UICommand{
 			            audit.setStatus(clearing.getState().getCode());
 			            audit.setUserid(Integer.valueOf(clearing.getAuthorizedSession().getAccount().getId()));
 			            audit.setUsername(clearing.getAuthorizedSession().getAccount().getUserName());
-			            audit.setData(ref+"|"+id+"|"+outletaccntno+"|"+clearingtype+"|"+companyaccntno);
+			            audit.setData("REFERENCE:" + ref+"|ID:"+id+"|OUTLETACCOUNTNUMBER:"+outletaccntno+"|CLEARINGTYPE:"+clearingtype+"|COMPANYACCOUNTNUMBER:"+companyaccntno);
 			            audit.setSessionid(clearing.getAuthorizedSession().getId());
 			    		audit.setBrowser(clearing.getAuthorizedSession().getBrowser());
 					    audit.setBrowserversion(clearing.getAuthorizedSession().getBrowserversion());
@@ -152,7 +152,7 @@ public class TransactionClearingCommand extends UICommand{
 		    		audit.setStatus(clearing.getState().getCode());
 		    		audit.setUserid(clearing.getAuthorizedSession().getAccount().getId());
 		    		audit.setUsername(clearing.getAuthorizedSession().getAccount().getUserName());
-		    		audit.setData(ref+"|"+id+"|"+outletaccntno+"|"+clearingtype+"|"+companyaccntno);
+		    		audit.setData("REFERENCE:" + ref+"|ID:"+id+"|OUTLETACCOUNTNUMBER:"+outletaccntno+"|CLEARINGTYPE:"+clearingtype+"|COMPANYACCOUNTNUMBER:"+companyaccntno);
 		    		audit.setSessionid(clearing.getAuthorizedSession().getId());
 		    		audit.setBrowser(clearing.getAuthorizedSession().getBrowser());
 				    audit.setBrowserversion(clearing.getAuthorizedSession().getBrowserversion());
@@ -173,7 +173,7 @@ public class TransactionClearingCommand extends UICommand{
 	    		audit.setStatus(clearing.getState().getCode());
 	    		audit.setUserid(clearing.getAuthorizedSession().getAccount().getId());
 	    		audit.setUsername(clearing.getAuthorizedSession().getAccount().getUserName());
-	    		audit.setData(ref+"|"+id+"|"+outletaccntno+"|"+clearingtype+"|"+companyaccntno);
+	    		audit.setData("REFERENCE:" + ref+"|ID:"+id+"|OUTLETACCOUNTNUMBER:"+outletaccntno+"|CLEARINGTYPE:"+clearingtype+"|COMPANYACCOUNTNUMBER:"+companyaccntno);
 	    		audit.setSessionid(clearing.getAuthorizedSession().getId());
 	    		audit.setBrowser(clearing.getAuthorizedSession().getBrowser());
 			    audit.setBrowserversion(clearing.getAuthorizedSession().getBrowserversion());
@@ -199,7 +199,7 @@ public class TransactionClearingCommand extends UICommand{
 	    		audit.setStatus(clearing.getState().getCode());
 	    		audit.setUserid(clearing.getAuthorizedSession().getAccount().getId());
 	    		audit.setUsername(clearing.getAuthorizedSession().getAccount().getUserName());
-	    		audit.setData(ref+"|"+id+"|"+outletaccntno+"|"+clearingtype+"|"+companyaccntno);
+	    		audit.setData("REFERENCE:" + ref+"|ID:"+id+"|OUTLETACCOUNTNUMBER:"+outletaccntno+"|CLEARINGTYPE:"+clearingtype+"|COMPANYACCOUNTNUMBER:"+companyaccntno);
 	    		audit.setSessionid(clearing.getAuthorizedSession().getId());
 	    		audit.setBrowser(clearing.getAuthorizedSession().getBrowser());
 			    audit.setBrowserversion(clearing.getAuthorizedSession().getBrowserversion());

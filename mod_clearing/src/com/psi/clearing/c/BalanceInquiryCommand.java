@@ -48,7 +48,7 @@ public class BalanceInquiryCommand extends UICommand {
 			    audit.setOs(reg.getAuthorizedSession().getOs());
 			    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    audit.setRequest(this.params.toString());
-			    audit.setData(accntno);
+			    audit.setData("ACCOUNTNUMBER:" + accntno);
 	            audit.insert();
 	            return new BalanceResponseView(reg);
 	          }
@@ -67,7 +67,8 @@ public class BalanceInquiryCommand extends UICommand {
 			    audit.setOs(reg.getAuthorizedSession().getOs());
 			    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    audit.setRequest(this.params.toString());
-			    audit.setData(accntno);
+//			    audit.setData(accntno);
+			    audit.setData("ACCOUNTNUMBER:" + accntno);
 	          audit.insert();
 	          return new JsonView(reg);
 	        }
