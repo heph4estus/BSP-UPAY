@@ -5,7 +5,7 @@ import com.tlc.gui.modules.common.Model;
 public class Tariffs extends Model{
 	public static final String PROP_PLANID="PLANID";
 	protected String[] planid;
-	protected String groupname;
+	protected String tarrifGroup;
 	protected String type;
 	protected String tablename;
 	
@@ -17,10 +17,10 @@ public class Tariffs extends Model{
 		this.planid = planid;
 	}
 	public String getGroupname() {
-		return groupname;
+		return tarrifGroup;
 	}
 	public void setGroupname(String groupname) {
-		this.groupname = groupname;
+		this.tarrifGroup = groupname;
 	}
 	public String getType() {
 		return type;

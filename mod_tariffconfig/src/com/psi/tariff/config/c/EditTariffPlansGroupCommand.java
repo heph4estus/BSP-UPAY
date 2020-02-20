@@ -81,7 +81,7 @@ public class EditTariffPlansGroupCommand extends UICommand{
 						    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 						    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(groupname+"|"+type+"|"+this.params.get("PLANID"));
+						    audit.setData(pingenGroup.toString());
 				    		audit.insert();
 							JsonView view = new JsonView(pingenGroup);
 							return view;
@@ -105,7 +105,7 @@ public class EditTariffPlansGroupCommand extends UICommand{
 				    audit.setOs(pingenGroup.getAuthorizedSession().getOs());
 				    audit.setUserslevel(pingenGroup.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(groupname+"|"+type+"|"+this.params.get("PLANID"));
+				    audit.setData(pingenGroup.toString());
 		    		audit.insert();
 					JsonView view = new JsonView(pingenGroup);
 					return view;

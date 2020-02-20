@@ -1,8 +1,11 @@
 package com.psi.tariff.config.m;
 
+import java.lang.reflect.Field;
+
 import com.psi.tariff.config.util.Tariffs;
 import com.tlc.common.DataRow;
 import com.tlc.common.DataRowCollection;
+import com.tlc.common.Logger;
 import com.tlc.common.LongUtil;
 import com.tlc.common.SystemInfo;
 import com.tlc.gui.modules.common.ModelCollection;
@@ -11,15 +14,15 @@ import com.tlc.gui.modules.common.ReportItem;
 @SuppressWarnings("serial")
 public class TariffMyPlanGroupCollection extends ModelCollection{
 
-	private String groupname;
+	private String tariffGroup;
 	protected String type;
 	
 	public TariffMyPlanGroupCollection(String groupname) {
-		this.groupname = groupname;
+		this.tariffGroup = groupname;
 	}
 	@Override
 	public boolean hasRows() {
-		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT TP.*,TF.TARIFFGROUP FROM TBLTARIFFCONFIG TF INNER JOIN TBLTARIFFPLANS TP ON TP.ID = TF.PLANID WHERE TARIFFGROUP=? AND TP.TYPE=? ORDER BY TP.ID DESC",this.groupname,this.type);
+		DataRowCollection r = SystemInfo.getDb().QueryDataRows("SELECT TP.*,TF.TARIFFGROUP FROM TBLTARIFFCONFIG TF INNER JOIN TBLTARIFFPLANS TP ON TP.ID = TF.PLANID WHERE TARIFFGROUP=? AND TP.TYPE=? ORDER BY TP.ID DESC",this.tariffGroup,this.type);
 	     
 	     if (!r.isEmpty())
 	     {
@@ -51,5 +54,46 @@ public class TariffMyPlanGroupCollection extends ModelCollection{
 		this.type = type;
 	}
 	
+	/**
+	 * MVO 18-02-2020
+	 */
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+		Field[] superFields = this.getClass().getSuperclass().getDeclaredFields();
+
+		/*
+		 * Super Class fields
+		 */
+		for (Field f : superFields) {
+			try {
+				f.setAccessible(true);
+				if (f.get(this) != null && !f.getName().equalsIgnoreCase("auditdata") && !f.getName().equalsIgnoreCase("password") && !f.getName().equalsIgnoreCase("authorizedSession") && !f.getName().equalsIgnoreCase("serialVersionUID"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+
+		}
+		/*
+		 * Class fields
+		 */
+		Field[] classFields = this.getClass().getDeclaredFields();
+		for (Field f : classFields) {
+			f.setAccessible(true);
+			try {
+
+				if (f.get(this) != null && !f.getName().equalsIgnoreCase("auditdata") && !f.getName().equalsIgnoreCase("password") && !f.getName().equalsIgnoreCase("authorizedSession") && !f.getName().equalsIgnoreCase("serialVersionUID"))
+					sb.append(f.getName().toUpperCase() + ":" + f.get(this) + "|");
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				Logger.LogServer(this.getClass().getSimpleName(), e);
+			}
+
+		}
+		if (sb.length() > 0)
+			sb.deleteCharAt(sb.lastIndexOf("|"));
+		return sb.toString();
+	}
 
 }
