@@ -44,7 +44,7 @@ public class CashierAmlSendCollectionCommand extends UICommand{
 				    audit.setPortalversion(col.getAuthorizedSession().getPortalverion());
 				    audit.setOs(col.getAuthorizedSession().getOs());
 				    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(accountnumber);
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber);
 				    audit.setRequest(this.params.toString());
 		    		audit.insert();
 					return new CollectionView("00",col);  
@@ -64,7 +64,7 @@ public class CashierAmlSendCollectionCommand extends UICommand{
 					    audit.setPortalversion(col.getAuthorizedSession().getPortalverion());
 					    audit.setOs(col.getAuthorizedSession().getOs());
 					    audit.setUserslevel(col.getAuthorizedSession().getAccount().getGroup().getName());
-					    audit.setData(accountnumber);
+					    audit.setData("ACCOUNTNUMBER:"+accountnumber);
 					    audit.setRequest(this.params.toString());
 			    		audit.insert();
 						return new NoDataFoundView(state); 

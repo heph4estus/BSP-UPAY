@@ -51,7 +51,7 @@ public class DeleteCashierAmlReceiveCommand extends UICommand{
 				    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(accountnumber+"|"+userslevel+"|"+key+"|"+alertlevel+"|"+scope);
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|USERSLEVEL:"+userslevel+"|TYPE:"+key+"|ALERTLEVEL:"+alertlevel+"|SCOPE:"+scope);
 				    audit.setRequest(this.params.toString());
 				    audit.setOlddata(reg.getAuditdata());
 		    		audit.insert();
@@ -73,7 +73,7 @@ public class DeleteCashierAmlReceiveCommand extends UICommand{
 				    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(accountnumber+"|"+userslevel+"|"+key+"|"+alertlevel+"|"+scope);
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|USERSLEVEL:"+userslevel+"|TYPE:"+key+"|ALERTLEVEL:"+alertlevel+"|SCOPE:"+scope);
 				    audit.setRequest(this.params.toString());
 				    audit.setOlddata(reg.getAuditdata());
 		    		audit.insert();
@@ -95,7 +95,7 @@ public class DeleteCashierAmlReceiveCommand extends UICommand{
 			    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 			    audit.setOs(reg.getAuthorizedSession().getOs());
 			    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-			    audit.setData(accountnumber+"|"+userslevel+"|"+key+"|"+alertlevel+"|"+scope);
+			    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|USERSLEVEL:"+userslevel+"|TYPE:"+key+"|ALERTLEVEL:"+alertlevel+"|SCOPE:"+scope);
 			    audit.setRequest(this.params.toString());
 			    audit.setOlddata(reg.getAuditdata());
 			    audit.insert();

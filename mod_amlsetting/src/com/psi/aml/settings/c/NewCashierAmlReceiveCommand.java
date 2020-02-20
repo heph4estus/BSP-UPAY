@@ -82,7 +82,7 @@ public class NewCashierAmlReceiveCommand extends UICommand{
 				    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(accountnumber+"|"+userslevel+"|"+key+"|"+alertlevel+"|"+scope+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxtransweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|USERSLEVEL:"+userslevel+"|TYPE:"+key+"|ALERTLEVEL:"+alertlevel+"|SCOPE:"+scope+"|MINAMOUNT:"+LongUtil.toString(minamount)+"|MAXAMOUNT:"+LongUtil.toString(maxamount)+"|MAXAMOUNTPERDAY:"+LongUtil.toString(maxamountday)+"|MAXAMOUNTPERWEEK:"+LongUtil.toString(maxamountweek)+"|MAXAMOUNTPERMONTH:"+LongUtil.toString(maxamountmonth)+"|MAXTRANSPERDAY:"+maxtransday+"|MAXTRANSPERWEEK:"+maxtransweek+"|MAXTRANSPERMONTH:"+maxtransmonth);
 				    audit.setRequest(this.params.toString());
 		    		
 		    		audit.insert();
@@ -104,7 +104,7 @@ public class NewCashierAmlReceiveCommand extends UICommand{
 				    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData(accountnumber+"|"+userslevel+"|"+key+"|"+alertlevel+"|"+scope+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxtransweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
+				    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|USERSLEVEL:"+userslevel+"|TYPE:"+key+"|ALERTLEVEL:"+alertlevel+"|SCOPE:"+scope+"|MINAMOUNT:"+LongUtil.toString(minamount)+"|MAXAMOUNT:"+LongUtil.toString(maxamount)+"|MAXAMOUNTPERDAY:"+LongUtil.toString(maxamountday)+"|MAXAMOUNTPERWEEK:"+LongUtil.toString(maxamountweek)+"|MAXAMOUNTPERMONTH:"+LongUtil.toString(maxamountmonth)+"|MAXTRANSPERDAY:"+maxtransday+"|MAXTRANSPERWEEK:"+maxtransweek+"|MAXTRANSPERMONTH:"+maxtransmonth);
 				    audit.setRequest(this.params.toString());
 		    		
 		    		audit.insert();
@@ -126,7 +126,7 @@ public class NewCashierAmlReceiveCommand extends UICommand{
 			    audit.setPortalversion(reg.getAuthorizedSession().getPortalverion());
 			    audit.setOs(reg.getAuthorizedSession().getOs());
 			    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
-			    audit.setData(accountnumber+"|"+userslevel+"|"+key+"|"+alertlevel+"|"+scope+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxtransweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
+			    audit.setData("ACCOUNTNUMBER:"+accountnumber+"|USERSLEVEL:"+userslevel+"|TYPE:"+key+"|ALERTLEVEL:"+alertlevel+"|SCOPE:"+scope+"|MINAMOUNT:"+LongUtil.toString(minamount)+"|MAXAMOUNT:"+LongUtil.toString(maxamount)+"|MAXAMOUNTPERDAY:"+LongUtil.toString(maxamountday)+"|MAXAMOUNTPERWEEK:"+LongUtil.toString(maxamountweek)+"|MAXAMOUNTPERMONTH:"+LongUtil.toString(maxamountmonth)+"|MAXTRANSPERDAY:"+maxtransday+"|MAXTRANSPERWEEK:"+maxtransweek+"|MAXTRANSPERMONTH:"+maxtransmonth);
 			    audit.setRequest(this.params.toString());
 	    		
 	    		audit.insert();
