@@ -39,7 +39,8 @@ public class WatchListedColCommand extends UICommand{
 				    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
 				    audit.setOs(model.getAuthorizedSession().getOs());
 				    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData("");
+		  		  	audit.setSessionid(model.getAuthorizedSession().getId());
+				    audit.setData("Display Details");
 				    audit.setRequest(this.params.toString());
 		    		audit.insert();
 					return new CollectionView("00",model);  
@@ -58,7 +59,8 @@ public class WatchListedColCommand extends UICommand{
 				    audit.setPortalversion(model.getAuthorizedSession().getPortalverion());
 				    audit.setOs(model.getAuthorizedSession().getOs());
 				    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
-				    audit.setData("");
+		  		  	audit.setSessionid(model.getAuthorizedSession().getId());
+				    audit.setData("Display Details");
 				    audit.setRequest(this.params.toString());
 		    		audit.insert();
 					return new NoDataFoundView(state); 

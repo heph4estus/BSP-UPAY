@@ -77,7 +77,8 @@ public class NewUploadFileCommand extends UICommand{
 				  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 				  		  	audit.setOs(create.getAuthorizedSession().getOs());
 				  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-				  		  	audit.setData(filename+"|"+filepath+"|"+batch+"|"+username);
+				  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+				  		  	audit.setData("FILENAME:"+filename+"|FILEPATH:"+filepath+"|BATCH:"+batch+"|USERNAME:"+username);
 				  		  	audit.setRequest(this.params.toString());
 				    		audit.insert();
 							return new JsonView(create); 
@@ -99,7 +100,8 @@ public class NewUploadFileCommand extends UICommand{
 					  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 					  		  	audit.setOs(create.getAuthorizedSession().getOs());
 					  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-					  		  	audit.setData(filename+"|"+filepath+"|"+batch+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+					  		  	audit.setData("FILENAME:"+filename+"|FILEPATH:"+filepath+"|BATCH:"+batch+"|USERNAME:"+username);
 					  		  	audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 
@@ -118,7 +120,8 @@ public class NewUploadFileCommand extends UICommand{
 					  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 					  		  	audit.setOs(create.getAuthorizedSession().getOs());
 					  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-					  		  	audit.setData(filename+"|"+filepath+"|"+batch+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+					  		  	audit.setData("FILENAME:"+filename+"|FILEPATH:"+filepath+"|BATCH:"+batch+"|USERNAME:"+username);
 					  		  	audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 
@@ -139,7 +142,8 @@ public class NewUploadFileCommand extends UICommand{
 				  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 				  		  	audit.setOs(create.getAuthorizedSession().getOs());
 				  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-				  		  	audit.setData(filename+"|"+filepath+"|"+batch+"|"+username);
+				  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+				  		  	audit.setData("FILENAME:"+filename+"|FILEPATH:"+filepath+"|BATCH:"+batch+"|USERNAME:"+username);
 				  		  	audit.setRequest(this.params.toString());
 				    		audit.insert();
 							return new JsonView(create); 
@@ -158,7 +162,8 @@ public class NewUploadFileCommand extends UICommand{
 				  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 				  		  	audit.setOs(create.getAuthorizedSession().getOs());
 				  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-				  		  	audit.setData(filename+"|"+filepath+"|"+batch+"|"+username);
+				  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+				  		  	audit.setData("FILENAME:"+filename+"|FILEPATH:"+filepath+"|BATCH:"+batch+"|USERNAME:"+username);
 				  		  	audit.setRequest(this.params.toString());
 				    		audit.insert();
 							return new JsonView(create); 

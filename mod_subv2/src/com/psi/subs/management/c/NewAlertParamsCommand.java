@@ -60,7 +60,8 @@ public class NewAlertParamsCommand extends UICommand
   		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
   		  	audit.setOs(create.getAuthorizedSession().getOs());
   		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-  		  	audit.setData(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+  		  	audit.setData("USERNAME:"+username + "|TYPE:" + type + "|FIRSTNAME:" + firstname + "|MIDDLENAME:" + middlename + "|LASTNAME:" + lastname + "|DATEOFBIRTH:" + dateofbirth);
   		  	audit.setRequest(this.params.toString());
             audit.insert();
             return new JsonView(create);
@@ -84,7 +85,8 @@ public class NewAlertParamsCommand extends UICommand
 	  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 	  		  	audit.setOs(create.getAuthorizedSession().getOs());
 	  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-	  		  	audit.setData(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+	  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+	  		  	audit.setData("USERNAME:"+username + "|TYPE:" + type + "|FIRSTNAME:" + firstname + "|MIDDLENAME:" + middlename + "|LASTNAME:" + lastname + "|DATEOFBIRTH:" + dateofbirth);
 	  		  	audit.setRequest(this.params.toString());
 	            audit.insert();
 	            return new JsonView(create);
@@ -104,7 +106,8 @@ public class NewAlertParamsCommand extends UICommand
 	  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 	  		  	audit.setOs(create.getAuthorizedSession().getOs());
 	  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-	  		  	audit.setData(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+	  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+	  		  	audit.setData("USERNAME:"+username + "|TYPE:" + type + "|FIRSTNAME:" + firstname + "|MIDDLENAME:" + middlename + "|LASTNAME:" + lastname + "|DATEOFBIRTH:" + dateofbirth);
 	  		  	audit.setRequest(this.params.toString());
 	            audit.insert();
 	            return new JsonView(create);
@@ -127,7 +130,8 @@ public class NewAlertParamsCommand extends UICommand
 		  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 		  		  	audit.setOs(create.getAuthorizedSession().getOs());
 		  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-		  		  	audit.setData(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+		  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+		  		  	audit.setData("USERNAME:"+username + "|TYPE:" + type + "|FIRSTNAME:" + firstname + "|MIDDLENAME:" + middlename + "|LASTNAME:" + lastname + "|DATEOFBIRTH:" + dateofbirth);
 		  		  	audit.setRequest(this.params.toString());
 		            audit.insert();
 		            return new JsonView(create);
@@ -147,7 +151,8 @@ public class NewAlertParamsCommand extends UICommand
 	  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 	  		  	audit.setOs(create.getAuthorizedSession().getOs());
 	  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-	  		  	audit.setData(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+	  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+	  		  	audit.setData("USERNAME:"+username + "|TYPE:" + type + "|FIRSTNAME:" + firstname + "|MIDDLENAME:" + middlename + "|LASTNAME:" + lastname + "|DATEOFBIRTH:" + dateofbirth);
 	  		  	audit.setRequest(this.params.toString());
 	            audit.insert();
 	            return new JsonView(create);
@@ -155,20 +160,21 @@ public class NewAlertParamsCommand extends UICommand
           }
 
           create.setState(new ObjectState("01", create.getState().getMessage()));
-          AuditTrail audit = new AuditTrail();
-          audit.setIp(create.getAuthorizedSession().getIpAddress());
-          audit.setModuleid(String.valueOf(getId()));
-          audit.setEntityid(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
-          audit.setLog(create.getState().getMessage());
-          audit.setStatus(create.getState().getCode());
-          audit.setUserid(create.getAuthorizedSession().getAccount().getId());
-          audit.setUsername(create.getAuthorizedSession().getAccount().getUserName());
-          audit.setBrowser(create.getAuthorizedSession().getBrowser());
+          	AuditTrail audit = new AuditTrail();
+          	audit.setIp(create.getAuthorizedSession().getIpAddress());
+          	audit.setModuleid(String.valueOf(getId()));
+          	audit.setEntityid(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+          	audit.setLog(create.getState().getMessage());
+          	audit.setStatus(create.getState().getCode());
+          	audit.setUserid(create.getAuthorizedSession().getAccount().getId());
+          	audit.setUsername(create.getAuthorizedSession().getAccount().getUserName());
+          	audit.setBrowser(create.getAuthorizedSession().getBrowser());
 		  	audit.setBrowserversion(create.getAuthorizedSession().getBrowserversion());
 		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 		  	audit.setOs(create.getAuthorizedSession().getOs());
 		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-		  	audit.setData(username + "|" + type + "|" + firstname + "|" + middlename + "|" + lastname + "|" + dateofbirth);
+  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+		  	audit.setData("USERNAME:"+username + "|TYPE:" + type + "|FIRSTNAME:" + firstname + "|MIDDLENAME:" + middlename + "|LASTNAME:" + lastname + "|DATEOFBIRTH:" + dateofbirth);
 		  	audit.setRequest(this.params.toString());
           audit.insert();
           return new JsonView(create);

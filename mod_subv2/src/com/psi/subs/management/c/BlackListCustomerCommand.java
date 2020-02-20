@@ -51,7 +51,8 @@ public class BlackListCustomerCommand extends UICommand{
 						    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-						    audit.setData(id+"|"+type+"|"+username);
+				  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+						    audit.setData("ID:"+id+"|TYPE:"+type+"|USERNAME:"+username);
 						    audit.setRequest(this.params.toString());
 				    		audit.insert();
 							return new JsonView(create); 
@@ -75,7 +76,8 @@ public class BlackListCustomerCommand extends UICommand{
 							    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setData(id+"|"+type+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+							    audit.setData("ID:"+id+"|TYPE:"+type+"|USERNAME:"+username);
 							    audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 
@@ -95,7 +97,8 @@ public class BlackListCustomerCommand extends UICommand{
 							    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setData(id+"|"+type+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+							    audit.setData("ID:"+id+"|TYPE:"+type+"|USERNAME:"+username);
 							    audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 
@@ -115,7 +118,8 @@ public class BlackListCustomerCommand extends UICommand{
 							    audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-							    audit.setData(id+"|"+type+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+							    audit.setData("ID:"+id+"|TYPE:"+type+"|USERNAME:"+username);
 							    audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 

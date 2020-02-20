@@ -50,7 +50,8 @@ public class DeleteBlackListCommand extends UICommand{
 				  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 				  		  	audit.setOs(create.getAuthorizedSession().getOs());
 				  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-				  		  	audit.setData(filename+"|"+batch+"|"+username);
+				  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+				  		  	audit.setData("FILENAME:"+filename+"|BATCH:"+batch+"|USERNAME:"+username);
 				  		  	audit.setRequest(this.params.toString());
 				    		audit.insert();
 							return new JsonView(create); 
@@ -71,7 +72,8 @@ public class DeleteBlackListCommand extends UICommand{
 					  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 					  		  	audit.setOs(create.getAuthorizedSession().getOs());
 					  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-					  		  	audit.setData(filename+"|"+batch+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+					  		    audit.setData("FILENAME:"+filename+"|BATCH:"+batch+"|USERNAME:"+username);
 					  		  	audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 
@@ -91,7 +93,8 @@ public class DeleteBlackListCommand extends UICommand{
 					  		  	audit.setPortalversion(create.getAuthorizedSession().getPortalverion());
 					  		  	audit.setOs(create.getAuthorizedSession().getOs());
 					  		  	audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
-					  		  	audit.setData(filename+"|"+batch+"|"+username);
+					  		  	audit.setSessionid(create.getAuthorizedSession().getId());
+					  		    audit.setData("FILENAME:"+filename+"|BATCH:"+batch+"|USERNAME:"+username);
 					  		  	audit.setRequest(this.params.toString());
 					    		audit.insert();
 								return new JsonView(create); 
