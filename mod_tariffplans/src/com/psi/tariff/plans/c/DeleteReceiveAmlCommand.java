@@ -47,7 +47,7 @@ public class DeleteReceiveAmlCommand extends UICommand{
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(id);
+						    audit.setData(create.toString());
 				    		
 				    		audit.insert();
 							return new JsonView(create); 
@@ -76,7 +76,8 @@ public class DeleteReceiveAmlCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(id);
+//							    audit.setData(id);
+							    audit.setData(create.toString());
 					    		audit.insert();
 								return new JsonView(create); 
 							}

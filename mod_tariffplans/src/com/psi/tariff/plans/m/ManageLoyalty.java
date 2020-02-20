@@ -2,6 +2,7 @@ package com.psi.tariff.plans.m;
 
 import com.psi.audit.trail.m.AuditTrail;
 import com.tlc.common.DataRow;
+import com.tlc.common.LongUtil;
 import com.tlc.common.SystemInfo;
 import com.tlc.gui.modules.common.Model;
 import com.tlc.gui.modules.session.UISession;
@@ -32,9 +33,9 @@ public class ManageLoyalty extends Model{
 		    audit.setPortalversion(sess.getPortalverion());
 		    audit.setOs(sess.getOs());
 		    audit.setUserslevel(sess.getAccount().getGroup().getName());
-		    audit.setData("NEW DETAILS: "+id+"|"+type+"|"+earn+"|"+forevery
-		    		+"OLD DETAILS: "+id+"|"+row.getString("TYPE")+"|"+row.getString("EARN")+"|"+row.getString("FOREVERY"));
-    		audit.insert();
+		    audit.setData("ID: "+id+"|TYPE:"+type+"|EARN:"+earn+"|FOREVERY:"+ LongUtil.toString(forevery));
+    		audit.setOlddata("ID: "+id+"|TYPE:"+row.getString("TYPE")+"|EARN:"+row.getString("EARN")+"|FOREVERY:"+LongUtil.toString(Long.valueOf(row.getString("FOREVERY"))));
+		    audit.insert();
     		return true;
 		}else{
 			return false;
@@ -60,7 +61,8 @@ public class ManageLoyalty extends Model{
 		    audit.setPortalversion(sess.getPortalverion());
 		    audit.setOs(sess.getOs());
 		    audit.setUserslevel(sess.getAccount().getGroup().getName());
-		    audit.setData(id+"|"+row.getString("TYPE")+"|"+row.getString("EARN")+"|"+row.getString("FOREVERY"));
+		    audit.setData("ID: "+id+"|TYPE:"+type+"|EARN:"+earn+"|FOREVERY:"+ LongUtil.toString(forevery));
+		    audit.setOlddata("ID: "+id+"|TYPE:"+row.getString("TYPE")+"|EARN:"+row.getString("EARN")+"|FOREVERY:"+LongUtil.toString(Long.valueOf(row.getString("FOREVERY"))));
     		audit.insert();
 			return true;
 		}else{

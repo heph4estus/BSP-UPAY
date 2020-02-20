@@ -4,6 +4,7 @@ import com.psi.audit.trail.m.AuditTrail;
 import com.psi.tariff.plans.m.ManageLoyalty;
 import com.psi.tariff.plans.v.JsonView;
 import com.tlc.common.Logger;
+import com.tlc.common.LongUtil;
 import com.tlc.gui.absmobile.modules.session.m.ExistingSession;
 import com.tlc.gui.absmobile.modules.session.v.SessionView;
 import com.tlc.gui.modules.common.IView;
@@ -47,7 +48,7 @@ public class DeleteLoyaltyCommand extends UICommand{
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(id);
+						    audit.setData("ID: "+create.getId()+"|TYPE:"+create.getType()+"|EARN:"+create.getEarn()+"|FOREVERY:"+ LongUtil.toString(create.getForevery()));
 						    
 				    		audit.insert();
 							return new JsonView(create); 
@@ -75,7 +76,8 @@ public class DeleteLoyaltyCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(id);
+//							    audit.setData(id);
+							    audit.setData("ID: "+create.getId()+"|TYPE:"+create.getType()+"|EARN:"+create.getEarn()+"|FOREVERY:"+ LongUtil.toString(create.getForevery()));
 					    		audit.insert();
 								return new JsonView(create); 
 							}

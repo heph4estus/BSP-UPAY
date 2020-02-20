@@ -75,8 +75,8 @@ public class NewSendAmlCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(key+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxamountday+"|"+maxamountweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
-		    		
+//				    audit.setData(key+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxamountday+"|"+maxamountweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
+		    		audit.setData(reg.toString());
 		    		audit.insert();
 					return new JsonView(reg); 
 				}
@@ -97,8 +97,8 @@ public class NewSendAmlCommand extends UICommand{
 				    audit.setOs(reg.getAuthorizedSession().getOs());
 				    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 				    audit.setRequest(this.params.toString());
-				    audit.setData(key+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxamountday+"|"+maxamountweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
-		    		
+//				    audit.setData(key+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxamountday+"|"+maxamountweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
+				    audit.setData(reg.toString());
 		    		audit.insert();
 					return new JsonView(reg);  
 				}
@@ -119,8 +119,8 @@ public class NewSendAmlCommand extends UICommand{
 			    audit.setOs(reg.getAuthorizedSession().getOs());
 			    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 			    audit.setRequest(this.params.toString());
-			    audit.setData(key+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxamountday+"|"+maxamountweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
-	    		
+//			    audit.setData(key+"|"+minamount+"|"+maxamount+"|"+maxamountday+"|"+maxamountday+"|"+maxamountweek+"|"+maxamountmonth+"|"+maxtransday+"|"+maxtransweek+"|"+maxtransmonth);
+			    audit.setData(reg.toString());
 	    		audit.insert();
 				return new JsonView(reg);  
 			}else{

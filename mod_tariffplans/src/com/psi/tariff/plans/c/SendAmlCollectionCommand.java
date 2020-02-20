@@ -43,7 +43,8 @@ public class SendAmlCollectionCommand extends UICommand{
 						    audit.setOs(model.getAuthorizedSession().getOs());
 						    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-				    		audit.insert();
+						    audit.setData("Display Details");
+						    audit.insert();
 							return new CollectionView("00",model);  
 						}else{
 								ObjectState state = new ObjectState("01", "No data found");
@@ -62,7 +63,8 @@ public class SendAmlCollectionCommand extends UICommand{
 							    audit.setOs(model.getAuthorizedSession().getOs());
 							    audit.setUserslevel(model.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-					    		audit.insert();
+							    audit.setData("Display Details");
+							    audit.insert();
 								return new NoDataFoundView(state); 
 						}
 					

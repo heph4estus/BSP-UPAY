@@ -52,7 +52,7 @@ public class NewLoyaltyCommand extends UICommand{
 						    audit.setOs(create.getAuthorizedSession().getOs());
 						    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(type+"|"+earn+"|"+forevery);
+						    audit.setData("TYPE:" + type+"|EARN:"+earn+"|FOREVERY:"+forevery);
 				    		audit.insert();
 							return new JsonView(create); 
 
@@ -74,7 +74,7 @@ public class NewLoyaltyCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(type+"|"+earn+"|"+forevery);
+							    audit.setData("TYPE:" + type+"|EARN:"+earn+"|FOREVERY:"+forevery);
 					    		audit.insert();
 								return new JsonView(create); 
 
@@ -95,7 +95,7 @@ public class NewLoyaltyCommand extends UICommand{
 							    audit.setOs(create.getAuthorizedSession().getOs());
 							    audit.setUserslevel(create.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(type+"|"+earn+"|"+forevery);
+							    audit.setData("TYPE:" + type+"|EARN:"+earn+"|FOREVERY:"+forevery);
 					    		audit.insert();
 								return new JsonView(create); 
 							}
