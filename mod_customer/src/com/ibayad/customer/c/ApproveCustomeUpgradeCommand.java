@@ -47,7 +47,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber+"|"+reg.getDataFqn());
+						  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -68,7 +69,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber+"|"+reg.getDataFqn());
+						  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -89,7 +91,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber+"|"+reg.getDataFqn());
+						  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -110,7 +113,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber+"|"+reg.getDataFqn());
+						  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
@@ -132,7 +136,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 							    audit.setOs(reg.getAuthorizedSession().getOs());
 							    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 							    audit.setRequest(this.params.toString());
-							    audit.setData(accountnumber+"|"+reg.getDataFqn());
+							  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+							    audit.setData(reg.toString());
 					    		audit.insert();
 								return new JsonView(reg);
 							}
@@ -154,7 +159,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber+"|"+reg.getDataFqn());
+						  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}else{
@@ -174,7 +180,8 @@ public class ApproveCustomeUpgradeCommand extends UICommand{
 						    audit.setOs(reg.getAuthorizedSession().getOs());
 						    audit.setUserslevel(reg.getAuthorizedSession().getAccount().getGroup().getName());
 						    audit.setRequest(this.params.toString());
-						    audit.setData(accountnumber+"|"+reg.getDataFqn());
+						  //audit.setData(accountnumber+"|"+reg.getDataFqn());
+						    audit.setData(reg.toString());
 				    		audit.insert();
 							return new JsonView(reg);
 						}
